@@ -1,0 +1,27 @@
+{
+ "contraindicacoes": {
+  "sem_carga_axial": "Sem carga comprimindo a coluna (barra nas costas, terra pesado)",
+  "sem_desenvolvimento_acima_cabeca": "Sem empurrar ou alongar acima da cabeca",
+  "evitar_amplitude_maxima_ombro": "Evitar amplitude extrema de ombro",
+  "flexao_joelho_limitada": "Flexao profunda ou extensao carregada de joelho limitada",
+  "sem_impacto": "Sem salto ou impacto",
+  "sem_flexao_lombar_carregada": "Sem flexionar a lombar sob carga",
+  "sem_hiperextensao_lombar": "Sem hiperextensao da lombar",
+  "sem_extensao_punho": "Sem extensao forcada de punho (barra reta)",
+  "sem_apoio_punho": "Sem apoiar o peso do corpo no punho",
+  "cervical_sensivel": "Cuidado com carga ou tensao na regiao cervical"
+ },
+ "padroes_movimento": [
+  "agachamento",
+  "anti_extensao",
+  "anti_rotacao",
+  "dobradica_quadril",
+  "empurrar_horizontal",
+  "empurrar_vertical",
+  "flexao_tronco",
+  "isolamento",
+  "puxar_horizontal",
+  "puxar_vertical",
+  "unilateral_perna"
+ ]
+}

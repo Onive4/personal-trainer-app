@@ -1,0 +1,262 @@
+{
+ "barra": [
+  {
+   "chave": "anilha",
+   "exercicios": 1
+  },
+  {
+   "chave": "barra_baixa",
+   "exercicios": 1
+  },
+  {
+   "chave": "barra_banco",
+   "exercicios": 1
+  },
+  {
+   "chave": "barra_livre",
+   "exercicios": 12
+  },
+  {
+   "chave": "barra_rack",
+   "exercicios": 8
+  },
+  {
+   "chave": "barra_rack_banco",
+   "exercicios": 1
+  },
+  {
+   "chave": "barra_rack_caixote",
+   "exercicios": 1
+  },
+  {
+   "chave": "barra_w",
+   "exercicios": 3
+  },
+  {
+   "chave": "trap_bar",
+   "exercicios": 1
+  }
+ ],
+ "halteres": [
+  {
+   "chave": "halteres",
+   "exercicios": 23
+  },
+  {
+   "chave": "halteres_banco",
+   "exercicios": 3
+  }
+ ],
+ "bancos": [
+  {
+   "chave": "banco",
+   "exercicios": 4
+  },
+  {
+   "chave": "banco_declinado_barra",
+   "exercicios": 1
+  },
+  {
+   "chave": "banco_declinado_halteres",
+   "exercicios": 1
+  },
+  {
+   "chave": "banco_desenvolvimento_barra",
+   "exercicios": 1
+  },
+  {
+   "chave": "banco_desenvolvimento_halteres",
+   "exercicios": 2
+  },
+  {
+   "chave": "banco_halteres",
+   "exercicios": 3
+  },
+  {
+   "chave": "banco_hiperextensao",
+   "exercicios": 2
+  },
+  {
+   "chave": "banco_inclinado_barra",
+   "exercicios": 1
+  },
+  {
+   "chave": "banco_inclinado_halteres",
+   "exercicios": 4
+  },
+  {
+   "chave": "banco_reto_barra",
+   "exercicios": 2
+  },
+  {
+   "chave": "banco_reto_barra_w",
+   "exercicios": 4
+  },
+  {
+   "chave": "banco_reto_halteres",
+   "exercicios": 6
+  },
+  {
+   "chave": "banco_scott",
+   "exercicios": 1
+  },
+  {
+   "chave": "banco_scott_w",
+   "exercicios": 1
+  }
+ ],
+ "polias": [
+  {
+   "chave": "crossover",
+   "exercicios": 4
+  },
+  {
+   "chave": "polia_alta",
+   "exercicios": 14
+  },
+  {
+   "chave": "polia_baixa",
+   "exercicios": 15
+  },
+  {
+   "chave": "polia_media",
+   "exercicios": 3
+  }
+ ],
+ "maquinas": [
+  {
+   "chave": "cadeira_abdutora",
+   "exercicios": 1
+  },
+  {
+   "chave": "cadeira_adutora",
+   "exercicios": 1
+  },
+  {
+   "chave": "cadeira_extensora",
+   "exercicios": 2
+  },
+  {
+   "chave": "cadeira_flexora",
+   "exercicios": 1
+  },
+  {
+   "chave": "cavalinho",
+   "exercicios": 1
+  },
+  {
+   "chave": "ghr",
+   "exercicios": 1
+  },
+  {
+   "chave": "leg_press",
+   "exercicios": 3
+  },
+  {
+   "chave": "maquina_abdominal",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_cavalinho",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_desenvolvimento",
+   "exercicios": 2
+  },
+  {
+   "chave": "maquina_encolhimento",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_flexora_pe",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_hack",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_panturrilha_pe",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_panturrilha_sentado",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_paralelas",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_remada",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_remada_alta",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_rosca",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_supino",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_supino_inclinado",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_triceps",
+   "exercicios": 1
+  },
+  {
+   "chave": "maquina_voador",
+   "exercicios": 2
+  },
+  {
+   "chave": "mesa_flexora",
+   "exercicios": 1
+  },
+  {
+   "chave": "smith",
+   "exercicios": 5
+  }
+ ],
+ "livre": [
+  {
+   "chave": "ab_wheel",
+   "exercicios": 1
+  },
+  {
+   "chave": "barra_fixa",
+   "exercicios": 3
+  },
+  {
+   "chave": "barra_fixa_elastico",
+   "exercicios": 1
+  },
+  {
+   "chave": "barra_fixa_peso",
+   "exercicios": 1
+  },
+  {
+   "chave": "elastico",
+   "exercicios": 5
+  },
+  {
+   "chave": "fitas_suspensao",
+   "exercicios": 2
+  },
+  {
+   "chave": "paralelas",
+   "exercicios": 3
+  },
+  {
+   "chave": "peso_corporal",
+   "exercicios": 16
+  }
+ ]
+}

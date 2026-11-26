@@ -11,6 +11,8 @@ Dois usuários (casal), custo recorrente zero, acesso por iPhone e Android.
 |---|---|---|
 | Distribuição | PWA instalável (tela de início) | App Store exige US$ 99/ano; PWA roda em iOS e Android sem custo |
 | Dados | Supabase free (Postgres + Auth + RLS) | Sync entre os dois celulares, histórico protegido de troca de aparelho |
+| Contas | Cadastro no app (e-mail/senha ou Google), restrito a uma lista de e-mails autorizados (`allowed_emails`) | Os dois criam a própria conta sem mexer no painel; ninguém de fora consegue se cadastrar |
+| Hospedagem | Cloudflare Worker só com arquivos estáticos (`wrangler.jsonc`) | Formato que o Cloudflare recomenda no lugar do Pages; gratuito; mesmo formato do `hidrata-app` |
 | Fonte de verdade local | IndexedDB (Dexie) + fila de sincronização | Academia tem sinal ruim; treino nunca pode travar por rede |
 | Motor de progressão | TypeScript puro, determinístico | Zero custo de API, roda offline, testável, resultado explicável |
 | Nutrição | Estimativa de referência (sem diário alimentar) | Calcula meta e ajusta pela curva real de peso |
@@ -34,21 +36,40 @@ Quatro mecanismos, nesta ordem de importância:
 ## 3. Stack
 
 ```
-Frontend    React 19 + TypeScript + Vite + Tailwind CSS
+Frontend    React 19 + TypeScript + Vite + Tailwind CSS v4 (@tailwindcss/vite)
 PWA         vite-plugin-pwa (Workbox) — service worker, manifest, offline shell
-Local       Dexie (IndexedDB) — fonte de verdade durante o treino
-Backend     Supabase: Auth (e-mail/senha), Postgres, Row Level Security
+Ícones      @vite-pwa/assets-generator — PNGs gerados de public/icon.svg em dev
+Local       Dexie + dexie-react-hooks (IndexedDB) — fonte de verdade durante o treino
+Backend     Supabase: Auth (e-mail/senha + Google OAuth), Postgres, Row Level Security
 Gráficos    Recharts
 Testes      Vitest (motor), Playwright (fluxo crítico de sessão)
-Hospedagem  Cloudflare Pages (ou Vercel) — plano gratuito, deploy por git push
+Hospedagem  Cloudflare Worker de arquivos estáticos — plano gratuito, `npm run deploy` (wrangler)
 Catálogo    free-exercise-db (Unlicense, domínio público) curado e traduzido
 ```
+
+**Endereços:** app em https://treino.raphaleskbom.workers.dev · Supabase `pndebjmytaasrlbtdfpb` (região us-west-2, Oregon) · código em `Onive4/personal-trainer-app`.
+
+### Permissões do banco (regra para toda tabela nova)
+
+O projeto Supabase não concede acesso automático da API às tabelas novas do schema `public`. Cada migração que cria tabela declara, explicitamente, os `grant` de `anon` e `authenticated` (por padrão: nada para `anon`; para `authenticated`, só as operações que o app usa, e `update` restrito às colunas editáveis). A RLS filtra as linhas por cima disso. Funções de trigger têm `execute` revogado de `anon` e `authenticated`. Depois de cada migração, rodar o verificador de segurança do Supabase.
+
+### Limites dos planos gratuitos usados
+
+| Serviço | Limite relevante | Situação no projeto |
+|---|---|---|
+| Supabase Free | 500 MB de banco, 50 mil usuários ativos/mês, pausa após 7 dias sem atividade | Dois usuários, só texto e números; pausa evitada pelo keep-alive |
+| Supabase Auth (SMTP padrão) | Envia e-mail só para membros da organização, com limite baixo por hora | "Confirm email" desligado; a lista `allowed_emails` faz o papel de proteção |
+| Supabase Auth (senhas vazadas) | Checagem contra senhas vazadas não está disponível no plano Free | Fica desligada; aviso do verificador aceito |
+| Google OAuth (Google Cloud) | Gratuito; tela de consentimento em modo "Teste" aceita até 100 usuários de teste | Os dois e-mails cadastrados como usuários de teste; só escopos de e-mail e perfil |
+| Cloudflare Workers Free | Requisições a arquivos estáticos são gratuitas e ilimitadas | App só de arquivos estáticos, sem código de servidor |
+| GitHub Actions | Repositório público ilimitado; privado 2.000 min/mês. Cron é desativado após 60 dias sem commit | Keep-alive usa segundos por semana; reativar o workflow se o GitHub desligar |
 
 ### Riscos da infraestrutura gratuita e mitigação
 
 | Risco | Mitigação |
 |---|---|
-| Projeto Supabase free pausa após 7 dias sem atividade no banco | GitHub Actions com cron semanal fazendo um SELECT trivial (gratuito) |
+| Projeto Supabase free pausa após 7 dias sem atividade no banco | GitHub Actions com cron duas vezes por semana chamando a função `keep_alive()` (gratuito) |
+| Login com Google dentro do PWA instalado no iOS pode voltar para o Safari em vez do app | E-mail e senha disponíveis como alternativa; validar no iPhone no fechamento do M0 |
 | iOS descarta IndexedDB após ~7 dias de inatividade se não instalado na tela de início | Tela de onboarding obrigando a instalação + sync na nuvem como backup real |
 | Limite de 500 MB do banco | Dados são texto e números; o uso de dois usuários por anos não chega perto. Imagens de exercício vêm por URL do GitHub, não do nosso storage |
 | PWA no iOS não tem prompt automático de instalação | Tela de instruções ilustrada no primeiro acesso (Compartilhar → Adicionar à Tela de Início) |
@@ -58,7 +79,10 @@ Catálogo    free-exercise-db (Unlicense, domínio público) curado e traduzido
 ## 4. Modelo de dados
 
 ```
-profiles            id, nome, sexo, data_nascimento, altura_cm, created_at
+allowed_emails      email, created_at   (sem acesso pela API; trigger em auth.users
+                    recusa cadastro de e-mail fora da lista)
+profiles            id (= auth.users.id), nome, sexo, data_nascimento, altura_cm,
+                    compartilhar_progresso, created_at   (criado por trigger no cadastro)
 anamneses           id, profile_id, versao, respostas (jsonb), clearance_status,
                     constraints (text[]), nivel, objetivo, data
 measurements        id, profile_id, data, peso_kg, pescoco, cintura, quadril,
@@ -276,7 +300,7 @@ mulheres: 495 / (1,29579 − 0,35004 × log10(cintura + quadril − pescoço) + 
 
 | Tela | Conteúdo |
 |---|---|
-| Onboarding | Instalação na tela de início, criação de conta, escolha de perfil |
+| Onboarding | Instalação na tela de início, criação de conta (e-mail/senha ou Google) e login; cada conta é um perfil |
 | Anamnese | Questionário em etapas, com progresso salvo |
 | Medidas | Entrada de peso e circunferências, histórico, gráficos |
 | Academias | Cadastro de academias e checklist de equipamentos, seleção da ativa |
@@ -305,7 +329,7 @@ A tela de sessão é usada de pé, com uma mão, celular suado, às vezes sem si
 Cada um termina funcionando e implantado. Nada de integração acumulada para o fim.
 
 **M0 — Fundação**
-Scaffold Vite + React + TS + Tailwind; PWA com manifest, ícones e service worker; Dexie configurado; Supabase com Auth e RLS; dois perfis; deploy no Cloudflare Pages; GitHub Action de keep-alive.
+Scaffold Vite + React + TS + Tailwind; PWA com manifest, ícones e service worker; Dexie configurado; Supabase com Auth e RLS; dois perfis; deploy no Cloudflare (Worker de arquivos estáticos); GitHub Action de keep-alive.
 *Pronto quando:* instala na tela de início do iPhone e do Android, abre offline, login funciona.
 
 **M1 — Anamnese e perfil**

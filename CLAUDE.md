@@ -16,7 +16,9 @@ PWA de treino personalizado para dois usuários (um casal). Faz o papel de perso
 
 ## Stack
 
-React 19 · TypeScript · Vite · Tailwind · vite-plugin-pwa · Dexie · Supabase (Auth + Postgres + RLS) · Recharts · Vitest · Playwright · Cloudflare Pages.
+React 19 · TypeScript · Vite · Tailwind · vite-plugin-pwa · Dexie · Supabase (Auth + Postgres + RLS) · Recharts · Vitest · Playwright · Cloudflare Workers (arquivos estáticos, `npm run deploy`).
+
+Toda migração que cria tabela declara os `grant` de `anon` e `authenticated` explicitamente — o projeto Supabase não concede acesso da API sozinho (ver "Permissões do banco" na especificação).
 
 ## Estrutura
 

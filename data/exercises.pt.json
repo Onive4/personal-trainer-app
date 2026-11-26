@@ -1,0 +1,4836 @@
+[
+ {
+  "slug": "Reverse_Crunch",
+  "nome_pt": "Abdominal infra (reverso)",
+  "nome_en": "Reverse Crunch",
+  "padrao_movimento": "flexao_tronco",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Deitado, leve os joelhos em direção ao peito elevando o quadril.",
+   "O movimento é de enrolar a pelve, não de balançar as pernas.",
+   "Desça controlando sem deixar os pés tocarem o chão."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Crunch/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Crunch/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Ab_Crunch_Machine",
+  "nome_pt": "Abdominal na máquina",
+  "nome_en": "Ab Crunch Machine",
+  "padrao_movimento": "flexao_tronco",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [],
+  "equipamento": "maquina_abdominal",
+  "nivel": "intermediario",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Ajuste o apoio para alinhar o tronco ao eixo.",
+   "Permite progressão de carga objetiva, diferente do crunch no solo.",
+   "Enrole a coluna, não apenas empurre com os braços."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ab_Crunch_Machine/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ab_Crunch_Machine/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Cable_Crunch",
+  "nome_pt": "Abdominal na polia alta",
+  "nome_en": "Cable Crunch",
+  "padrao_movimento": "flexao_tronco",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [],
+  "equipamento": "polia_alta",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "De joelhos de frente para a polia, corda ao lado da cabeça.",
+   "Enrole a coluna levando o cotovelo ao joelho.",
+   "Quadril parado: não transforme em dobradiça."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crunch/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crunch/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Ab_Roller",
+  "nome_pt": "Abdominal na roda (ab wheel)",
+  "nome_en": "Ab Roller",
+  "padrao_movimento": "anti_extensao",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [
+   "ombros"
+  ],
+  "equipamento": "ab_wheel",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Comece de joelhos, quadril e costela alinhados.",
+   "Role à frente só até onde conseguir manter a lombar neutra.",
+   "Amplitude pequena e correta vale mais que longa e torta."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ab_Roller/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ab_Roller/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Russian_Twist",
+  "nome_pt": "Abdominal russo",
+  "nome_en": "Russian Twist",
+  "padrao_movimento": "anti_rotacao",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [
+   "lombar"
+  ],
+  "equipamento": "peso_corporal",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Sentado, tronco inclinado para trás, pés no chão ou elevados.",
+   "Gire o tronco levando as mãos ao lado do quadril.",
+   "Pode segurar anilha ou halter para progredir."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Russian_Twist/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Russian_Twist/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Crunches",
+  "nome_pt": "Abdominal supra (crunch)",
+  "nome_en": "Crunches",
+  "padrao_movimento": "flexao_tronco",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Mãos ao lado da cabeça, sem puxar o pescoço.",
+   "Eleve só as escápulas do chão.",
+   "Movimento curto e contraído, sem balanço."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Crunches/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Crunches/1.jpg"
+  ],
+  "contraindicacoes": [
+   "cervical_sensivel",
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Air_Bike",
+  "nome_pt": "Bicicleta no solo",
+  "nome_en": "Air Bike",
+  "padrao_movimento": "flexao_tronco",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Cotovelo em direção ao joelho oposto, alternando.",
+   "Sem puxar o pescoço com as mãos.",
+   "Ritmo controlado, não acelerado."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Air_Bike/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Air_Bike/1.jpg"
+  ],
+  "contraindicacoes": [
+   "cervical_sensivel"
+  ]
+ },
+ {
+  "slug": "Dead_Bug",
+  "nome_pt": "Dead bug",
+  "nome_en": "Dead Bug",
+  "padrao_movimento": "anti_extensao",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Deitado, lombar colada no chão durante todo o exercício.",
+   "Estenda braço e perna opostos devagar.",
+   "Se a lombar descolar, reduza a amplitude."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dead_Bug/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dead_Bug/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Knee_Hip_Raise_On_Parallel_Bars",
+  "nome_pt": "Elevação de pernas nas paralelas",
+  "nome_en": "Knee/Hip Raise On Parallel Bars",
+  "padrao_movimento": "flexao_tronco",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [],
+  "equipamento": "paralelas",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Apoiado nos antebraços nas paralelas, corpo pendurado.",
+   "Eleve os joelhos ao peito enrolando a pelve.",
+   "Sem balanço: desça controlando."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Knee_Hip_Raise_On_Parallel_Bars/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Knee_Hip_Raise_On_Parallel_Bars/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Flat_Bench_Lying_Leg_Raise",
+  "nome_pt": "Elevação de pernas no banco",
+  "nome_en": "Flat Bench Lying Leg Raise",
+  "padrao_movimento": "flexao_tronco",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [],
+  "equipamento": "banco",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Segure nas laterais do banco, pernas estendidas.",
+   "Suba até a vertical e desça até a linha do banco.",
+   "Lombar colada: se descolar, flexione mais o joelho."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flat_Bench_Lying_Leg_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flat_Bench_Lying_Leg_Raise/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Suspended_Fallout",
+  "nome_pt": "Fallout na fita de suspensão",
+  "nome_en": "Suspended Fallout",
+  "padrao_movimento": "anti_extensao",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [
+   "peito",
+   "lombar",
+   "ombros"
+  ],
+  "equipamento": "fitas_suspensao",
+  "nivel": "intermediario",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Em pé, fitas nas mãos, incline o corpo à frente.",
+   "Braços estendidos sem perder o alinhamento do tronco.",
+   "Quanto mais horizontal, mais difícil."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Suspended_Fallout/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Suspended_Fallout/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Standing_Cable_Wood_Chop",
+  "nome_pt": "Lenhador na polia",
+  "nome_en": "Standing Cable Wood Chop",
+  "padrao_movimento": "anti_rotacao",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [
+   "ombros"
+  ],
+  "equipamento": "polia_alta",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Polia alta, puxe em diagonal da altura do ombro ao quadril oposto.",
+   "Rotação vem do quadril e do tronco juntos.",
+   "Pés firmes, sem girar o joelho."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Wood_Chop/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Wood_Chop/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Pallof_Press",
+  "nome_pt": "Pallof press",
+  "nome_en": "Pallof Press",
+  "padrao_movimento": "anti_rotacao",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [
+   "peito",
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "polia_media",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "De lado para a polia, manopla na altura do peito.",
+   "Estenda os braços à frente resistindo à rotação do tronco.",
+   "Quanto mais longe da polia, maior a exigência."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Pallof_Press_With_Rotation",
+  "nome_pt": "Pallof press com rotação",
+  "nome_en": "Pallof Press With Rotation",
+  "padrao_movimento": "anti_rotacao",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [
+   "peito",
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "polia_media",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Mesma montagem do Pallof, mas gire o tronco no fim.",
+   "Movimento lento e controlado.",
+   "Versão mais avançada: domine o Pallof estático primeiro."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press_With_Rotation/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press_With_Rotation/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Plank",
+  "nome_pt": "Prancha",
+  "nome_en": "Plank",
+  "padrao_movimento": "anti_extensao",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Apoio nos antebraços e pontas dos pés, corpo em linha reta.",
+   "Glúteo e abdômen contraídos: quadril nem alto nem caído.",
+   "Progrida pelo tempo sob tensão, não pela amplitude."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_apoio_punho"
+  ]
+ },
+ {
+  "slug": "Side_Bridge",
+  "nome_pt": "Prancha lateral",
+  "nome_en": "Side Bridge",
+  "padrao_movimento": "anti_extensao",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [
+   "ombros"
+  ],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Apoio em um antebraço, corpo alinhado de lado.",
+   "Quadril elevado, sem deixar cair para frente ou para trás.",
+   "Mesmo tempo nos dois lados."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Bridge/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Bridge/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Barbell_Ab_Rollout",
+  "nome_pt": "Rollout com barra",
+  "nome_en": "Barbell Ab Rollout",
+  "padrao_movimento": "anti_extensao",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [
+   "lombar",
+   "ombros"
+  ],
+  "equipamento": "barra_livre",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra com anilhas pequenas, de joelhos no chão.",
+   "Role à frente mantendo o abdômen contraído.",
+   "Volte puxando com o abdômen, não com o quadril."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Ab_Rollout/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Ab_Rollout/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Cable_Russian_Twists",
+  "nome_pt": "Rotação de tronco na polia",
+  "nome_en": "Cable Russian Twists",
+  "padrao_movimento": "anti_rotacao",
+  "musculo_primario": "abdomen",
+  "musculos_secundarios": [],
+  "equipamento": "polia_media",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Braços estendidos na altura do peito, gire o tronco.",
+   "Quadril estável: o movimento é do tronco.",
+   "Carga leve e controle total."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Russian_Twists/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Russian_Twists/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Thigh_Abductor",
+  "nome_pt": "Cadeira abdutora",
+  "nome_en": "Thigh Abductor",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "abdutores",
+  "musculos_secundarios": [
+   "gluteos"
+  ],
+  "equipamento": "cadeira_abdutora",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Afaste as pernas contra a resistência.",
+   "Tronco ereto, sem jogar para trás para ganhar amplitude.",
+   "Segure meio segundo na abertura máxima."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Abductor/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Abductor/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Monster_Walk",
+  "nome_pt": "Caminhada lateral com elástico",
+  "nome_en": "Monster Walk",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "abdutores",
+  "musculos_secundarios": [],
+  "equipamento": "elastico",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Elástico acima dos joelhos ou nos tornozelos.",
+   "Passos laterais mantendo tensão constante no elástico.",
+   "Boa para ativar glúteo médio antes de treinar perna."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Monster_Walk/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Monster_Walk/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Thigh_Adductor",
+  "nome_pt": "Cadeira adutora",
+  "nome_en": "Thigh Adductor",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "adutores",
+  "musculos_secundarios": [
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "cadeira_adutora",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Costas apoiada, junte as pernas contra a resistência.",
+   "Volte controlando até sentir o alongamento.",
+   "Amplitude confortável, sem forçar a virilha."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Adductor/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Adductor/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Farmers_Walk",
+  "nome_pt": "Caminhada do fazendeiro",
+  "nome_en": "Farmer's Walk",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "antebraco",
+  "musculos_secundarios": [
+   "abdomen",
+   "gluteos",
+   "posterior_de_coxa",
+   "lombar",
+   "quadriceps",
+   "trapezio"
+  ],
+  "equipamento": "halteres",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Um halter pesado em cada mão, ombro longe da orelha.",
+   "Caminhe em linha reta com o tronco ereto.",
+   "Progrida por distância ou por tempo sob carga."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Farmers_Walk/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Farmers_Walk/1.jpg"
+  ],
+  "contraindicacoes": [
+   "cervical_sensivel"
+  ]
+ },
+ {
+  "slug": "Seated_Palm-Up_Barbell_Wrist_Curl",
+  "nome_pt": "Rosca de punho com barra",
+  "nome_en": "Seated Palm-Up Barbell Wrist Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "antebraco",
+  "musculos_secundarios": [],
+  "equipamento": "banco_reto_barra_w",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Antebraços apoiados na coxa, palmas para cima.",
+   "Deixe o punho estender e enrole a barra de volta.",
+   "Amplitude pequena, repetições altas."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Palm-Up_Barbell_Wrist_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Palm-Up_Barbell_Wrist_Curl/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_extensao_punho"
+  ]
+ },
+ {
+  "slug": "Palms-Down_Wrist_Curl_Over_A_Bench",
+  "nome_pt": "Rosca de punho inversa",
+  "nome_en": "Palms-Down Wrist Curl Over A Bench",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "antebraco",
+  "musculos_secundarios": [],
+  "equipamento": "banco_reto_barra_w",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Antebraços no banco, palmas para baixo.",
+   "Eleve o dorso da mão contra a resistência.",
+   "Carga bem leve: o movimento é curto."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Down_Wrist_Curl_Over_A_Bench/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Down_Wrist_Curl_Over_A_Bench/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_extensao_punho"
+  ]
+ },
+ {
+  "slug": "Preacher_Curl",
+  "nome_pt": "Rosca Scott",
+  "nome_en": "Preacher Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [],
+  "equipamento": "banco_scott",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Axila encostada no topo do apoio inclinado.",
+   "Desça até quase esticar, sem relaxar a tensão.",
+   "O apoio impede qualquer compensação de tronco."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Preacher_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Preacher_Curl/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_extensao_punho"
+  ]
+ },
+ {
+  "slug": "Cable_Preacher_Curl",
+  "nome_pt": "Rosca Scott na polia",
+  "nome_en": "Cable Preacher Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [
+   "antebraco"
+  ],
+  "equipamento": "polia_baixa",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Banco Scott posicionado de frente para a polia baixa.",
+   "Combina apoio do Scott com tensão constante do cabo.",
+   "Desça controlando até quase a extensão total."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Preacher_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Preacher_Curl/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Zottman_Curl",
+  "nome_pt": "Rosca Zottman",
+  "nome_en": "Zottman Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [
+   "antebraco"
+  ],
+  "equipamento": "halteres",
+  "nivel": "intermediario",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Suba com pegada supinada, gire no topo e desça pronada.",
+   "A fase negativa pronada é o diferencial.",
+   "Carga moderada: a descida é a parte difícil."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Zottman_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Zottman_Curl/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Dumbbell_Alternate_Bicep_Curl",
+  "nome_pt": "Rosca alternada com halteres",
+  "nome_en": "Dumbbell Alternate Bicep Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [
+   "antebraco"
+  ],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Um braço por vez, o outro permanece estendido.",
+   "Permite mais foco e carga por braço.",
+   "Tronco parado: sem impulso de ombro."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Alternate_Bicep_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Alternate_Bicep_Curl/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Concentration_Curls",
+  "nome_pt": "Rosca concentrada",
+  "nome_en": "Concentration Curls",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [
+   "antebraco"
+  ],
+  "equipamento": "banco_halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Sentado, cotovelo apoiado na parte interna da coxa.",
+   "Suba até a contração máxima e segure um instante.",
+   "Zero impulso: é o exercício mais estrito de bíceps."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Concentration_Curls/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Concentration_Curls/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Barbell_Curl",
+  "nome_pt": "Rosca direta com barra",
+  "nome_en": "Barbell Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [
+   "antebraco"
+  ],
+  "equipamento": "barra_livre",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Cotovelo colado ao tronco, pegada na largura do ombro.",
+   "Suba sem jogar o quadril à frente.",
+   "Desça até esticar o braço, controlando."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Curl/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_extensao_punho"
+  ]
+ },
+ {
+  "slug": "Dumbbell_Bicep_Curl",
+  "nome_pt": "Rosca direta com halteres",
+  "nome_en": "Dumbbell Bicep Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [
+   "antebraco"
+  ],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Palmas para frente, cotovelo fixo ao lado do tronco.",
+   "Suba os dois ao mesmo tempo, sem balanço.",
+   "Gire levemente o punho para fora no topo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bicep_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bicep_Curl/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "EZ-Bar_Curl",
+  "nome_pt": "Rosca direta na barra W",
+  "nome_en": "EZ-Bar Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [],
+  "equipamento": "barra_w",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada angulada da barra W alivia o punho.",
+   "Mesma execução da rosca direta.",
+   "Primeira escolha para quem sente o punho na barra reta."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/EZ-Bar_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/EZ-Bar_Curl/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Standing_Biceps_Cable_Curl",
+  "nome_pt": "Rosca direta na polia",
+  "nome_en": "Standing Biceps Cable Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [],
+  "equipamento": "polia_baixa",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra reta ou W na polia baixa.",
+   "Tensão constante, sem ponto de alívio no fim.",
+   "Cotovelo fixo ao lado do tronco."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Cable_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Cable_Curl/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Reverse_Barbell_Curl",
+  "nome_pt": "Rosca inversa com barra",
+  "nome_en": "Reverse Barbell Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [
+   "antebraco"
+  ],
+  "equipamento": "barra_w",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada pronada, palmas para baixo.",
+   "Carga bem menor que na rosca normal.",
+   "Trabalha antebraço e braquiorradial."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Barbell_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Barbell_Curl/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_extensao_punho"
+  ]
+ },
+ {
+  "slug": "Hammer_Curls",
+  "nome_pt": "Rosca martelo",
+  "nome_en": "Hammer Curls",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada neutra, polegar para cima, durante todo o movimento.",
+   "Trabalha braquial e antebraço junto com o bíceps.",
+   "Cotovelo fixo ao lado do corpo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Curls/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Curls/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Cable_Hammer_Curls_-_Rope_Attachment",
+  "nome_pt": "Rosca martelo na corda",
+  "nome_en": "Cable Hammer Curls - Rope Attachment",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [],
+  "equipamento": "polia_baixa",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Corda na polia baixa, pegada neutra.",
+   "Suba mantendo a corda paralela ao chão.",
+   "Boa para braquial com tensão contínua."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Hammer_Curls_-_Rope_Attachment/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Hammer_Curls_-_Rope_Attachment/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Machine_Bicep_Curl",
+  "nome_pt": "Rosca na máquina",
+  "nome_en": "Machine Bicep Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [],
+  "equipamento": "maquina_rosca",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Ajuste o assento para o cotovelo alinhar com o eixo.",
+   "Trajetória guiada: dá para falhar com segurança.",
+   "Amplitude completa, sem bater os pesos."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bicep_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bicep_Curl/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Incline_Dumbbell_Curl",
+  "nome_pt": "Rosca no banco inclinado",
+  "nome_en": "Incline Dumbbell Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [],
+  "equipamento": "banco_inclinado_halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Banco a 45 graus, braços pendurados atrás do tronco.",
+   "Posição alongada aumenta o estímulo na cabeça longa.",
+   "Carga menor que na rosca em pé."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Curl/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Spider_Curl",
+  "nome_pt": "Rosca spider",
+  "nome_en": "Spider Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "biceps",
+  "musculos_secundarios": [],
+  "equipamento": "banco_scott_w",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Peito apoiado no lado inclinado do banco Scott.",
+   "Braços pendurados na vertical.",
+   "Pico de tensão na parte final da flexão."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Spider_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Spider_Curl/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Band_Assisted_Pull-Up",
+  "nome_pt": "Barra fixa assistida com elástico",
+  "nome_en": "Band Assisted Pull-Up",
+  "padrao_movimento": "puxar_vertical",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [
+   "abdomen",
+   "antebraco",
+   "dorsal_medio"
+  ],
+  "equipamento": "barra_fixa_elastico",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Elástico na barra e o joelho ou pé apoiado nele.",
+   "Elástico mais grosso dá mais ajuda; vá reduzindo com o tempo.",
+   "Mantenha a mesma técnica da barra livre."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Band_Assisted_Pull-Up/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Band_Assisted_Pull-Up/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Weighted_Pull_Ups",
+  "nome_pt": "Barra fixa com peso",
+  "nome_en": "Weighted Pull Ups",
+  "padrao_movimento": "puxar_vertical",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsal_medio"
+  ],
+  "equipamento": "barra_fixa_peso",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Cinto de lastro ou halter entre os pés.",
+   "Só adicione carga quando fizer 10 repetições limpas sem peso.",
+   "Amplitude completa antes de aumentar o peso."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Weighted_Pull_Ups/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Weighted_Pull_Ups/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "V-Bar_Pullup",
+  "nome_pt": "Barra fixa com triângulo",
+  "nome_en": "V-Bar Pullup",
+  "padrao_movimento": "puxar_vertical",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsal_medio",
+   "ombros"
+  ],
+  "equipamento": "barra_fixa",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada neutra no triângulo, mãos próximas.",
+   "Puxe levando o esterno ao triângulo.",
+   "Pegada neutra costuma incomodar menos o ombro."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pullup/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pullup/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Pullups",
+  "nome_pt": "Barra fixa pegada pronada",
+  "nome_en": "Pullups",
+  "padrao_movimento": "puxar_vertical",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsal_medio"
+  ],
+  "equipamento": "barra_fixa",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada um pouco mais larga que o ombro, palmas para frente.",
+   "Puxe o peito em direção à barra, não o queixo.",
+   "Desça até os braços esticarem, sem relaxar o ombro no fim."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pullups/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pullups/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Chin-Up",
+  "nome_pt": "Barra fixa pegada supinada",
+  "nome_en": "Chin-Up",
+  "padrao_movimento": "puxar_vertical",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [
+   "biceps",
+   "antebraco",
+   "dorsal_medio"
+  ],
+  "equipamento": "barra_fixa",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Palmas viradas para você, pegada na largura do ombro.",
+   "Mais participação do bíceps que na pronada.",
+   "Evite balançar as pernas para ganhar impulso."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chin-Up/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chin-Up/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Straight-Arm_Pulldown",
+  "nome_pt": "Pulldown com braços estendidos",
+  "nome_en": "Straight-Arm Pulldown",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [],
+  "equipamento": "polia_alta",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Braços quase estendidos, cotovelo travado.",
+   "Puxe a barra até a coxa em arco, sem flexionar o cotovelo.",
+   "Isola o dorsal sem envolver o bíceps."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Pulldown/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Pulldown/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Rope_Straight-Arm_Pulldown",
+  "nome_pt": "Pulldown na corda",
+  "nome_en": "Rope Straight-Arm Pulldown",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [],
+  "equipamento": "polia_alta",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Corda permite separar as mãos no fim do movimento.",
+   "Cotovelo travado em leve flexão.",
+   "Segure a contração um segundo na coxa."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rope_Straight-Arm_Pulldown/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rope_Straight-Arm_Pulldown/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "V-Bar_Pulldown",
+  "nome_pt": "Puxada alta com triângulo",
+  "nome_en": "V-Bar Pulldown",
+  "padrao_movimento": "puxar_vertical",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsal_medio",
+   "ombros"
+  ],
+  "equipamento": "polia_alta",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada neutra, mãos próximas no triângulo.",
+   "Puxe até o triângulo encostar na parte alta do abdômen.",
+   "Boa alternativa quando a pegada pronada incomoda o punho."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pulldown/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pulldown/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Wide-Grip_Lat_Pulldown",
+  "nome_pt": "Puxada alta pegada aberta",
+  "nome_en": "Wide-Grip Lat Pulldown",
+  "padrao_movimento": "puxar_vertical",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsal_medio",
+   "ombros"
+  ],
+  "equipamento": "polia_alta",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Coxas travadas no apoio, tronco levemente para trás.",
+   "Puxe a barra até a clavícula, cotovelo descendo junto ao corpo.",
+   "Suba controlando, deixando a escápula subir no fim."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Close-Grip_Front_Lat_Pulldown",
+  "nome_pt": "Puxada alta pegada fechada",
+  "nome_en": "Close-Grip Front Lat Pulldown",
+  "padrao_movimento": "puxar_vertical",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsal_medio",
+   "ombros"
+  ],
+  "equipamento": "polia_alta",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada na largura dos ombros ou menos.",
+   "Leve a barra ao peito, peito estufado.",
+   "Amplitude maior que na pegada aberta."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Front_Lat_Pulldown/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Front_Lat_Pulldown/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Underhand_Cable_Pulldowns",
+  "nome_pt": "Puxada alta supinada",
+  "nome_en": "Underhand Cable Pulldowns",
+  "padrao_movimento": "puxar_vertical",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsal_medio",
+   "ombros"
+  ],
+  "equipamento": "polia_alta",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Palmas viradas para você, mãos na largura do ombro.",
+   "Cotovelo desce rente ao tronco, até a barra tocar o peito.",
+   "Evite inclinar muito o tronco para trás."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Underhand_Cable_Pulldowns/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Underhand_Cable_Pulldowns/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "One_Arm_Lat_Pulldown",
+  "nome_pt": "Puxada alta unilateral",
+  "nome_en": "One Arm Lat Pulldown",
+  "padrao_movimento": "puxar_vertical",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsal_medio"
+  ],
+  "equipamento": "polia_alta",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Manopla simples, um braço por vez.",
+   "Permite amplitude maior e corrige diferença entre os lados.",
+   "Tronco estável: o movimento é só do braço."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Lat_Pulldown/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Lat_Pulldown/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Leverage_Iso_Row",
+  "nome_pt": "Remada articulada na máquina",
+  "nome_en": "Leverage Iso Row",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsal_medio"
+  ],
+  "equipamento": "maquina_remada",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Peito no apoio, ajuste o assento para o cotovelo passar rente ao tronco.",
+   "Dá para fazer unilateral alternando os braços.",
+   "Segure meio segundo na contração."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Iso_Row/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Iso_Row/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Elevated_Cable_Rows",
+  "nome_pt": "Remada na polia com apoio elevado",
+  "nome_en": "Elevated Cable Rows",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsais",
+  "musculos_secundarios": [
+   "dorsal_medio",
+   "trapezio"
+  ],
+  "equipamento": "polia_baixa",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pés elevados no apoio, tronco firme.",
+   "Puxe ao abdômen mantendo a coluna neutra.",
+   "Alternativa quando a remada baixa tradicional está ocupada."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elevated_Cable_Rows/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elevated_Cable_Rows/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Leverage_High_Row",
+  "nome_pt": "Remada alta na máquina",
+  "nome_en": "Leverage High Row",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "dorsais"
+  ],
+  "equipamento": "maquina_remada_alta",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Peito apoiado, pegada pronada ou neutra.",
+   "Puxe em diagonal, cotovelo abrindo um pouco.",
+   "Ênfase na parte alta das costas."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_High_Row/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_High_Row/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Seated_Cable_Rows",
+  "nome_pt": "Remada baixa sentado",
+  "nome_en": "Seated Cable Rows",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsais",
+   "ombros"
+  ],
+  "equipamento": "polia_baixa",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Joelho levemente flexionado, coluna neutra.",
+   "Puxe o triângulo ao abdômen, escápulas se aproximando.",
+   "Volte controlando, sem deixar o peso puxar o tronco."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Seated_One-arm_Cable_Pulley_Rows",
+  "nome_pt": "Remada baixa unilateral",
+  "nome_en": "Seated One-arm Cable Pulley Rows",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsais",
+   "trapezio"
+  ],
+  "equipamento": "polia_baixa",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Manopla simples, um lado por vez.",
+   "Permite rotação natural do tronco no fim da puxada.",
+   "Útil para equilibrar diferença entre os lados."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-arm_Cable_Pulley_Rows/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-arm_Cable_Pulley_Rows/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "T-Bar_Row_with_Handle",
+  "nome_pt": "Remada cavalinho",
+  "nome_en": "T-Bar Row with Handle",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsais"
+  ],
+  "equipamento": "cavalinho",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pés firmes nas laterais, peito aberto, coluna neutra.",
+   "Puxe o peso ao abdômen e segure meio segundo.",
+   "Não use o tronco como alavanca para subir o peso."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/T-Bar_Row_with_Handle/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/T-Bar_Row_with_Handle/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Lying_T-Bar_Row",
+  "nome_pt": "Remada cavalinho deitado na máquina",
+  "nome_en": "Lying T-Bar Row",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsais"
+  ],
+  "equipamento": "maquina_cavalinho",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Deitado de peito no apoio inclinado.",
+   "Zero carga na lombar: boa opção para quem tem restrição.",
+   "Puxe até a barra encostar no apoio."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_T-Bar_Row/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_T-Bar_Row/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Bent_Over_Barbell_Row",
+  "nome_pt": "Remada curvada com barra",
+  "nome_en": "Bent Over Barbell Row",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsais",
+   "ombros"
+  ],
+  "equipamento": "barra_livre",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Tronco a cerca de 45 graus, coluna neutra, joelho levemente flexionado.",
+   "Puxe a barra ao umbigo, cotovelo rente ao corpo.",
+   "Se a lombar arredondar, reduza a carga."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Barbell_Row/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Barbell_Row/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Bent_Over_Two-Dumbbell_Row",
+  "nome_pt": "Remada curvada com halteres",
+  "nome_en": "Bent Over Two-Dumbbell Row",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsais",
+   "ombros"
+  ],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Tronco inclinado a 45 graus, coluna neutra.",
+   "Puxe os dois halteres ao quadril ao mesmo tempo.",
+   "Ombros longe das orelhas durante todo o movimento."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Dumbbell_Row/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Dumbbell_Row/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Smith_Machine_Bent_Over_Row",
+  "nome_pt": "Remada curvada no Smith",
+  "nome_en": "Smith Machine Bent Over Row",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsais",
+   "ombros"
+  ],
+  "equipamento": "smith",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Trajetória guiada ajuda quem está aprendendo o movimento.",
+   "Posicione os pés para a barra subir rente ao corpo.",
+   "Coluna neutra: a guia não protege a lombar."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Bent_Over_Row/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Bent_Over_Row/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Reverse_Grip_Bent-Over_Rows",
+  "nome_pt": "Remada curvada supinada",
+  "nome_en": "Reverse Grip Bent-Over Rows",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsais",
+   "ombros"
+  ],
+  "equipamento": "barra_livre",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada supinada na largura do ombro.",
+   "Puxe a barra na direção do quadril, não do peito.",
+   "Mais ênfase no dorsal baixo e no bíceps."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Grip_Bent-Over_Rows/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Grip_Bent-Over_Rows/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Bodyweight_Mid_Row",
+  "nome_pt": "Remada invertida na barra",
+  "nome_en": "Bodyweight Mid Row",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsais"
+  ],
+  "equipamento": "barra_baixa",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra na altura do quadril, corpo esticado embaixo dela.",
+   "Pés mais à frente deixa mais difícil; joelho flexionado facilita.",
+   "Peito encosta na barra no fim da puxada."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bodyweight_Mid_Row/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bodyweight_Mid_Row/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Inverted_Row_with_Straps",
+  "nome_pt": "Remada invertida na fita",
+  "nome_en": "Inverted Row with Straps",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsais"
+  ],
+  "equipamento": "fitas_suspensao",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Corpo em linha reta, só os pés no chão.",
+   "Quanto mais horizontal o corpo, mais difícil.",
+   "Puxe até as mãos chegarem ao lado do tronco."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Inverted_Row_with_Straps/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Inverted_Row_with_Straps/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Dumbbell_Incline_Row",
+  "nome_pt": "Remada no banco inclinado",
+  "nome_en": "Dumbbell Incline Row",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "biceps",
+   "antebraco",
+   "dorsais",
+   "ombros"
+  ],
+  "equipamento": "banco_inclinado_halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Peito apoiado no banco inclinado, pés no chão.",
+   "O apoio elimina a demanda sobre a lombar.",
+   "Puxe levando o cotovelo para trás e para cima."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Incline_Row/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Incline_Row/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "One-Arm_Dumbbell_Row",
+  "nome_pt": "Remada unilateral com halter (serrote)",
+  "nome_en": "One-Arm Dumbbell Row",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "dorsal_medio",
+  "musculos_secundarios": [
+   "biceps",
+   "dorsais",
+   "ombros"
+  ],
+  "equipamento": "halteres_banco",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Uma mão e um joelho no banco, coluna paralela ao chão.",
+   "Puxe o halter ao lado do quadril, cotovelo rente ao tronco.",
+   "Não gire o tronco para ganhar amplitude."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Dumbbell_Row/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Dumbbell_Row/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Glute_Kickback",
+  "nome_pt": "Coice de glúteo no solo",
+  "nome_en": "Glute Kickback",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "gluteos",
+  "musculos_secundarios": [
+   "posterior_de_coxa"
+  ],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Apoio em quatro, leve o calcanhar ao teto.",
+   "Lombar neutra: o movimento é do quadril.",
+   "Pode adicionar caneleira ou elástico."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Glute_Kickback/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Glute_Kickback/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Barbell_Hip_Thrust",
+  "nome_pt": "Elevação de quadril com barra",
+  "nome_en": "Barbell Hip Thrust",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "gluteos",
+  "musculos_secundarios": [
+   "panturrilha",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "barra_banco",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Costas apoiadas no banco, barra sobre o quadril com proteção.",
+   "Suba até o tronco ficar paralelo ao chão e aperte o glúteo.",
+   "Costela baixa: não force a lombar para ganhar altura."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hip_Thrust/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hip_Thrust/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Hip_Extension_with_Bands",
+  "nome_pt": "Extensão de quadril com elástico",
+  "nome_en": "Hip Extension with Bands",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "gluteos",
+  "musculos_secundarios": [
+   "posterior_de_coxa"
+  ],
+  "equipamento": "elastico",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Elástico no tornozelo, apoio à frente para estabilizar.",
+   "Leve a perna para trás sem arquear a lombar.",
+   "Movimento vem do quadril, não da coluna."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hip_Extension_with_Bands/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hip_Extension_with_Bands/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "One-Legged_Cable_Kickback",
+  "nome_pt": "Glúteo na polia (coice)",
+  "nome_en": "One-Legged Cable Kickback",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "gluteos",
+  "musculos_secundarios": [
+   "posterior_de_coxa"
+  ],
+  "equipamento": "polia_baixa",
+  "nivel": "intermediario",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Caneleira na polia baixa, apoio nas mãos à frente.",
+   "Leve a perna para trás e para cima, sem girar o quadril.",
+   "Segure a contração um segundo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Legged_Cable_Kickback/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Legged_Cable_Kickback/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Butt_Lift_Bridge",
+  "nome_pt": "Ponte de glúteo",
+  "nome_en": "Butt Lift (Bridge)",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "gluteos",
+  "musculos_secundarios": [
+   "posterior_de_coxa"
+  ],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Deitado, pés próximos ao quadril.",
+   "Suba apertando o glúteo, sem empurrar com a lombar.",
+   "Boa para ativar glúteo antes do treino de perna."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Barbell_Glute_Bridge",
+  "nome_pt": "Ponte de glúteo com barra",
+  "nome_en": "Barbell Glute Bridge",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "gluteos",
+  "musculos_secundarios": [
+   "panturrilha",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "barra_livre",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Deitado no chão, barra sobre o quadril.",
+   "Amplitude menor que o hip thrust, mais fácil de montar.",
+   "Pausa de um segundo no topo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Glute_Bridge/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Glute_Bridge/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Single_Leg_Glute_Bridge",
+  "nome_pt": "Ponte de glúteo unilateral",
+  "nome_en": "Single Leg Glute Bridge",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "gluteos",
+  "musculos_secundarios": [
+   "posterior_de_coxa"
+  ],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Uma perna apoiada, a outra estendida no ar.",
+   "Suba o quadril até alinhar tronco e coxa.",
+   "Quadril nivelado: não deixe cair para um lado."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Single_Leg_Glute_Bridge/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Single_Leg_Glute_Bridge/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Pull_Through",
+  "nome_pt": "Pull through na polia",
+  "nome_en": "Pull Through",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "gluteos",
+  "musculos_secundarios": [
+   "posterior_de_coxa",
+   "lombar"
+  ],
+  "equipamento": "polia_baixa",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "De costas para a polia baixa, corda passando entre as pernas.",
+   "Empurre o quadril para trás e volte estendendo o quadril.",
+   "Ótimo para aprender a dobradiça sem carga na coluna."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pull_Through/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pull_Through/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Step-up_with_Knee_Raise",
+  "nome_pt": "Subida no banco com elevação de joelho",
+  "nome_en": "Step-up with Knee Raise",
+  "padrao_movimento": "unilateral_perna",
+  "musculo_primario": "gluteos",
+  "musculos_secundarios": [
+   "posterior_de_coxa",
+   "quadriceps"
+  ],
+  "equipamento": "banco",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Suba no banco e eleve o joelho oposto no topo.",
+   "Sem carga: trabalha equilíbrio e glúteo.",
+   "Movimento lento, sem balanço."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Step-up_with_Knee_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Step-up_with_Knee_Raise/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Hyperextensions_With_No_Hyperextension_Bench",
+  "nome_pt": "Extensão lombar no solo (superman)",
+  "nome_en": "Hyperextensions With No Hyperextension Bench",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "lombar",
+  "musculos_secundarios": [
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "peso_corporal",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Deitado de bruços, eleve tronco e pernas ao mesmo tempo.",
+   "Amplitude pequena, sem forçar a lombar.",
+   "Segure 2 segundos no topo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hyperextensions_With_No_Hyperextension_Bench/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hyperextensions_With_No_Hyperextension_Bench/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Hyperextensions_Back_Extensions",
+  "nome_pt": "Hiperextensão lombar no banco romano",
+  "nome_en": "Hyperextensions (Back Extensions)",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "lombar",
+  "musculos_secundarios": [
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "banco_hiperextensao",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Apoio na altura da crista ilíaca, não na costela.",
+   "Suba até a linha do corpo e pare: sem hiperextender.",
+   "Movimento vem do quadril, lombar estável."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hyperextensions_Back_Extensions/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hyperextensions_Back_Extensions/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Barbell_Deadlift",
+  "nome_pt": "Levantamento terra",
+  "nome_en": "Barbell Deadlift",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "lombar",
+  "musculos_secundarios": [
+   "panturrilha",
+   "antebraco",
+   "gluteos",
+   "posterior_de_coxa",
+   "dorsais",
+   "dorsal_medio",
+   "quadriceps",
+   "trapezio"
+  ],
+  "equipamento": "barra_livre",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra sobre o meio do pé, canela quase tocando.",
+   "Peito aberto, lombar neutra, puxe empurrando o chão.",
+   "Se a lombar arredondar ao sair do chão, reduza a carga."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Deadlift/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Deadlift/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Rack_Pulls",
+  "nome_pt": "Rack pull (terra parcial)",
+  "nome_en": "Rack Pulls",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "lombar",
+  "musculos_secundarios": [
+   "antebraco",
+   "gluteos",
+   "posterior_de_coxa",
+   "trapezio"
+  ],
+  "equipamento": "barra_rack",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra nos pinos na altura do joelho ou pouco abaixo.",
+   "Amplitude reduzida permite carga maior com menos estresse lombar.",
+   "Mesma técnica do terra na parte alta do movimento."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rack_Pulls/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rack_Pulls/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial"
+  ]
+ },
+ {
+  "slug": "Band_Pull_Apart",
+  "nome_pt": "Abertura com elástico",
+  "nome_en": "Band Pull Apart",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "dorsal_medio",
+   "trapezio"
+  ],
+  "equipamento": "elastico",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Elástico na altura do peito, braços estendidos.",
+   "Abra até o elástico tocar o esterno.",
+   "Excelente no aquecimento de qualquer treino de empurrar."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Band_Pull_Apart/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Band_Pull_Apart/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Reverse_Flyes",
+  "nome_pt": "Crucifixo inverso com halteres",
+  "nome_en": "Reverse Flyes",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Tronco inclinado à frente, coluna neutra.",
+   "Abra os braços para o lado liderando com o cotovelo.",
+   "Ombro longe da orelha: não encolha o trapézio."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Flyes/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Flyes/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Reverse_Machine_Flyes",
+  "nome_pt": "Crucifixo inverso na máquina",
+  "nome_en": "Reverse Machine Flyes",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [],
+  "equipamento": "maquina_voador",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Peito apoiado, manoplas na altura do ombro.",
+   "Abra até a linha do tronco e segure meio segundo.",
+   "O voador invertido elimina a carga na lombar."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Machine_Flyes/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Machine_Flyes/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Cable_Rear_Delt_Fly",
+  "nome_pt": "Crucifixo inverso na polia",
+  "nome_en": "Cable Rear Delt Fly",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [],
+  "equipamento": "crossover",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Polias altas cruzadas, pega a manopla do lado oposto.",
+   "Abra em arco até a linha dos ombros.",
+   "Movimento amplo e sem balanço."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rear_Delt_Fly/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rear_Delt_Fly/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Arnold_Dumbbell_Press",
+  "nome_pt": "Desenvolvimento Arnold",
+  "nome_en": "Arnold Dumbbell Press",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "triceps"
+  ],
+  "equipamento": "banco_desenvolvimento_halteres",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Começa com as palmas viradas para você, na altura do peito.",
+   "Gire os punhos enquanto sobe, terminando com palmas à frente.",
+   "Carga menor que no desenvolvimento normal: a rotação exige controle."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Arnold_Dumbbell_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Arnold_Dumbbell_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca",
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Leverage_Shoulder_Press",
+  "nome_pt": "Desenvolvimento articulado na máquina",
+  "nome_en": "Leverage Shoulder Press",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "triceps"
+  ],
+  "equipamento": "maquina_desenvolvimento",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Braços independentes permitem corrigir assimetria.",
+   "Ajuste o assento antes de carregar o peso.",
+   "Amplitude até sentir o ombro, sem forçar o fim."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shoulder_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shoulder_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca"
+  ]
+ },
+ {
+  "slug": "Dumbbell_Shoulder_Press",
+  "nome_pt": "Desenvolvimento com halteres",
+  "nome_en": "Dumbbell Shoulder Press",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "triceps"
+  ],
+  "equipamento": "halteres",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Halteres na altura da orelha, cotovelo levemente à frente.",
+   "Suba juntando os halteres sem batê-los.",
+   "Não trave o cotovelo com força no topo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shoulder_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shoulder_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca"
+  ]
+ },
+ {
+  "slug": "Seated_Dumbbell_Press",
+  "nome_pt": "Desenvolvimento com halteres sentado",
+  "nome_en": "Seated Dumbbell Press",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "triceps"
+  ],
+  "equipamento": "banco_desenvolvimento_halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Costas apoiadas no banco, pés firmes.",
+   "Desça até o cotovelo passar pouco abaixo do ombro.",
+   "Punho firme, alinhado com o antebraço."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca"
+  ]
+ },
+ {
+  "slug": "Standing_Dumbbell_Press",
+  "nome_pt": "Desenvolvimento em pé com halteres",
+  "nome_en": "Standing Dumbbell Press",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "triceps"
+  ],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Abdômen firme para proteger a lombar.",
+   "Suba os dois halteres juntos, em linha com a orelha.",
+   "Pés na largura do quadril para base estável."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca",
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Standing_Military_Press",
+  "nome_pt": "Desenvolvimento militar em pé",
+  "nome_en": "Standing Military Press",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "triceps"
+  ],
+  "equipamento": "barra_livre",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pés na largura do quadril, glúteo e abdômen contraídos.",
+   "Barra sai da clavícula e sobe em linha reta.",
+   "Nada de impulso de perna: se precisar, está pesado."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Military_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Military_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca",
+   "sem_carga_axial",
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Seated_Barbell_Military_Press",
+  "nome_pt": "Desenvolvimento militar sentado com barra",
+  "nome_en": "Seated Barbell Military Press",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "triceps"
+  ],
+  "equipamento": "banco_desenvolvimento_barra",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Banco com apoio, barra descendo até o queixo.",
+   "Costela baixa: não compense arqueando a lombar.",
+   "Cabeça passa levemente à frente da barra no topo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Barbell_Military_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Barbell_Military_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca",
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Machine_Shoulder_Military_Press",
+  "nome_pt": "Desenvolvimento na máquina",
+  "nome_en": "Machine Shoulder (Military) Press",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "triceps"
+  ],
+  "equipamento": "maquina_desenvolvimento",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Assento na altura que deixa as manoplas na linha do ombro.",
+   "Costas apoiada, sem arquear para empurrar.",
+   "Boa opção para chegar perto da falha com segurança."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Shoulder_Military_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Shoulder_Military_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca"
+  ]
+ },
+ {
+  "slug": "Cable_Shoulder_Press",
+  "nome_pt": "Desenvolvimento na polia",
+  "nome_en": "Cable Shoulder Press",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "triceps"
+  ],
+  "equipamento": "polia_baixa",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Polias baixas, manoplas na altura do ombro.",
+   "Tensão constante do início ao fim do movimento.",
+   "Core firme para não inclinar o tronco."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Shoulder_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Shoulder_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca"
+  ]
+ },
+ {
+  "slug": "Dumbbell_One-Arm_Shoulder_Press",
+  "nome_pt": "Desenvolvimento unilateral com halter",
+  "nome_en": "Dumbbell One-Arm Shoulder Press",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "triceps"
+  ],
+  "equipamento": "halteres",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Um halter por vez, mão livre apoiada ou no quadril.",
+   "Não deixe o tronco inclinar para o lado oposto.",
+   "Exige mais do core que a versão bilateral."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_One-Arm_Shoulder_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_One-Arm_Shoulder_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca"
+  ]
+ },
+ {
+  "slug": "Dumbbell_Scaption",
+  "nome_pt": "Elevação em diagonal (scaption)",
+  "nome_en": "Dumbbell Scaption",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "trapezio"
+  ],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Suba os halteres em diagonal, a cerca de 30 graus da frente.",
+   "Polegar levemente para cima.",
+   "Trajetória mais amigável para o ombro que a lateral pura."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Scaption/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Scaption/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Front_Plate_Raise",
+  "nome_pt": "Elevação frontal com anilha",
+  "nome_en": "Front Plate Raise",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [],
+  "equipamento": "anilha",
+  "nivel": "intermediario",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Segure a anilha pelas laterais, como um volante.",
+   "Suba até a altura dos olhos.",
+   "Pegada neutra costuma incomodar menos o punho."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Plate_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Plate_Raise/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Front_Dumbbell_Raise",
+  "nome_pt": "Elevação frontal com halteres",
+  "nome_en": "Front Dumbbell Raise",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Suba até a altura do ombro, não acima.",
+   "Cotovelo quase estendido, punho neutro.",
+   "Alterne os braços se a lombar tender a arquear."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Dumbbell_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Dumbbell_Raise/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Front_Cable_Raise",
+  "nome_pt": "Elevação frontal na polia",
+  "nome_en": "Front Cable Raise",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [],
+  "equipamento": "polia_baixa",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Cabo passando entre as pernas, polia na posição mais baixa.",
+   "Suba à frente até a linha do ombro.",
+   "Tensão contínua, sem ponto de alívio."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Cable_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Cable_Raise/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Lateral_Raise_-_With_Bands",
+  "nome_pt": "Elevação lateral com elástico",
+  "nome_en": "Lateral Raise - With Bands",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [],
+  "equipamento": "elastico",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pise no elástico e segure as pontas ao lado do corpo.",
+   "Resistência aumenta conforme sobe.",
+   "Alternativa para treinar em casa ou aquecer o ombro."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lateral_Raise_-_With_Bands/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lateral_Raise_-_With_Bands/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Side_Lateral_Raise",
+  "nome_pt": "Elevação lateral com halteres",
+  "nome_en": "Side Lateral Raise",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Cotovelo levemente flexionado, sobe até a linha do ombro.",
+   "Lidere o movimento com o cotovelo, não com a mão.",
+   "Sem balanço de tronco: carga leve resolve melhor que peso alto."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Lateral_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Lateral_Raise/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Cable_Seated_Lateral_Raise",
+  "nome_pt": "Elevação lateral na polia",
+  "nome_en": "Cable Seated Lateral Raise",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "dorsal_medio",
+   "trapezio"
+  ],
+  "equipamento": "polia_baixa",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Polia baixa, cabo cruzando na frente do corpo.",
+   "Tensão constante inclusive no início do movimento.",
+   "Um braço por vez, tronco parado."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Seated_Lateral_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Seated_Lateral_Raise/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Seated_Side_Lateral_Raise",
+  "nome_pt": "Elevação lateral sentado",
+  "nome_en": "Seated Side Lateral Raise",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [],
+  "equipamento": "banco_halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Sentado, o tronco não consegue dar impulso.",
+   "Suba até a altura do ombro e desça controlando.",
+   "Versão mais estrita que em pé."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Side_Lateral_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Side_Lateral_Raise/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "One-Arm_Side_Laterals",
+  "nome_pt": "Elevação lateral unilateral",
+  "nome_en": "One-Arm Side Laterals",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Mão livre segurando um apoio para estabilizar.",
+   "Permite focar no lado mais fraco.",
+   "Amplitude até a linha do ombro."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Side_Laterals/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Side_Laterals/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Bent_Over_Low-Pulley_Side_Lateral",
+  "nome_pt": "Elevação posterior na polia baixa",
+  "nome_en": "Bent Over Low-Pulley Side Lateral",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "lombar",
+   "dorsal_medio",
+   "trapezio"
+  ],
+  "equipamento": "polia_baixa",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Tronco inclinado, cabo cruzando o corpo.",
+   "Abra o braço para o lado e para trás.",
+   "Carga leve: é deltoide posterior, não dorsal."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Low-Pulley_Side_Lateral/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Low-Pulley_Side_Lateral/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Face_Pull",
+  "nome_pt": "Face pull na corda",
+  "nome_en": "Face Pull",
+  "padrao_movimento": "puxar_horizontal",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "dorsal_medio"
+  ],
+  "equipamento": "polia_alta",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Corda na altura do rosto, pegada neutra.",
+   "Puxe separando as mãos, levando a corda à testa.",
+   "Termine com os cotovelos acima da linha dos punhos."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Face_Pull/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Face_Pull/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Upright_Barbell_Row",
+  "nome_pt": "Remada alta com barra",
+  "nome_en": "Upright Barbell Row",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [
+   "trapezio"
+  ],
+  "equipamento": "barra_livre",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada na largura dos ombros, não mais estreita.",
+   "Suba até a barra chegar na altura do peito, não do queixo.",
+   "Se incomodar o ombro, troque por elevação lateral."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upright_Barbell_Row/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upright_Barbell_Row/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "External_Rotation_with_Band",
+  "nome_pt": "Rotação externa com elástico",
+  "nome_en": "External Rotation with Band",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "ombros",
+  "musculos_secundarios": [],
+  "equipamento": "elastico",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Cotovelo colado ao tronco a 90 graus.",
+   "Gire o antebraço para fora mantendo o cotovelo fixo.",
+   "Carga leve: é saúde de ombro, não hipertrofia."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/External_Rotation_with_Band/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/External_Rotation_with_Band/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Standing_Barbell_Calf_Raise",
+  "nome_pt": "Panturrilha em pé com barra",
+  "nome_en": "Standing Barbell Calf Raise",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "panturrilha",
+  "musculos_secundarios": [],
+  "equipamento": "barra_rack",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra no trapézio, ponta dos pés num step.",
+   "Equilíbrio exige atenção: comece leve.",
+   "Amplitude total em cada repetição."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Barbell_Calf_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Barbell_Calf_Raise/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial"
+  ]
+ },
+ {
+  "slug": "Standing_Dumbbell_Calf_Raise",
+  "nome_pt": "Panturrilha em pé com halter",
+  "nome_en": "Standing Dumbbell Calf Raise",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "panturrilha",
+  "musculos_secundarios": [],
+  "equipamento": "halteres",
+  "nivel": "intermediario",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Halter em uma das mãos, apoio na outra.",
+   "Ponta do pé num step para ganhar amplitude.",
+   "Dá para fazer unilateral para mais carga relativa."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Calf_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Calf_Raise/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Standing_Calf_Raises",
+  "nome_pt": "Panturrilha em pé na máquina",
+  "nome_en": "Standing Calf Raises",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "panturrilha",
+  "musculos_secundarios": [],
+  "equipamento": "maquina_panturrilha_pe",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Ponta do pé na plataforma, calcanhar livre.",
+   "Desça até sentir alongar e suba até a extensão total.",
+   "Pausa de um segundo em cima e embaixo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Smith_Machine_Calf_Raise",
+  "nome_pt": "Panturrilha no Smith",
+  "nome_en": "Smith Machine Calf Raise",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "panturrilha",
+  "musculos_secundarios": [],
+  "equipamento": "smith",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Guia resolve o equilíbrio e permite carga alta.",
+   "Step ou anilha sob a ponta dos pés.",
+   "Pausa no alongamento máximo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Calf_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Calf_Raise/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial"
+  ]
+ },
+ {
+  "slug": "Calf_Press_On_The_Leg_Press_Machine",
+  "nome_pt": "Panturrilha no leg press",
+  "nome_en": "Calf Press On The Leg Press Machine",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "panturrilha",
+  "musculos_secundarios": [],
+  "equipamento": "leg_press",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Só a ponta do pé na plataforma, joelho quase estendido.",
+   "Trave a máquina antes de iniciar.",
+   "Controle a descida: é onde a panturrilha cresce."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press_On_The_Leg_Press_Machine/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press_On_The_Leg_Press_Machine/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Seated_Calf_Raise",
+  "nome_pt": "Panturrilha sentado na máquina",
+  "nome_en": "Seated Calf Raise",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "panturrilha",
+  "musculos_secundarios": [],
+  "equipamento": "maquina_panturrilha_sentado",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Joelho flexionado enfatiza o sóleo.",
+   "Amplitude completa, sem repique.",
+   "Carga menor que em pé, repetições mais altas."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Calf_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Calf_Raise/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Cable_Crossover",
+  "nome_pt": "Crossover na polia alta",
+  "nome_en": "Cable Crossover",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros"
+  ],
+  "equipamento": "crossover",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Um pé à frente, tronco levemente inclinado.",
+   "Cruze as mãos na frente do abdômen e segure a contração.",
+   "Cotovelo travado em leve flexão; o movimento é do ombro."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Low_Cable_Crossover",
+  "nome_pt": "Crossover na polia baixa",
+  "nome_en": "Low Cable Crossover",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros"
+  ],
+  "equipamento": "crossover",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Polias na posição mais baixa, mãos subindo em arco.",
+   "Junte na altura do peito, palmas para cima.",
+   "Ênfase na porção superior do peito."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Low_Cable_Crossover/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Low_Cable_Crossover/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Incline_Dumbbell_Flyes",
+  "nome_pt": "Crucifixo inclinado com halteres",
+  "nome_en": "Incline Dumbbell Flyes",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros"
+  ],
+  "equipamento": "banco_inclinado_halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Banco a 30 graus, cotovelo fixo em leve flexão.",
+   "Suba desenhando um arco, juntando sem bater os halteres.",
+   "Pare a descida quando o ombro começar a rolar para frente."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Flyes/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Flyes/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Dumbbell_Flyes",
+  "nome_pt": "Crucifixo reto com halteres",
+  "nome_en": "Dumbbell Flyes",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [],
+  "equipamento": "banco_reto_halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Cotovelo semiflexionado e travado nesse ângulo.",
+   "Abra até sentir o peito alongar, sem passar da linha do tronco.",
+   "Carga moderada: é exercício de alongamento sob tensão, não de força."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Flyes/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Flyes/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Incline_Push-Up",
+  "nome_pt": "Flexão com mãos elevadas",
+  "nome_en": "Incline Push-Up",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Mãos no banco ou step: versão mais fácil da flexão.",
+   "Quanto mais alto o apoio, menor a carga.",
+   "Progressão natural: vá baixando a altura do apoio."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_apoio_punho"
+  ]
+ },
+ {
+  "slug": "Push-Ups_With_Feet_Elevated",
+  "nome_pt": "Flexão com pés elevados",
+  "nome_en": "Push-Ups With Feet Elevated",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pés no banco, mãos no chão; quanto mais alto, mais difícil.",
+   "Mantenha a linha do corpo reta, sem afundar a lombar.",
+   "Ênfase maior na parte superior do peito e ombro."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push-Ups_With_Feet_Elevated/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push-Ups_With_Feet_Elevated/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_apoio_punho"
+  ]
+ },
+ {
+  "slug": "Pushups",
+  "nome_pt": "Flexão de braço",
+  "nome_en": "Pushups",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Corpo em prancha: quadril nem alto nem caído.",
+   "Mãos um pouco mais largas que o ombro, cotovelo a 45 graus do tronco.",
+   "Desça até o peito quase tocar o chão."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pushups/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pushups/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_apoio_punho"
+  ]
+ },
+ {
+  "slug": "Dips_-_Chest_Version",
+  "nome_pt": "Paralelas com ênfase no peito",
+  "nome_en": "Dips - Chest Version",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "paralelas",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Tronco inclinado à frente e pernas levemente à frente do corpo.",
+   "Desça até o ombro ficar na altura do cotovelo, não mais.",
+   "Se doer o ombro na descida, reduza a amplitude."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dips_-_Chest_Version/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dips_-_Chest_Version/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Straight-Arm_Dumbbell_Pullover",
+  "nome_pt": "Pullover com halter",
+  "nome_en": "Straight-Arm Dumbbell Pullover",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "dorsais",
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "banco_reto_halteres",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Deite no banco e segure um halter com as duas mãos.",
+   "Leve atrás da cabeça com braços quase estendidos, costela baixa.",
+   "Não deixe a lombar arquear para ganhar amplitude."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Dumbbell_Pullover/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Dumbbell_Pullover/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro",
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Decline_Barbell_Bench_Press",
+  "nome_pt": "Supino declinado com barra",
+  "nome_en": "Decline Barbell Bench Press",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "banco_declinado_barra",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Trave as pernas antes de receber a barra.",
+   "Barra desce na altura da parte baixa do peito.",
+   "Use parceiro ou suporte para entrar e sair da posição."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Barbell_Bench_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Barbell_Bench_Press/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Decline_Dumbbell_Bench_Press",
+  "nome_pt": "Supino declinado com halteres",
+  "nome_en": "Decline Dumbbell Bench Press",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "banco_declinado_halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pernas travadas antes de iniciar.",
+   "Trajetória levemente diagonal, em direção ao umbigo.",
+   "Amplitude menor que no reto: pare quando o ombro começar a girar."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Bench_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Bench_Press/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Barbell_Incline_Bench_Press_-_Medium_Grip",
+  "nome_pt": "Supino inclinado com barra",
+  "nome_en": "Barbell Incline Bench Press - Medium Grip",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "banco_inclinado_barra",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Banco entre 30 e 45 graus; mais que isso vira desenvolvimento.",
+   "Barra desce na altura da clavícula, não do meio do peito.",
+   "Cotovelos levemente para dentro, não abertos a 90 graus."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Incline_Bench_Press_-_Medium_Grip/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Incline_Bench_Press_-_Medium_Grip/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Incline_Dumbbell_Press",
+  "nome_pt": "Supino inclinado com halteres",
+  "nome_en": "Incline Dumbbell Press",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "banco_inclinado_halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Banco a 30-45 graus, escápulas apoiadas.",
+   "Punho neutro ou levemente rotacionado, nunca quebrado para trás.",
+   "Desça controlado até sentir alongar o peito, sem forçar o ombro."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Leverage_Incline_Chest_Press",
+  "nome_pt": "Supino inclinado na máquina",
+  "nome_en": "Leverage Incline Chest Press",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "maquina_supino_inclinado",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Costas e quadril apoiados, pés firmes.",
+   "Empurre em diagonal para cima, acompanhando a guia.",
+   "Volte até sentir o peito alongar, sem bater os pesos."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Incline_Chest_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Incline_Chest_Press/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Cable_Chest_Press",
+  "nome_pt": "Supino na polia em pé",
+  "nome_en": "Cable Chest Press",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "crossover",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Polias na altura do peito, um pé à frente para estabilizar.",
+   "Empurre à frente juntando as mãos no fim do movimento.",
+   "Core firme: não deixe o tronco girar."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Chest_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Chest_Press/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Barbell_Bench_Press_-_Medium_Grip",
+  "nome_pt": "Supino reto com barra",
+  "nome_en": "Barbell Bench Press - Medium Grip",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "banco_reto_barra",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Escápulas retraídas e apoiadas no banco do início ao fim.",
+   "Barra descendo na linha do meio do peito, antebraço na vertical.",
+   "Pés firmes no chão, sem levantar o quadril."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "One_Arm_Dumbbell_Bench_Press",
+  "nome_pt": "Supino reto com halter unilateral",
+  "nome_en": "One Arm Dumbbell Bench Press",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "banco_reto_halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Segure no banco com a mão livre para não rodar o tronco.",
+   "Abdômen contraído: o lado sem carga tende a subir.",
+   "Mesmo número de repetições nos dois lados."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Dumbbell_Bench_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Dumbbell_Bench_Press/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Dumbbell_Bench_Press",
+  "nome_pt": "Supino reto com halteres",
+  "nome_en": "Dumbbell Bench Press",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "banco_reto_halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Suba os halteres junto com o tronco ao deitar, não do chão.",
+   "Desça até os halteres ficarem na linha do peito.",
+   "No topo não bata os halteres: pare a um palmo um do outro."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Dumbbell_Bench_Press_with_Neutral_Grip",
+  "nome_pt": "Supino reto com halteres pegada neutra",
+  "nome_en": "Dumbbell Bench Press with Neutral Grip",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "banco_reto_halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Palmas viradas uma para a outra durante todo o movimento.",
+   "Cotovelos mais próximos do corpo: menos estresse no ombro.",
+   "Boa escolha quando o supino tradicional incomoda o ombro."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press_with_Neutral_Grip/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press_with_Neutral_Grip/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Machine_Bench_Press",
+  "nome_pt": "Supino reto na máquina",
+  "nome_en": "Machine Bench Press",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "maquina_supino",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Assento na altura que deixa as mãos na linha do meio do peito.",
+   "Não estenda o cotovelo até travar no topo.",
+   "Boa opção para treinar perto da falha sem parceiro."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bench_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bench_Press/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Smith_Machine_Bench_Press",
+  "nome_pt": "Supino reto no Smith",
+  "nome_en": "Smith Machine Bench Press",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [
+   "ombros",
+   "triceps"
+  ],
+  "equipamento": "smith",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Posicione o banco para a barra descer na linha do peito.",
+   "Destrave os ganchos antes de iniciar a série.",
+   "A guia fixa a trajetória: ajuste o corpo, não a barra."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Bench_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Bench_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Butterfly",
+  "nome_pt": "Voador (peck deck)",
+  "nome_en": "Butterfly",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "peito",
+  "musculos_secundarios": [],
+  "equipamento": "maquina_voador",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Ajuste o assento para o cotovelo ficar na altura do ombro.",
+   "Costas colada no apoio; não jogue o tronco para frente.",
+   "Segure meio segundo na junção e volte controlando."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butterfly/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butterfly/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Good_Morning",
+  "nome_pt": "Bom dia com barra",
+  "nome_en": "Good Morning",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "posterior_de_coxa",
+  "musculos_secundarios": [
+   "abdomen",
+   "gluteos",
+   "lombar"
+  ],
+  "equipamento": "barra_rack",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra no trapézio, joelho levemente flexionado.",
+   "Incline o tronco à frente empurrando o quadril para trás.",
+   "Carga leve: é exercício de posterior, não de força máxima."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Good_Morning/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Good_Morning/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Seated_Leg_Curl",
+  "nome_pt": "Cadeira flexora sentado",
+  "nome_en": "Seated Leg Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "posterior_de_coxa",
+  "musculos_secundarios": [],
+  "equipamento": "cadeira_flexora",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Costas apoiada, coxa travada pelo apoio.",
+   "Posição sentada alonga mais a cabeça longa do posterior.",
+   "Amplitude completa, sem bater o peso."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Leg_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Leg_Curl/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Glute_Ham_Raise",
+  "nome_pt": "Elevação de posterior no banco romano (GHR)",
+  "nome_en": "Glute Ham Raise",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "posterior_de_coxa",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos"
+  ],
+  "equipamento": "ghr",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pés travados, desça o tronco controlando com o posterior.",
+   "Comece com assistência das mãos se não conseguir subir.",
+   "Exercício exigente: comece com poucas repetições."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Glute_Ham_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Glute_Ham_Raise/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Standing_Leg_Curl",
+  "nome_pt": "Flexora em pé",
+  "nome_en": "Standing Leg Curl",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "posterior_de_coxa",
+  "musculos_secundarios": [],
+  "equipamento": "maquina_flexora_pe",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Uma perna por vez, tronco apoiado.",
+   "Corrige diferença entre os lados.",
+   "Quadril parado: só o joelho flexiona."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Leg_Curl/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Leg_Curl/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Reverse_Hyperextension",
+  "nome_pt": "Hiperextensão reversa",
+  "nome_en": "Reverse Hyperextension",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "posterior_de_coxa",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos"
+  ],
+  "equipamento": "banco_hiperextensao",
+  "nivel": "intermediario",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Tronco apoiado, pernas livres subindo até a linha do corpo.",
+   "Não passe da linha: hiperextender a lombar não traz ganho.",
+   "Movimento do quadril, glúteo apertando no topo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Hyperextension/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Hyperextension/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Romanian_Deadlift",
+  "nome_pt": "Levantamento terra romeno",
+  "nome_en": "Romanian Deadlift",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "posterior_de_coxa",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "lombar"
+  ],
+  "equipamento": "barra_livre",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Joelho levemente flexionado e fixo nesse ângulo.",
+   "Empurre o quadril para trás, barra descendo rente à perna.",
+   "Pare quando o posterior estiver no limite do alongamento."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Sumo_Deadlift",
+  "nome_pt": "Levantamento terra sumô",
+  "nome_en": "Sumo Deadlift",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "posterior_de_coxa",
+  "musculos_secundarios": [
+   "adutores",
+   "antebraco",
+   "gluteos",
+   "lombar",
+   "dorsal_medio",
+   "quadriceps",
+   "trapezio"
+  ],
+  "equipamento": "barra_livre",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pés bem afastados, mãos por dentro das pernas.",
+   "Tronco mais vertical: menos exigência da lombar.",
+   "Empurre os joelhos para fora durante a subida."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Sumo_Deadlift/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Sumo_Deadlift/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Lying_Leg_Curls",
+  "nome_pt": "Mesa flexora",
+  "nome_en": "Lying Leg Curls",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "posterior_de_coxa",
+  "musculos_secundarios": [],
+  "equipamento": "mesa_flexora",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Joelho alinhado com o eixo da máquina.",
+   "Quadril colado no apoio durante todo o movimento.",
+   "Desça controlando: a negativa é onde o posterior trabalha."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Leg_Curls/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Leg_Curls/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Natural_Glute_Ham_Raise",
+  "nome_pt": "Nórdico (flexão nórdica de posterior)",
+  "nome_en": "Natural Glute Ham Raise",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "posterior_de_coxa",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "lombar"
+  ],
+  "equipamento": "peso_corporal",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Parceiro ou apoio travando os tornozelos.",
+   "Desça o mais lento possível e empurre o chão para voltar.",
+   "Comece com 3 repetições: a negativa já é estímulo enorme."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Natural_Glute_Ham_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Natural_Glute_Ham_Raise/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Stiff-Legged_Dumbbell_Deadlift",
+  "nome_pt": "Terra romeno com halteres",
+  "nome_en": "Stiff-Legged Dumbbell Deadlift",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "posterior_de_coxa",
+  "musculos_secundarios": [
+   "gluteos",
+   "lombar"
+  ],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Halteres à frente das coxas, joelho quase estendido.",
+   "Desça empurrando o quadril para trás, coluna neutra.",
+   "Sem carga na coluna pela barra: boa alternativa inicial."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Dumbbell_Deadlift/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Dumbbell_Deadlift/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_flexao_lombar_carregada"
+  ]
+ },
+ {
+  "slug": "Cable_Hip_Adduction",
+  "nome_pt": "Adução de quadril na polia",
+  "nome_en": "Cable Hip Adduction",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [],
+  "equipamento": "polia_baixa",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Caneleira na polia baixa, perna cruzando à frente do corpo.",
+   "Apoio na mão para estabilizar o tronco.",
+   "Movimento controlado, sem balanço."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Hip_Adduction/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Hip_Adduction/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Barbell_Walking_Lunge",
+  "nome_pt": "Afundo caminhando com barra",
+  "nome_en": "Barbell Walking Lunge",
+  "padrao_movimento": "unilateral_perna",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "barra_rack",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Barra nas costas, passos longos e controlados.",
+   "Joelho de trás quase tocando o chão a cada passo.",
+   "Comece sem carga até o equilíbrio ficar firme."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Walking_Lunge/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Walking_Lunge/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Dumbbell_Lunges",
+  "nome_pt": "Afundo com halteres",
+  "nome_en": "Dumbbell Lunges",
+  "padrao_movimento": "unilateral_perna",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Passo à frente, desça até o joelho de trás perto do chão.",
+   "Joelho da frente alinhado com o pé, não passando muito da ponta.",
+   "Suba empurrando com o pé da frente."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lunges/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lunges/1.jpg"
+  ],
+  "contraindicacoes": [
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Dumbbell_Rear_Lunge",
+  "nome_pt": "Afundo para trás com halteres",
+  "nome_en": "Dumbbell Rear Lunge",
+  "padrao_movimento": "unilateral_perna",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "halteres",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Passo para trás, mantendo o tronco ereto.",
+   "Menos estresse no joelho da frente que o afundo à frente.",
+   "Empurre com a perna da frente para voltar."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Rear_Lunge/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Rear_Lunge/1.jpg"
+  ],
+  "contraindicacoes": [
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Split_Squat_with_Dumbbells",
+  "nome_pt": "Agachamento búlgaro com halteres",
+  "nome_en": "Split Squat with Dumbbells",
+  "padrao_movimento": "unilateral_perna",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "halteres_banco",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Pé de trás apoiado no banco, tronco ereto.",
+   "Desça até o joelho de trás quase tocar o chão.",
+   "Tronco um pouco à frente enfatiza mais o glúteo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Split_Squat_with_Dumbbells/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Split_Squat_with_Dumbbells/1.jpg"
+  ],
+  "contraindicacoes": [
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Smith_Single-Leg_Split_Squat",
+  "nome_pt": "Agachamento búlgaro no Smith",
+  "nome_en": "Smith Single-Leg Split Squat",
+  "padrao_movimento": "unilateral_perna",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "smith",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "A guia resolve o equilíbrio e deixa focar na perna.",
+   "Pé de trás no banco, pé da frente bem posicionado antes de iniciar.",
+   "Boa opção para carga alta em unilateral."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Single-Leg_Split_Squat/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Single-Leg_Split_Squat/1.jpg"
+  ],
+  "contraindicacoes": [
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Dumbbell_Squat",
+  "nome_pt": "Agachamento com halteres",
+  "nome_en": "Dumbbell Squat",
+  "padrao_movimento": "agachamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa",
+   "lombar"
+  ],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Halteres ao lado do corpo ou um à frente do peito.",
+   "Sem carga na coluna: boa alternativa com restrição axial.",
+   "Desça até o paralelo mantendo o peito aberto."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat/1.jpg"
+  ],
+  "contraindicacoes": [
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Front_Squat_Clean_Grip",
+  "nome_pt": "Agachamento frontal",
+  "nome_en": "Front Squat (Clean Grip)",
+  "padrao_movimento": "agachamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "abdomen",
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "barra_rack",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra na frente, apoiada nos deltoides, cotovelos altos.",
+   "Tronco mais vertical que no agachamento livre.",
+   "Mais exigência de quadríceps e menos de lombar."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Squat_Clean_Grip/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Squat_Clean_Grip/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "flexao_joelho_limitada",
+   "sem_extensao_punho"
+  ]
+ },
+ {
+  "slug": "Barbell_Hack_Squat",
+  "nome_pt": "Agachamento hack com barra",
+  "nome_en": "Barbell Hack Squat",
+  "padrao_movimento": "agachamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "antebraco",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "barra_livre",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra atrás das pernas, pegada pronada.",
+   "Suba estendendo quadril e joelho juntos.",
+   "Exige mobilidade de ombro para segurar atrás."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hack_Squat/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hack_Squat/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial"
+  ]
+ },
+ {
+  "slug": "Hack_Squat",
+  "nome_pt": "Agachamento hack na máquina",
+  "nome_en": "Hack Squat",
+  "padrao_movimento": "agachamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "maquina_hack",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Costas e quadril colados no apoio.",
+   "Pés mais altos na plataforma puxam mais o posterior.",
+   "Não trave o joelho com força no topo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hack_Squat/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hack_Squat/1.jpg"
+  ],
+  "contraindicacoes": [
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Barbell_Side_Split_Squat",
+  "nome_pt": "Agachamento lateral com barra",
+  "nome_en": "Barbell Side Split Squat",
+  "padrao_movimento": "unilateral_perna",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "posterior_de_coxa",
+   "lombar"
+  ],
+  "equipamento": "barra_rack",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Pernas bem afastadas, desça para um lado flexionando só aquele joelho.",
+   "A perna oposta fica estendida.",
+   "Trabalha adutor junto com quadríceps e glúteo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Side_Split_Squat/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Side_Split_Squat/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Barbell_Squat",
+  "nome_pt": "Agachamento livre com barra",
+  "nome_en": "Barbell Squat",
+  "padrao_movimento": "agachamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa",
+   "lombar"
+  ],
+  "equipamento": "barra_rack",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra apoiada no trapézio, pés na largura dos ombros.",
+   "Desça empurrando o quadril para trás e os joelhos para fora.",
+   "Coluna neutra: nada de arredondar a lombar no fundo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Squat/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Squat/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Bodyweight_Squat",
+  "nome_pt": "Agachamento livre sem carga",
+  "nome_en": "Bodyweight Squat",
+  "padrao_movimento": "agachamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "peso_corporal",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Braços à frente para equilibrar.",
+   "Use para aquecer ou para aprender o padrão.",
+   "Desça no ritmo controlado, 3 segundos na descida."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bodyweight_Squat/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bodyweight_Squat/1.jpg"
+  ],
+  "contraindicacoes": [
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Chair_Squat",
+  "nome_pt": "Agachamento na cadeira",
+  "nome_en": "Chair Squat",
+  "padrao_movimento": "agachamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "banco",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Sente e levante de um banco, sem impulso de braço.",
+   "Versão mais acessível para iniciantes absolutos.",
+   "Suba empurrando o chão com o pé inteiro."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chair_Squat/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chair_Squat/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Smith_Machine_Squat",
+  "nome_pt": "Agachamento no Smith",
+  "nome_en": "Smith Machine Squat",
+  "padrao_movimento": "agachamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa",
+   "lombar"
+  ],
+  "equipamento": "smith",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pés um pouco à frente da barra, costas reta.",
+   "A guia estabiliza o movimento: boa para aprender o padrão.",
+   "Não force amplitude que o quadril não permite."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Squat/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Squat/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Box_Squat",
+  "nome_pt": "Agachamento no caixote",
+  "nome_en": "Box Squat",
+  "padrao_movimento": "agachamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "adutores",
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa",
+   "lombar"
+  ],
+  "equipamento": "barra_rack_caixote",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Desça até tocar o caixote, sem desabar sobre ele.",
+   "Altura do caixote controla a profundidade: útil com restrição de joelho.",
+   "Pausa curta e suba empurrando o chão."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Box_Squat/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Box_Squat/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial"
+  ]
+ },
+ {
+  "slug": "Barbell_Full_Squat",
+  "nome_pt": "Agachamento profundo com barra",
+  "nome_en": "Barbell Full Squat",
+  "padrao_movimento": "agachamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa",
+   "lombar"
+  ],
+  "equipamento": "barra_rack",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Desça abaixo da linha do paralelo, sem perder a coluna neutra.",
+   "Só vá a essa profundidade se tiver mobilidade de tornozelo e quadril.",
+   "Peito aberto durante toda a subida."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Full_Squat/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Full_Squat/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Leg_Extensions",
+  "nome_pt": "Cadeira extensora",
+  "nome_en": "Leg Extensions",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [],
+  "equipamento": "cadeira_extensora",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Joelho alinhado com o eixo, costas apoiada.",
+   "Estenda até quase travar e segure meio segundo.",
+   "Desça controlando, sem deixar o peso cair."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Extensions/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Extensions/1.jpg"
+  ],
+  "contraindicacoes": [
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Single-Leg_Leg_Extension",
+  "nome_pt": "Extensora unilateral",
+  "nome_en": "Single-Leg Leg Extension",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [],
+  "equipamento": "cadeira_extensora",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Uma perna por vez, mesmo número de repetições.",
+   "Útil quando um lado é visivelmente mais fraco.",
+   "Carga pela metade do que você usa bilateral."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Single-Leg_Leg_Extension/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Single-Leg_Leg_Extension/1.jpg"
+  ],
+  "contraindicacoes": [
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Leg_Press",
+  "nome_pt": "Leg press",
+  "nome_en": "Leg Press",
+  "padrao_movimento": "agachamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "leg_press",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pés na largura dos ombros, joelho alinhado com o pé.",
+   "Desça até o quadril começar a sair do apoio e pare ali.",
+   "Nunca trave o joelho no fim da extensão."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Narrow_Stance_Leg_Press",
+  "nome_pt": "Leg press pegada fechada",
+  "nome_en": "Narrow Stance Leg Press",
+  "padrao_movimento": "agachamento",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "leg_press",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pés próximos no centro da plataforma.",
+   "Mais ênfase no vasto lateral.",
+   "Amplitude controlada, sem deixar a lombar descolar."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Narrow_Stance_Leg_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Narrow_Stance_Leg_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Trap_Bar_Deadlift",
+  "nome_pt": "Levantamento terra na barra hexagonal",
+  "nome_en": "Trap Bar Deadlift",
+  "padrao_movimento": "dobradica_quadril",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "trap_bar",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada neutra ao lado do corpo, tronco mais ereto.",
+   "Versão mais amigável à lombar que a barra reta.",
+   "Empurre o chão e estenda quadril e joelho juntos."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Trap_Bar_Deadlift/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Trap_Bar_Deadlift/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial"
+  ]
+ },
+ {
+  "slug": "Barbell_Step_Ups",
+  "nome_pt": "Subida no banco com barra",
+  "nome_en": "Barbell Step Ups",
+  "padrao_movimento": "unilateral_perna",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa",
+   "quadriceps"
+  ],
+  "equipamento": "barra_rack_banco",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Barra nas costas exige mais equilíbrio: domine com halteres primeiro.",
+   "Pé inteiro apoiado no banco.",
+   "Mesma altura e repetições nos dois lados."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Step_Ups/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Step_Ups/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Dumbbell_Step_Ups",
+  "nome_pt": "Subida no banco com halteres",
+  "nome_en": "Dumbbell Step Ups",
+  "padrao_movimento": "unilateral_perna",
+  "musculo_primario": "quadriceps",
+  "musculos_secundarios": [
+   "panturrilha",
+   "gluteos",
+   "posterior_de_coxa"
+  ],
+  "equipamento": "halteres_banco",
+  "nivel": "intermediario",
+  "mecanica": "composto",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Banco na altura do joelho ou pouco acima.",
+   "Suba empurrando com a perna de cima, sem impulso da de baixo.",
+   "Desça controlando, sem deixar cair."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Step_Ups/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Step_Ups/1.jpg"
+  ],
+  "contraindicacoes": [
+   "flexao_joelho_limitada"
+  ]
+ },
+ {
+  "slug": "Barbell_Shrug",
+  "nome_pt": "Encolhimento com barra",
+  "nome_en": "Barbell Shrug",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "trapezio",
+  "musculos_secundarios": [],
+  "equipamento": "barra_livre",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra à frente do corpo, braços estendidos.",
+   "Suba os ombros em direção às orelhas, sem girar.",
+   "Segure meio segundo no topo e desça controlando."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shrug/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shrug/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_carga_axial",
+   "cervical_sensivel"
+  ]
+ },
+ {
+  "slug": "Dumbbell_Shrug",
+  "nome_pt": "Encolhimento com halteres",
+  "nome_en": "Dumbbell Shrug",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "trapezio",
+  "musculos_secundarios": [],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Halteres ao lado do corpo, braços relaxados.",
+   "Movimento só de subir e descer o ombro.",
+   "Permite amplitude maior que a barra."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shrug/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shrug/1.jpg"
+  ],
+  "contraindicacoes": [
+   "cervical_sensivel"
+  ]
+ },
+ {
+  "slug": "Leverage_Shrug",
+  "nome_pt": "Encolhimento na máquina",
+  "nome_en": "Leverage Shrug",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "trapezio",
+  "musculos_secundarios": [
+   "antebraco"
+  ],
+  "equipamento": "maquina_encolhimento",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada nas manoplas laterais, tronco ereto.",
+   "Nenhuma carga sobre a coluna.",
+   "Boa alternativa com restrição de carga axial."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shrug/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shrug/1.jpg"
+  ],
+  "contraindicacoes": [
+   "cervical_sensivel"
+  ]
+ },
+ {
+  "slug": "Cable_Shrugs",
+  "nome_pt": "Encolhimento na polia",
+  "nome_en": "Cable Shrugs",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "trapezio",
+  "musculos_secundarios": [],
+  "equipamento": "polia_baixa",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra na polia baixa, braços estendidos.",
+   "Tensão constante durante toda a amplitude.",
+   "Postura ereta, sem inclinar o tronco."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Shrugs/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Shrugs/1.jpg"
+  ],
+  "contraindicacoes": [
+   "cervical_sensivel"
+  ]
+ },
+ {
+  "slug": "Standing_Dumbbell_Upright_Row",
+  "nome_pt": "Remada alta com halteres",
+  "nome_en": "Standing Dumbbell Upright Row",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "trapezio",
+  "musculos_secundarios": [
+   "biceps",
+   "ombros"
+  ],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Halteres à frente das coxas, cotovelo liderando a subida.",
+   "Suba até a altura do peito.",
+   "Halteres permitem trajetória mais natural que a barra."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Upright_Row/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Upright_Row/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Dips_-_Triceps_Version",
+  "nome_pt": "Paralelas com ênfase no tríceps",
+  "nome_en": "Dips - Triceps Version",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [
+   "peito",
+   "ombros"
+  ],
+  "equipamento": "paralelas",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Tronco o mais vertical possível, cotovelo para trás.",
+   "Desça até o cotovelo chegar a 90 graus.",
+   "Adicione lastro quando passar de 12 repetições limpas."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dips_-_Triceps_Version/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dips_-_Triceps_Version/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro"
+  ]
+ },
+ {
+  "slug": "Dip_Machine",
+  "nome_pt": "Paralelas na máquina (graviton)",
+  "nome_en": "Dip Machine",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [
+   "peito",
+   "ombros"
+  ],
+  "equipamento": "maquina_paralelas",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Permite regular a assistência ou a carga.",
+   "Caminho de progressão até a paralela livre.",
+   "Tronco ereto para ênfase no tríceps."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dip_Machine/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dip_Machine/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Close-Grip_Barbell_Bench_Press",
+  "nome_pt": "Supino fechado com barra",
+  "nome_en": "Close-Grip Barbell Bench Press",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [
+   "peito",
+   "ombros"
+  ],
+  "equipamento": "banco_reto_barra",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada na largura dos ombros, não mais estreita.",
+   "Cotovelo rente ao tronco na descida.",
+   "Exercício composto: é o que permite carga alta para tríceps."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Barbell_Bench_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Barbell_Bench_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_extensao_punho"
+  ]
+ },
+ {
+  "slug": "Close-Grip_Dumbbell_Press",
+  "nome_pt": "Supino fechado com halteres",
+  "nome_en": "Close-Grip Dumbbell Press",
+  "padrao_movimento": "empurrar_horizontal",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [
+   "peito",
+   "ombros"
+  ],
+  "equipamento": "banco_reto_halteres",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Halteres encostados um no outro sobre o peito.",
+   "Cotovelo rente ao corpo durante toda a descida.",
+   "Punho neutro, mais confortável que a barra."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Dumbbell_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Dumbbell_Press/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Bench_Dips",
+  "nome_pt": "Tríceps banco (mergulho)",
+  "nome_en": "Bench Dips",
+  "padrao_movimento": "empurrar_vertical",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [
+   "peito",
+   "ombros"
+  ],
+  "equipamento": "banco",
+  "nivel": "iniciante",
+  "mecanica": "composto",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Mãos na borda do banco, quadril rente a ele.",
+   "Desça até o cotovelo a 90 graus.",
+   "Pés mais distantes aumentam a dificuldade."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bench_Dips/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bench_Dips/1.jpg"
+  ],
+  "contraindicacoes": [
+   "evitar_amplitude_maxima_ombro",
+   "sem_apoio_punho"
+  ]
+ },
+ {
+  "slug": "Tricep_Dumbbell_Kickback",
+  "nome_pt": "Tríceps coice com halter",
+  "nome_en": "Tricep Dumbbell Kickback",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Tronco inclinado, braço colado ao corpo.",
+   "Estenda para trás até o braço ficar reto.",
+   "Carga leve: amplitude e contração valem mais que peso."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Tricep_Dumbbell_Kickback/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Tricep_Dumbbell_Kickback/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Standing_Overhead_Barbell_Triceps_Extension",
+  "nome_pt": "Tríceps francês em pé com barra",
+  "nome_en": "Standing Overhead Barbell Triceps Extension",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [
+   "ombros"
+  ],
+  "equipamento": "barra_w",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra acima da cabeça, cotovelo apontado para cima.",
+   "Desça atrás da cabeça mantendo o cotovelo fixo.",
+   "Abdômen firme para não arquear a lombar."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Overhead_Barbell_Triceps_Extension/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Overhead_Barbell_Triceps_Extension/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca",
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Cable_Rope_Overhead_Triceps_Extension",
+  "nome_pt": "Tríceps francês na corda",
+  "nome_en": "Cable Rope Overhead Triceps Extension",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [],
+  "equipamento": "polia_baixa",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "De costas para a polia, corda atrás da cabeça.",
+   "Cotovelo apontado para frente e para cima, fixo.",
+   "Posição alongada é o que estimula a cabeça longa."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Overhead_Triceps_Extension/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Overhead_Triceps_Extension/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca"
+  ]
+ },
+ {
+  "slug": "Seated_Triceps_Press",
+  "nome_pt": "Tríceps francês sentado com halter",
+  "nome_en": "Seated Triceps Press",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [],
+  "equipamento": "banco_halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Um halter com as duas mãos atrás da cabeça.",
+   "Cotovelo apontado para cima e próximo da cabeça.",
+   "Costela baixa: não arqueie a lombar."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Triceps_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Triceps_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca",
+   "sem_hiperextensao_lombar"
+  ]
+ },
+ {
+  "slug": "Standing_One-Arm_Dumbbell_Triceps_Extension",
+  "nome_pt": "Tríceps francês unilateral",
+  "nome_en": "Standing One-Arm Dumbbell Triceps Extension",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [
+   "peito",
+   "ombros"
+  ],
+  "equipamento": "halteres",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Um halter, braço estendido acima da cabeça.",
+   "Mão livre pode apoiar o cotovelo.",
+   "Corrige diferença entre os lados."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_One-Arm_Dumbbell_Triceps_Extension/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_One-Arm_Dumbbell_Triceps_Extension/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca"
+  ]
+ },
+ {
+  "slug": "Triceps_Pushdown_-_Rope_Attachment",
+  "nome_pt": "Tríceps na corda",
+  "nome_en": "Triceps Pushdown - Rope Attachment",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [],
+  "equipamento": "polia_alta",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Separe as mãos no fim da extensão.",
+   "Cotovelo fixo ao lado do corpo.",
+   "A corda permite contração mais completa que a barra."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_Rope_Attachment/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_Rope_Attachment/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Machine_Triceps_Extension",
+  "nome_pt": "Tríceps na máquina",
+  "nome_en": "Machine Triceps Extension",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [],
+  "equipamento": "maquina_triceps",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Ajuste o assento para alinhar o cotovelo ao eixo.",
+   "Trajetória guiada: segura para treinar até a falha.",
+   "Volte controlando até a amplitude inicial."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Triceps_Extension/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Triceps_Extension/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Triceps_Pushdown",
+  "nome_pt": "Tríceps na polia com barra",
+  "nome_en": "Triceps Pushdown",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [],
+  "equipamento": "polia_alta",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Cotovelo colado ao tronco, só o antebraço se move.",
+   "Estenda até travar e segure meio segundo.",
+   "Tronco levemente inclinado, sem usar o peso do corpo."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Triceps_Pushdown_-_V-Bar_Attachment",
+  "nome_pt": "Tríceps na polia com triângulo",
+  "nome_en": "Triceps Pushdown - V-Bar Attachment",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [],
+  "equipamento": "polia_alta",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Pegada neutra no triângulo.",
+   "Mesma mecânica do pushdown com barra.",
+   "Opção quando a barra reta incomoda o punho."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_V-Bar_Attachment/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_V-Bar_Attachment/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "Reverse_Grip_Triceps_Pushdown",
+  "nome_pt": "Tríceps na polia pegada supinada",
+  "nome_en": "Reverse Grip Triceps Pushdown",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [],
+  "equipamento": "polia_alta",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": true,
+  "instrucoes_pt": [
+   "Palma para cima, uma mão por vez.",
+   "Ênfase na cabeça medial do tríceps.",
+   "Carga leve: a pegada é menos estável."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Grip_Triceps_Pushdown/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Grip_Triceps_Pushdown/1.jpg"
+  ],
+  "contraindicacoes": []
+ },
+ {
+  "slug": "EZ-Bar_Skullcrusher",
+  "nome_pt": "Tríceps testa com barra W",
+  "nome_en": "EZ-Bar Skullcrusher",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [
+   "antebraco"
+  ],
+  "equipamento": "banco_reto_barra_w",
+  "nivel": "iniciante",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Deitado, barra descendo até a testa ou atrás dela.",
+   "Cotovelo parado: só o antebraço se move.",
+   "Use pegada firme e carga que você controla na descida."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/EZ-Bar_Skullcrusher/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/EZ-Bar_Skullcrusher/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca"
+  ]
+ },
+ {
+  "slug": "Lying_Triceps_Press",
+  "nome_pt": "Tríceps testa deitado",
+  "nome_en": "Lying Triceps Press",
+  "padrao_movimento": "isolamento",
+  "musculo_primario": "triceps",
+  "musculos_secundarios": [],
+  "equipamento": "banco_reto_barra_w",
+  "nivel": "intermediario",
+  "mecanica": "isolado",
+  "unilateral": false,
+  "instrucoes_pt": [
+   "Barra desce em direção ao topo da cabeça.",
+   "Mantenha o úmero inclinado para trás para manter tensão.",
+   "Desça controlando: é onde o estímulo acontece."
+  ],
+  "imagens": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Triceps_Press/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Triceps_Press/1.jpg"
+  ],
+  "contraindicacoes": [
+   "sem_desenvolvimento_acima_cabeca"
+  ]
+ }
+]
