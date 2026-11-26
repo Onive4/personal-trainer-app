@@ -83,8 +83,10 @@ allowed_emails      email, created_at   (sem acesso pela API; trigger em auth.us
                     recusa cadastro de e-mail fora da lista)
 profiles            id (= auth.users.id), nome, sexo, data_nascimento, altura_cm,
                     compartilhar_progresso, created_at   (criado por trigger no cadastro)
-anamneses           id, profile_id, versao, respostas (jsonb), clearance_status,
-                    constraints (text[]), nivel, objetivo, data
+anamneses           id, profile_id, versao, respostas (jsonb), clearance_status
+                    (liberado | orientar_avaliacao | liberado_por_registro),
+                    constraints (text[]), nivel, objetivo, liberacao (jsonb: data,
+                    profissional, registrado_em), data
 measurements        id, profile_id, data, peso_kg, pescoco, cintura, quadril,
                     torax, braco_d, braco_e, coxa_d, coxa_e, panturrilha, bf_estimado
 gyms                id, profile_id, nome, ativa (bool)
@@ -102,10 +104,14 @@ sessions            id, mesocycle_id, profile_id, dia, semana, data_prevista,
 set_logs            id, session_id, slot_id, exercise_id, serie_num, tipo_carga
                     (kg | placas | peso_corporal | elastico), carga, placas, reps, rir,
                     e1rm, gym_id, maquina_label, observacao, created_at
-nutrition_targets   id, profile_id, data, tdee, kcal_alvo, proteina_g, gordura_g,
-                    carbo_g, objetivo, peso_alvo_semana_pct
+nutrition_targets   id, profile_id, data, tmb, tdee, kcal_alvo, proteina_g, gordura_g,
+                    carbo_g, objetivo, peso_alvo_semana_pct, motivo
 sync_outbox         id, tabela, operacao, payload (jsonb), tentativas, status
 ```
+
+**Anamnese, medidas e metas são append-only pela API** (só `select` e `insert` para `authenticated`). Refazer a anamnese ou registrar liberação médica cria uma versão nova; corrigir medida cria registro novo; cada meta grava o `motivo` que a gerou. Os ids são gerados no celular (`crypto.randomUUID`), então reenviar a fila é idempotente (`insert … on conflict do nothing`). As três tabelas são lidas só pelo dono; a leitura mútua de medidas para os painéis entra no M6.
+
+**Sincronização (versão do M1):** `src/db/sync.ts` envia a fila em ordem ao abrir o app e quando o sinal volta. Sem rede, para e espera; recusa do servidor conta tentativa e desiste após 5. Depois do envio, `baixarDados` espelha no Dexie o que está no servidor. A resolução de conflitos completa é do M4.
 
 **RLS obrigatório:** toda tabela com `profile_id` filtra por `auth.uid()`. Os dois perfis são separados; cada um vê o próprio treino. Uma flag `compartilhar_progresso` libera leitura mútua dos dashboards (não da anamnese — histórico de saúde fica privado por padrão).
 
@@ -133,6 +139,10 @@ sync_outbox         id, tabela, operacao, payload (jsonb), tentativas, status
 - Existe um registro explícito de liberação ("já tenho liberação médica", com data e profissional) que desbloqueia a geração. A decisão é do usuário e fica registrada.
 - Lesões viram `constraints[]` legíveis pelo motor. Exemplos: `sem_carga_axial`, `sem_desenvolvimento_acima_cabeca`, `flexao_joelho_limitada`, `sem_impacto`, `evitar_amplitude_maxima_ombro`.
 - Cada `constraint` casa com `exercises.contraindicacoes[]` e remove o exercício do pool antes da montagem.
+- **Regra de conversão (implementada em `src/engine/anamnese.ts`):** lesão **ativa** → restrições padrão da região + as dos movimentos que doem; **em reabilitação** → só as dos movimentos marcados (ou as da região, se nenhum foi marcado); **resolvida** → nenhuma. Padrão por região: ombro → `sem_desenvolvimento_acima_cabeca`, `evitar_amplitude_maxima_ombro`; cervical → `cervical_sensivel`, `sem_carga_axial`; lombar → `sem_carga_axial`, `sem_flexao_lombar_carregada`, `sem_hiperextensao_lombar`; quadril e joelho → `flexao_joelho_limitada`, `sem_impacto`; tornozelo → `sem_impacto`; punho/cotovelo → `sem_extensao_punho`, `sem_apoio_punho`. A tela de avaliação mostra cada restrição com a lesão que a causou.
+- Nível pelo tempo de treino contínuo: menos de 6 meses iniciante, 6 a 24 intermediário, mais de 24 avançado.
+- Sinal de alerta sem liberação também bloqueia a meta calórica (a orientação é passar por médico antes).
+- No M1 a etapa "Contexto" não pergunta a academia ativa: o cadastro de academias chega no M2.
 
 ### 5.3 Observação legal importante
 
@@ -277,9 +287,9 @@ mulheres: 10 × peso_kg + 6,25 × altura_cm − 5 × idade − 161
 
 **Gasto total:** basal × fator de atividade (1,2 sedentário · 1,375 leve · 1,55 moderado · 1,725 intenso), escolhido pela atividade diária e corrigido pela frequência real de treino registrada.
 
-**Meta calórica:** emagrecimento −10% a −20% · hipertrofia +5% a +10% · manutenção 0%.
+**Meta calórica:** emagrecimento −10% a −20% · hipertrofia +5% a +10% · manutenção 0%. Valores usados na meta inicial: emagrecimento −15%, hipertrofia +7,5%, demais objetivos 0%.
 
-**Macros:** proteína 1,6 a 2,2 g/kg · gordura 0,8 a 1,0 g/kg · carboidrato preenche o restante.
+**Macros:** proteína 1,6 a 2,2 g/kg · gordura 0,8 a 1,0 g/kg · carboidrato preenche o restante. Valores usados: proteína 2,0 g/kg no emagrecimento, 1,8 na hipertrofia e força, 1,6 nos demais; gordura 0,8 g/kg. O ajuste adaptativo é proposto na tela de nutrição e só vale depois que o usuário aprova; ele compara as médias de 7 dias de hoje e de 14 dias atrás (cada uma com pelo menos 3 pesagens).
 
 **Ritmo alvo de peso:** −0,5% a −1,0% do peso corporal por semana (emagrecimento); +0,25% a +0,5% (hipertrofia).
 

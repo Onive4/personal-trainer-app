@@ -1,6 +1,15 @@
 import Dexie, { type EntityTable } from 'dexie'
+import type {
+  ClearanceStatus,
+  Constraint,
+  LiberacaoMedica,
+  Nivel,
+  Objetivo,
+  RespostasAnamnese,
+  Sexo,
+} from '../engine/anamnese'
 
-export type Sexo = 'masculino' | 'feminino'
+export type { Sexo }
 
 export interface Profile {
   id: string
@@ -15,7 +24,63 @@ export interface Profile {
 export type OperacaoSync = 'insert' | 'update' | 'upsert'
 export type StatusSync = 'pendente' | 'enviando' | 'erro'
 
-/** Fila de escrita para o Supabase. Criada no M0, processada a partir do M4. */
+export interface Anamnese {
+  id: string
+  profile_id: string
+  versao: number
+  respostas: RespostasAnamnese
+  clearance_status: ClearanceStatus
+  constraints: Constraint[]
+  nivel: Nivel
+  objetivo: Objetivo
+  liberacao: LiberacaoMedica | null
+  data: string // ISO 8601
+}
+
+/** Circunferências em cm. Correção = registro novo; nada é editado. */
+export interface Measurement {
+  id: string
+  profile_id: string
+  data: string // AAAA-MM-DD
+  peso_kg: number
+  pescoco: number | null
+  cintura: number | null
+  quadril: number | null
+  torax: number | null
+  braco_d: number | null
+  braco_e: number | null
+  coxa_d: number | null
+  coxa_e: number | null
+  panturrilha: number | null
+  bf_estimado: number | null
+  created_at: string
+}
+
+export interface NutritionTarget {
+  id: string
+  profile_id: string
+  data: string // AAAA-MM-DD
+  tmb: number
+  tdee: number
+  kcal_alvo: number
+  proteina_g: number
+  gordura_g: number
+  carbo_g: number
+  objetivo: Objetivo
+  peso_alvo_semana_pct: number
+  motivo: string
+  created_at: string
+}
+
+/** Anamnese em andamento: o progresso de cada etapa fica salvo só no aparelho. */
+export interface RascunhoAnamnese {
+  profile_id: string
+  etapa: number
+  respostas: Partial<RespostasAnamnese>
+  atualizado_em: string
+}
+
+/** Fila de escrita para o Supabase. Enviada por src/db/sync.ts. */
 export interface SyncOutboxItem {
   id?: number
   tabela: string
@@ -29,12 +94,22 @@ export interface SyncOutboxItem {
 export class TreinoDB extends Dexie {
   profiles!: EntityTable<Profile, 'id'>
   sync_outbox!: EntityTable<SyncOutboxItem, 'id'>
+  anamneses!: EntityTable<Anamnese, 'id'>
+  measurements!: EntityTable<Measurement, 'id'>
+  nutrition_targets!: EntityTable<NutritionTarget, 'id'>
+  rascunhos_anamnese!: EntityTable<RascunhoAnamnese, 'profile_id'>
 
   constructor(nome = 'treino') {
     super(nome)
     this.version(1).stores({
       profiles: 'id',
       sync_outbox: '++id, status, tabela, created_at',
+    })
+    this.version(2).stores({
+      anamneses: 'id, profile_id, [profile_id+versao]',
+      measurements: 'id, profile_id, [profile_id+data]',
+      nutrition_targets: 'id, profile_id, [profile_id+data]',
+      rascunhos_anamnese: 'profile_id',
     })
   }
 }

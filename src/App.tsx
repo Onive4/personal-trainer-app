@@ -6,7 +6,7 @@ import { SignUpScreen } from './features/auth/SignUpScreen'
 import { AuthCallback } from './features/auth/AuthCallback'
 import { InstallScreen } from './features/onboarding/InstallScreen'
 import { estaInstalado } from './features/onboarding/platform'
-import { HomeScreen } from './features/home/HomeScreen'
+import { AreaLogada } from './features/home/AreaLogada'
 
 const CHAVE_PULOU_INSTALACAO = 'pt:pulou-instalacao'
 
@@ -55,7 +55,7 @@ export default function App() {
       )
     case 'logado':
       return (
-        <HomeScreen
+        <AreaLogada
           userId={auth.userId}
           email={auth.email}
           nomeDaSessao={auth.nome}
