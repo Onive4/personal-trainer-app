@@ -54,6 +54,13 @@ export default function App() {
         <SignUpScreen onJaTenhoConta={() => setTelaAuth('entrar')} />
       )
     case 'logado':
-      return <HomeScreen userId={auth.userId} email={auth.email} onSair={auth.sair} />
+      return (
+        <HomeScreen
+          userId={auth.userId}
+          email={auth.email}
+          nomeDaSessao={auth.nome}
+          onSair={auth.sair}
+        />
+      )
   }
 }

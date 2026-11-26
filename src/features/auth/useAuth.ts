@@ -1,28 +1,33 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { Session } from '@supabase/supabase-js'
 import { supabase } from '../../api/supabase'
+import { nomeDosMetadados } from './nomeDosMetadados'
 
 const CHAVE_ULTIMO_USUARIO = 'pt:ultimo-usuario'
 
-type Estado =
-  | { status: 'carregando' }
-  | { status: 'deslogado' }
-  | { status: 'logado'; userId: string; email: string | null }
+interface Usuario {
+  userId: string
+  email: string | null
+  /** Nome vindo do cadastro ou do Google; reserva até o perfil chegar do banco. */
+  nome: string | null
+}
+
+type Estado = { status: 'carregando' } | { status: 'deslogado' } | ({ status: 'logado' } & Usuario)
 
 export type AuthState =
   | { status: 'carregando' }
   | { status: 'deslogado' }
-  | { status: 'logado'; userId: string; email: string | null; sair: () => Promise<void> }
+  | ({ status: 'logado'; sair: () => Promise<void> } & Usuario)
 
-interface UltimoUsuario {
-  id: string
-  email: string | null
-}
-
-function lerUltimoUsuario(): UltimoUsuario | null {
+function lerUltimoUsuario(): Usuario | null {
   try {
     const bruto = localStorage.getItem(CHAVE_ULTIMO_USUARIO)
-    return bruto ? (JSON.parse(bruto) as UltimoUsuario) : null
+    if (!bruto) return null
+    const salvo = JSON.parse(bruto) as Partial<Usuario> & { id?: string }
+    // Formato antigo guardava "id" em vez de "userId".
+    const userId = salvo.userId ?? salvo.id
+    if (!userId) return null
+    return { userId, email: salvo.email ?? null, nome: salvo.nome ?? null }
   } catch {
     return null
   }
@@ -39,14 +44,18 @@ export function useAuth(): AuthState {
   useEffect(() => {
     function aplicar(session: Session | null) {
       if (session) {
-        const usuario: UltimoUsuario = { id: session.user.id, email: session.user.email ?? null }
+        const usuario: Usuario = {
+          userId: session.user.id,
+          email: session.user.email ?? null,
+          nome: nomeDosMetadados(session.user.user_metadata),
+        }
         localStorage.setItem(CHAVE_ULTIMO_USUARIO, JSON.stringify(usuario))
-        setEstado({ status: 'logado', userId: usuario.id, email: usuario.email })
+        setEstado({ status: 'logado', ...usuario })
         return
       }
       const ultimo = lerUltimoUsuario()
       if (ultimo && !navigator.onLine) {
-        setEstado({ status: 'logado', userId: ultimo.id, email: ultimo.email })
+        setEstado({ status: 'logado', ...ultimo })
         return
       }
       setEstado({ status: 'deslogado' })

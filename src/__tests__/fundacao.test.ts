@@ -3,6 +3,22 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { TreinoDB, enfileirarSync } from '../db/schema'
 import { traduzirErroAuth } from '../features/auth/authErrors'
 import { detectarPlataforma } from '../features/onboarding/platform'
+import { nomeDosMetadados } from '../features/auth/nomeDosMetadados'
+
+describe('nomeDosMetadados', () => {
+  it('usa o nome do cadastro por e-mail', () => {
+    expect(nomeDosMetadados({ nome: 'Raphael', full_name: 'Raphael Rossi' })).toBe('Raphael')
+  })
+
+  it('usa o nome completo do Google', () => {
+    expect(nomeDosMetadados({ full_name: 'Julyana Fonseca', name: 'Julyana' })).toBe('Julyana Fonseca')
+  })
+
+  it('ignora nome vazio e metadados ausentes', () => {
+    expect(nomeDosMetadados({ nome: '  ' })).toBeNull()
+    expect(nomeDosMetadados(undefined)).toBeNull()
+  })
+})
 
 describe('Dexie', () => {
   let banco: TreinoDB

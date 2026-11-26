@@ -16,11 +16,12 @@ function assinarConexao(f: () => void) {
 interface Props {
   userId: string
   email: string | null
+  nomeDaSessao: string | null
   onSair: () => Promise<void>
 }
 
 /** Início provisório do M0: confirma login, perfil e modo offline. */
-export function HomeScreen({ userId, email, onSair }: Props) {
+export function HomeScreen({ userId, email, nomeDaSessao, onSair }: Props) {
   const online = useSyncExternalStore(assinarConexao, () => navigator.onLine)
   // A tela lê do Dexie; a rede só atualiza o espelho em segundo plano.
   const perfil = useLiveQuery(() => db.profiles.get(userId), [userId])
@@ -29,7 +30,8 @@ export function HomeScreen({ userId, email, onSair }: Props) {
     if (online) void sincronizarPerfil(userId)
   }, [userId, online])
 
-  const nome = perfil?.nome || email || 'você'
+  // Perfil local primeiro; na primeira abertura, o nome que veio no login.
+  const nome = perfil?.nome || nomeDaSessao || email || 'você'
 
   return (
     <main className="tela mx-auto flex min-h-dvh max-w-md flex-col gap-6">
