@@ -10,6 +10,8 @@ import { HomeScreen } from './HomeScreen'
 import { AcademiasScreen } from '../academias/AcademiasScreen'
 import { ExerciciosScreen } from '../exercicios/ExerciciosScreen'
 import { ExercicioScreen } from '../exercicios/ExercicioScreen'
+import { ProgramaScreen } from '../programa/ProgramaScreen'
+import { PropostaScreen } from '../programa/PropostaScreen'
 
 function assinarConexao(f: () => void) {
   window.addEventListener('online', f)
@@ -55,7 +57,20 @@ export function AreaLogada({ userId, email, nomeDaSessao, onSair }: Props) {
     )
   }
 
+  const abrirExercicio = (s: string) => ir(`/exercicios/${encodeURIComponent(s)}`)
+
   switch (caminho) {
+    case '/programa':
+      return <ProgramaScreen userId={userId} onVoltar={voltar} onIr={ir} onAbrirExercicio={abrirExercicio} />
+    case '/programa/proposta':
+      return (
+        <PropostaScreen
+          userId={userId}
+          onVoltar={voltar}
+          onAprovado={() => ir('/programa', true)}
+          onAbrirExercicio={abrirExercicio}
+        />
+      )
     case '/academias':
       return <AcademiasScreen userId={userId} onVoltar={voltar} />
     case '/exercicios':

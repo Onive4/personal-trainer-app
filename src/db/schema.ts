@@ -8,6 +8,7 @@ import type {
   RespostasAnamnese,
   Sexo,
 } from '../engine/anamnese'
+import type { PropostaMesociclo } from '../engine/builder'
 
 export type { Sexo }
 
@@ -91,6 +92,63 @@ export interface Gym {
   updated_at: string
 }
 
+export interface Program {
+  id: string
+  profile_id: string
+  nome: string
+  objetivo: Objetivo
+  dias_semana: number
+  criado_em: string
+  ativo: boolean
+  updated_at: string
+}
+
+export type StatusMesociclo = 'proposto' | 'aprovado' | 'em_andamento' | 'concluido'
+
+export interface Mesocycle {
+  id: string
+  program_id: string
+  profile_id: string
+  numero: number
+  semanas: number
+  enfase: string[]
+  status: StatusMesociclo
+  diagnostico: Record<string, unknown>
+  aprovado_em: string | null
+  created_at: string
+  updated_at: string
+}
+
+export interface Slot {
+  id: string
+  mesocycle_id: string
+  profile_id: string
+  dia: number
+  ordem: number
+  exercise_id: string
+  padrao_movimento: string
+  tipo: 'composto' | 'acessorio'
+  series_alvo: number
+  rep_min: number
+  rep_max: number
+  rir_semana: number[]
+  substituiu_slot_id: string | null
+  motivo: string
+  created_at: string
+}
+
+/** Proposta de bloco ainda não aprovada: fica só no aparelho. */
+export interface PropostaLocal {
+  profile_id: string
+  variante: number
+  proposta: PropostaMesociclo
+  /** Trocas feitas à mão: "dia-ordem" → slug do exercício escolhido. */
+  trocas: Record<string, string>
+  gym_id: string
+  anamnese_id: string
+  gerada_em: string
+}
+
 /** Fila de escrita para o Supabase. Enviada por src/db/sync.ts. */
 export interface SyncOutboxItem {
   id?: number
@@ -110,6 +168,10 @@ export class TreinoDB extends Dexie {
   nutrition_targets!: EntityTable<NutritionTarget, 'id'>
   rascunhos_anamnese!: EntityTable<RascunhoAnamnese, 'profile_id'>
   gyms!: EntityTable<Gym, 'id'>
+  programs!: EntityTable<Program, 'id'>
+  mesocycles!: EntityTable<Mesocycle, 'id'>
+  slots!: EntityTable<Slot, 'id'>
+  propostas!: EntityTable<PropostaLocal, 'profile_id'>
 
   constructor(nome = 'treino') {
     super(nome)
@@ -125,6 +187,12 @@ export class TreinoDB extends Dexie {
     })
     this.version(3).stores({
       gyms: 'id, profile_id',
+    })
+    this.version(4).stores({
+      programs: 'id, profile_id',
+      mesocycles: 'id, program_id, profile_id',
+      slots: 'id, mesocycle_id, profile_id',
+      propostas: 'profile_id',
     })
   }
 }

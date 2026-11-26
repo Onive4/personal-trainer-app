@@ -5,6 +5,7 @@ import { num } from '../../ui/datas'
 import { anamneseAtual, metaAtual, ultimaMedida } from '../perfil/registros'
 import { ROTULO_NIVEL, ROTULO_OBJETIVO } from '../anamnese/rotulos'
 import { academiaAtiva } from '../academias/registros'
+import { programaAtual } from '../programa/registros'
 
 interface Props {
   userId: string
@@ -18,7 +19,7 @@ interface Props {
 export function HomeScreen({ userId, email, nomeDaSessao, online, onIr, onSair }: Props) {
   // A tela lê do Dexie; a rede só atualiza o espelho em segundo plano.
   const dados = useLiveQuery(async () => {
-    const [perfil, anamnese, meta, medida, rascunho, pendentes, gym] = await Promise.all([
+    const [perfil, anamnese, meta, medida, rascunho, pendentes, gym, programa, proposta] = await Promise.all([
       db.profiles.get(userId),
       anamneseAtual(userId),
       metaAtual(userId),
@@ -26,8 +27,10 @@ export function HomeScreen({ userId, email, nomeDaSessao, online, onIr, onSair }
       db.rascunhos_anamnese.get(userId),
       db.sync_outbox.count(),
       academiaAtiva(userId),
+      programaAtual(userId),
+      db.propostas.get(userId),
     ])
-    return { perfil, anamnese, meta, medida, rascunho, pendentes, gym }
+    return { perfil, anamnese, meta, medida, rascunho, pendentes, gym, programa, proposta }
   }, [userId])
 
   // Perfil local primeiro; na primeira abertura, o nome que veio no login.
@@ -64,6 +67,30 @@ export function HomeScreen({ userId, email, nomeDaSessao, online, onIr, onSair }
           <p className="text-neutral-300">O treino fica bloqueado até você registrar a liberação.</p>
           <Button onClick={() => onIr('/avaliacao')}>Ver detalhes</Button>
         </section>
+      )}
+
+      {anamnese && anamnese.clearance_status !== 'orientar_avaliacao' && (
+        <button
+          type="button"
+          onClick={() => onIr('/programa')}
+          className="flex flex-col gap-1 rounded-2xl border border-orange-500/60 bg-neutral-900 p-4 text-left active:bg-neutral-800"
+        >
+          <span className="text-sm text-orange-300">Seu treino</span>
+          <span className="text-lg font-semibold">
+            {dados?.programa
+              ? dados.programa.programa.nome
+              : dados?.proposta
+                ? 'Proposta aguardando aprovação'
+                : dados?.gym
+                  ? 'Gerar proposta de treino'
+                  : 'Cadastre a academia para gerar'}
+          </span>
+          {dados?.programa && (
+            <span className="text-sm text-neutral-400">
+              Bloco {dados.programa.mesociclo.numero} · {dados.programa.mesociclo.semanas} semanas
+            </span>
+          )}
+        </button>
       )}
 
       {anamnese && anamnese.clearance_status !== 'orientar_avaliacao' && (

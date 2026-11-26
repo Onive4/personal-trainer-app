@@ -94,11 +94,13 @@ gyms                id, profile_id, nome, ativa (bool), equipamentos (text[]),
 exercises           id (= slug do free-exercise-db), nome_pt, nome_en, padrao_movimento,
                     musculo_primario, musculos_secundarios[], equipamento, nivel,
                     mecanica, unilateral, instrucoes_pt[], imagens[], contraindicacoes[]
-programs            id, profile_id, nome, objetivo, dias_semana, criado_em, ativo
-mesocycles          id, program_id, numero, semanas, enfase[], status
-                    (proposto | aprovado | em_andamento | concluido), diagnostico (jsonb)
-slots               id, mesocycle_id, dia, ordem, exercise_id, padrao_movimento,
-                    series_alvo, rep_min, rep_max, rir_semana (int[]), substituiu_slot_id
+programs            id, profile_id, nome, objetivo, dias_semana, criado_em, ativo, updated_at
+mesocycles          id, program_id, profile_id, numero, semanas, enfase[], status
+                    (proposto | aprovado | em_andamento | concluido), diagnostico (jsonb),
+                    aprovado_em, created_at, updated_at
+slots               id, mesocycle_id, profile_id, dia, ordem, exercise_id, padrao_movimento,
+                    tipo (composto | acessorio), series_alvo, rep_min, rep_max,
+                    rir_semana (int[]), substituiu_slot_id, motivo, created_at
 sessions            id, mesocycle_id, profile_id, dia, semana, data_prevista,
                     data_realizada, readiness (jsonb), status
 set_logs            id, session_id, slot_id, exercise_id, serie_num, tipo_carga
@@ -369,6 +371,14 @@ Arquivos do catálogo:
 **M3 — Gerador de programa**
 Motor de montagem (volume, divisão, padrões de movimento, seleção de exercício); tela de proposta e aprovação.
 *Pronto quando:* a partir das duas anamneses, saem dois programas diferentes e coerentes, aprovados em tela.
+
+Decisões do M3 (implementadas em `src/engine/volume.ts` e `src/engine/builder.ts`):
+- **Grupos de volume:** peito, costas (dorsais + meio das costas), ombros, quadríceps, posterior de coxa, glúteos, bíceps, tríceps, panturrilha e abdômen. Panturrilha e abdômen têm metade da faixa da tabela 6.1. Trapézio, antebraço, lombar, adutores e abdutores só recebem volume indireto. Uma série conta 1 para o músculo primário e 0,5 para cada secundário.
+- **Tempo por sessão:** ~10 min de aquecimento + ~2,5 min por série. 60 min → 20 séries.
+- **Montagem:** cada dia da divisão tem um molde fixo de padrões (compostos primeiro, acessórios, abdômen por último). Compostos começam com 3 séries e acessórios com 2 (mínimo 2, máximo 5 por exercício). Depois: corta o que não cabe no tempo → respeita o teto da faixa (podendo tirar um exercício repetido, nunca o único de um padrão obrigatório) → sobe séries de quem está abaixo da meta, prioritários primeiro, sem passar do teto de nenhum grupo → garante puxar ≥ empurrar. Duas passadas, porque cada ajuste mexe nos outros. O que ficar abaixo da meta vira aviso na proposta, com o motivo (tempo ou teto dos músculos que trabalham junto).
+- **Escolha do exercício:** depois do filtro eliminatório, pontua: exercício ainda não usado na semana (10), mecânica do tipo do slot (3), peso livre se o usuário domina o padrão ou máquina/cabo se não domina (1), diferente do bloco anterior (1). Empate: no composto, o que envolve mais músculos; no acessório, o mais isolado; depois o slug. "Outra proposta" alterna entre os melhores (até 1 ponto abaixo do primeiro).
+- **Bloco:** iniciante 4 semanas, intermediário 5, avançado 6, mais 1 de descarga. RIR desce linearmente dentro da faixa do objetivo (hipertrofia 3→1, força 2→1, emagrecimento 3→2, condicionamento e saúde 4→2); descarga em RIR 4 (5 quando o objetivo começa em 4), metade das séries.
+- **Aprovação:** a proposta fica só no aparelho (tabela local `propostas`) com as trocas feitas à mão. Aprovar grava programa, mesociclo e slots de uma vez. Mesmo objetivo e mesmos dias → novo mesociclo no mesmo programa; senão, programa novo e o anterior fica inativo. Pela API, `programs` só altera `ativo`, `mesocycles` só altera `status`, e `slots` não muda.
 
 **M4 — Execução e registro**
 Tela de sessão; registro de carga/placas/reps/RIR; cronômetro; detecção de recorde; check-in de readiness; fila de sincronização e resolução offline.

@@ -82,7 +82,14 @@ As variáveis `VITE_SUPABASE_*` entram no build a partir do `.env.local`.
 
 ## Critério de pronto do M2
 
-- [ ] Cadastrar a academia e marcar os equipamentos (cada um no seu celular)
-- [ ] Buscar um exercício e ver 3 alternativas válidas para a academia ativa
+- [x] Cadastrar a academia e marcar os equipamentos (Raphael; Julyana quando for usar)
+- [x] Buscar um exercício e ver 3 alternativas válidas para a academia ativa
 - [x] Catálogo carregado no Supabase (190 exercícios, conferido contra `data/exercises.pt.json`)
 - [x] Cenário 7: academia sem leg press → alternativas do mesmo padrão e músculo (teste do motor)
+
+## Critério de pronto do M3
+
+- [ ] Raphael gera, revisa e aprova o programa no celular
+- [ ] Julyana cadastra a academia, gera e aprova o programa dela
+- [ ] Os dois programas aparecem no Supabase (`programs`, `mesocycles`, `slots`) e são diferentes
+- [x] Cenários 1 e 2 da especificação passam (testes do motor)
