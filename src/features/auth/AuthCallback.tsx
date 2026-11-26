@@ -49,7 +49,7 @@ export function AuthCallback() {
           <Button onClick={irParaInicio}>Voltar</Button>
         </>
       ) : (
-        <p className="text-slate-300">Entrando…</p>
+        <p className="text-neutral-300">Entrando…</p>
       )}
     </main>
   )

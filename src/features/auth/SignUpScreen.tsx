@@ -38,7 +38,7 @@ export function SignUpScreen({ onJaTenhoConta }: { onJaTenhoConta: () => void })
     return (
       <main className="tela mx-auto flex min-h-dvh max-w-md flex-col justify-center gap-6">
         <h1 className="text-2xl font-bold">Confirme seu e-mail</h1>
-        <p className="text-slate-300">
+        <p className="text-neutral-300">
           Enviamos um link para {email}. Abra o link e depois volte aqui para entrar.
         </p>
         <Button onClick={onJaTenhoConta}>Ir para Entrar</Button>
@@ -52,10 +52,10 @@ export function SignUpScreen({ onJaTenhoConta }: { onJaTenhoConta: () => void })
 
       <GoogleButton onErro={setErro} />
 
-      <div className="flex items-center gap-3 text-sm text-slate-400">
-        <span className="h-px flex-1 bg-slate-700" />
+      <div className="flex items-center gap-3 text-sm text-neutral-400">
+        <span className="h-px flex-1 bg-neutral-800" />
         ou com e-mail
-        <span className="h-px flex-1 bg-slate-700" />
+        <span className="h-px flex-1 bg-neutral-800" />
       </div>
 
       <form onSubmit={cadastrar} className="flex flex-col gap-4">

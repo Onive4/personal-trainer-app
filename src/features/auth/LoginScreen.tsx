@@ -27,10 +27,10 @@ export function LoginScreen({ onCriarConta }: { onCriarConta: () => void }) {
 
       <GoogleButton onErro={setErro} />
 
-      <div className="flex items-center gap-3 text-sm text-slate-400">
-        <span className="h-px flex-1 bg-slate-700" />
+      <div className="flex items-center gap-3 text-sm text-neutral-400">
+        <span className="h-px flex-1 bg-neutral-800" />
         ou com e-mail
-        <span className="h-px flex-1 bg-slate-700" />
+        <span className="h-px flex-1 bg-neutral-800" />
       </div>
 
       <form onSubmit={entrar} className="flex flex-col gap-4">

@@ -18,7 +18,7 @@ export function InstallScreen({ onContinuarNoNavegador }: { onContinuarNoNavegad
   return (
     <main className="tela mx-auto flex min-h-dvh max-w-md flex-col justify-center gap-6">
       <h1 className="text-3xl font-bold">Instale o app</h1>
-      <p className="text-slate-300">
+      <p className="text-neutral-300">
         Instalado na tela de início, o Treino abre sem internet e seus registros ficam guardados no
         celular até sincronizar.
       </p>
@@ -60,7 +60,7 @@ export function InstallScreen({ onContinuarNoNavegador }: { onContinuarNoNavegad
         ))}
 
       {plataforma === 'outra' && (
-        <p className="text-slate-300">
+        <p className="text-neutral-300">
           No computador, use o ícone de instalar na barra de endereço, ou continue no navegador.
         </p>
       )}

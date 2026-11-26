@@ -3,9 +3,9 @@ import type { ButtonHTMLAttributes } from 'react'
 type Variante = 'primario' | 'secundario' | 'texto'
 
 const estilos: Record<Variante, string> = {
-  primario: 'bg-emerald-500 text-slate-950 font-semibold active:bg-emerald-400',
-  secundario: 'bg-slate-800 text-slate-100 font-semibold active:bg-slate-700',
-  texto: 'bg-transparent text-emerald-300 underline-offset-4 active:underline',
+  primario: 'bg-orange-500 text-black font-semibold active:bg-orange-400',
+  secundario: 'bg-neutral-900 text-neutral-100 font-semibold active:bg-neutral-800',
+  texto: 'bg-transparent text-orange-400 underline-offset-4 active:underline',
 }
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {

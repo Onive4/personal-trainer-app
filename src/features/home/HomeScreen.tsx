@@ -39,14 +39,14 @@ export function HomeScreen({ userId, email, nomeDaSessao, onSair }: Props) {
         <h1 className="text-2xl font-bold">Olá, {nome}</h1>
         <span
           className={`rounded-full px-3 py-1 text-sm ${
-            online ? 'bg-emerald-900 text-emerald-200' : 'bg-amber-900 text-amber-200'
+            online ? 'bg-orange-950 text-orange-300' : 'bg-neutral-800 text-neutral-300'
           }`}
         >
           {online ? 'Online' : 'Offline'}
         </span>
       </header>
 
-      <p className="text-slate-300">
+      <p className="text-neutral-300">
         A fundação está pronta. A anamnese chega na próxima etapa.
       </p>
 

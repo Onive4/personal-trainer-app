@@ -21,7 +21,7 @@ export default function App() {
     return (
       <main className="tela mx-auto max-w-md">
         <h1 className="text-xl font-semibold">Configuração ausente</h1>
-        <p className="mt-3 text-slate-300">
+        <p className="mt-3 text-neutral-300">
           Defina VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY no .env.local (veja o README).
         </p>
       </main>

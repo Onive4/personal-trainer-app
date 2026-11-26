@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
-const TEMA = '#0f172a'
+const TEMA = '#000000'
 
 export default defineConfig({
   plugins: [
