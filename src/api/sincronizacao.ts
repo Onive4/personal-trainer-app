@@ -1,5 +1,5 @@
 import { supabase } from './supabase'
-import { db, type Anamnese, type Measurement, type NutritionTarget, type SyncOutboxItem } from '../db/schema'
+import { db, type Anamnese, type Gym, type Measurement, type NutritionTarget, type SyncOutboxItem } from '../db/schema'
 import { processarFila, type ResultadoEnvio } from '../db/sync'
 
 /** Erro de fetch (sem rede) aparece como TypeError ou mensagem "Failed to fetch". */
@@ -35,10 +35,11 @@ export function enviarFila(): Promise<void> {
  */
 export async function baixarDados(userId: string): Promise<void> {
   if (!navigator.onLine) return
-  const [a, m, n] = await Promise.all([
+  const [a, m, n, g] = await Promise.all([
     supabase.from('anamneses').select('id, profile_id, versao, respostas, clearance_status, constraints, nivel, objetivo, liberacao, data').eq('profile_id', userId),
     supabase.from('measurements').select('*').eq('profile_id', userId),
     supabase.from('nutrition_targets').select('*').eq('profile_id', userId),
+    supabase.from('gyms').select('id, profile_id, nome, ativa, equipamentos, created_at, updated_at').eq('profile_id', userId),
   ])
   const num = <T extends object>(linhas: T[]) =>
     linhas.map((l) =>
@@ -46,10 +47,15 @@ export async function baixarDados(userId: string): Promise<void> {
         Object.entries(l).map(([k, v]) => [k, typeof v === 'string' && /^-?\d+(\.\d+)?$/.test(v) && k !== 'data' ? Number(v) : v]),
       ) as T,
     )
-  await db.transaction('rw', db.anamneses, db.measurements, db.nutrition_targets, async () => {
+  await db.transaction('rw', [db.anamneses, db.measurements, db.nutrition_targets, db.gyms], async () => {
     if (a.data) await db.anamneses.bulkPut(a.data as Anamnese[])
     if (m.data) await db.measurements.bulkPut(num(m.data as Measurement[]))
     if (n.data) await db.nutrition_targets.bulkPut(num(n.data as NutritionTarget[]))
+    // Academia é editável: só aceita a versão do servidor se não for mais velha que a local.
+    for (const remota of (g.data ?? []) as Gym[]) {
+      const local = await db.gyms.get(remota.id)
+      if (!local || Date.parse(remota.updated_at) >= Date.parse(local.updated_at)) await db.gyms.put(remota)
+    }
   })
 }
 

@@ -89,11 +89,11 @@ anamneses           id, profile_id, versao, respostas (jsonb), clearance_status
                     profissional, registrado_em), data
 measurements        id, profile_id, data, peso_kg, pescoco, cintura, quadril,
                     torax, braco_d, braco_e, coxa_d, coxa_e, panturrilha, bf_estimado
-gyms                id, profile_id, nome, ativa (bool)
-gym_equipment       gym_id, equipment_key, disponivel (bool)
-exercises           id, slug, nome_pt, nome_en, padrao_movimento, musculo_primario,
-                    musculos_secundarios[], equipamento, nivel, unilateral,
-                    instrucoes_pt, imagens[], contraindicacoes[]
+gyms                id, profile_id, nome, ativa (bool), equipamentos (text[]),
+                    created_at, updated_at
+exercises           id (= slug do free-exercise-db), nome_pt, nome_en, padrao_movimento,
+                    musculo_primario, musculos_secundarios[], equipamento, nivel,
+                    mecanica, unilateral, instrucoes_pt[], imagens[], contraindicacoes[]
 programs            id, profile_id, nome, objetivo, dias_semana, criado_em, ativo
 mesocycles          id, program_id, numero, semanas, enfase[], status
                     (proposto | aprovado | em_andamento | concluido), diagnostico (jsonb)
@@ -272,6 +272,8 @@ Pontuação para ordenar: mesmo padrão de movimento (peso 3); mesma condição 
 
 **Regra de fallback (validada no catálogo):** cinco exercícios não têm nenhuma alternativa estrita, isto é, nenhum outro exercício com o mesmo músculo primário **e** o mesmo padrão de movimento. Quando não houver candidato estrito, o motor relaxa o critério de padrão e busca apenas pelo músculo primário, avisando na tela que a alternativa muda o padrão do movimento. Sem essa regra, o botão de substituir retorna vazio nesses casos.
 
+**Como ficou implementado (`src/engine/substitution.ts`):** os candidatos do mesmo músculo saem todos de uma lista só, ordenada pela pontuação; como o mesmo padrão vale 3 pontos, os estritos sempre vêm primeiro, e os de outro padrão só completam as 3 vagas, marcados com "muda o padrão do movimento". Há um segundo degrau de fallback: `Thigh_Adductor` é o único exercício de adutores, então, quando não existe nenhum candidato do mesmo músculo primário, o motor busca exercícios que trabalham esse músculo como secundário, também com aviso. Empate é desfeito pelo nome, para o resultado ser sempre o mesmo. Peso corporal conta como disponível em qualquer academia. Um teste garante que, com a academia completa, todo exercício do catálogo tem alternativa.
+
 Mostra as 3 melhores opções com imagem e instruções. Ao trocar, o novo exercício herda o slot (a contagem de volume semanal continua intacta) mas começa histórico de carga próprio, e o gráfico marca que as cargas não são comparáveis.
 
 ---
@@ -349,6 +351,11 @@ Questionário em etapas; lógica de triagem e `constraints[]`; registro de liber
 **M2 — Catálogo e academias**
 Catálogo **já pronto** em `data/` — 190 exercícios curados, com nome em português, cues de execução, contraindicações e chave de equipamento granular; basta importar para o banco. Falta: cadastro de academias com o checklist de `data/equipamentos.json`, busca e motor de substituição.
 *Pronto quando:* dá para procurar um exercício e ver 3 alternativas válidas para a academia ativa.
+
+Decisões do M2:
+- **Equipamentos dentro da academia** (`gyms.equipamentos text[]`) em vez da tabela `gym_equipment`: marcar o checklist é uma gravação só, que funciona offline e sincroniza sem conflito (vale a versão com `updated_at` mais recente). Pela API a academia aceita `insert` e `update` só de `nome`, `ativa`, `equipamentos` e `updated_at`; só uma fica ativa por pessoa. Cada pessoa cadastra a própria academia.
+- **Catálogo em dois lugares, mesma fonte:** o app lê `data/exercises.pt.json` empacotado (carregado sob demanda e guardado pelo service worker, funciona offline); a tabela `exercises` no Supabase existe para as chaves estrangeiras dos treinos (M3 em diante) e é só leitura pela API. A carga é gerada por `scripts/gerar-seed-exercicios.mjs` (migração `0006`, idempotente). Mudou o catálogo → regerar e aplicar de novo.
+- **Imagens do catálogo:** continuam vindo do GitHub por URL; o service worker guarda até 400 já vistas (cache `imagens-exercicios`) para aparecerem sem sinal.
 
 Arquivos do catálogo:
 

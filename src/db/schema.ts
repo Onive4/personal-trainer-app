@@ -80,6 +80,17 @@ export interface RascunhoAnamnese {
   atualizado_em: string
 }
 
+/** Academia com a lista de equipamentos (chaves de data/equipamentos.json). */
+export interface Gym {
+  id: string
+  profile_id: string
+  nome: string
+  ativa: boolean
+  equipamentos: string[]
+  created_at: string
+  updated_at: string
+}
+
 /** Fila de escrita para o Supabase. Enviada por src/db/sync.ts. */
 export interface SyncOutboxItem {
   id?: number
@@ -98,6 +109,7 @@ export class TreinoDB extends Dexie {
   measurements!: EntityTable<Measurement, 'id'>
   nutrition_targets!: EntityTable<NutritionTarget, 'id'>
   rascunhos_anamnese!: EntityTable<RascunhoAnamnese, 'profile_id'>
+  gyms!: EntityTable<Gym, 'id'>
 
   constructor(nome = 'treino') {
     super(nome)
@@ -110,6 +122,9 @@ export class TreinoDB extends Dexie {
       measurements: 'id, profile_id, [profile_id+data]',
       nutrition_targets: 'id, profile_id, [profile_id+data]',
       rascunhos_anamnese: 'profile_id',
+    })
+    this.version(3).stores({
+      gyms: 'id, profile_id',
     })
   }
 }

@@ -75,7 +75,14 @@ As variáveis `VITE_SUPABASE_*` entram no build a partir do `.env.local`.
 
 ## Critério de pronto do M1
 
-- [ ] Raphael completa a anamnese e vê nível, restrições e meta de nutrição
-- [ ] Julyana completa a anamnese e vê nível, restrições e meta de nutrição
-- [ ] Os dados aparecem no Supabase (tabelas `anamneses`, `measurements`, `nutrition_targets`)
+- [x] Raphael completa a anamnese e vê nível, restrições e meta de nutrição
+- [x] Julyana completa a anamnese e vê nível, restrições e meta de nutrição
+- [x] Os dados aparecem no Supabase (tabelas `anamneses`, `measurements`, `nutrition_targets`)
 - [x] Sinal de alerta bloqueia treino e meta; liberação registrada desbloqueia (testes do motor e teste na tela)
+
+## Critério de pronto do M2
+
+- [ ] Cadastrar a academia e marcar os equipamentos (cada um no seu celular)
+- [ ] Buscar um exercício e ver 3 alternativas válidas para a academia ativa
+- [x] Catálogo carregado no Supabase (190 exercícios, conferido contra `data/exercises.pt.json`)
+- [x] Cenário 7: academia sem leg press → alternativas do mesmo padrão e músculo (teste do motor)

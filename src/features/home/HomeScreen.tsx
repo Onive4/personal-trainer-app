@@ -4,6 +4,7 @@ import { Button } from '../../ui/Button'
 import { num } from '../../ui/datas'
 import { anamneseAtual, metaAtual, ultimaMedida } from '../perfil/registros'
 import { ROTULO_NIVEL, ROTULO_OBJETIVO } from '../anamnese/rotulos'
+import { academiaAtiva } from '../academias/registros'
 
 interface Props {
   userId: string
@@ -17,15 +18,16 @@ interface Props {
 export function HomeScreen({ userId, email, nomeDaSessao, online, onIr, onSair }: Props) {
   // A tela lê do Dexie; a rede só atualiza o espelho em segundo plano.
   const dados = useLiveQuery(async () => {
-    const [perfil, anamnese, meta, medida, rascunho, pendentes] = await Promise.all([
+    const [perfil, anamnese, meta, medida, rascunho, pendentes, gym] = await Promise.all([
       db.profiles.get(userId),
       anamneseAtual(userId),
       metaAtual(userId),
       ultimaMedida(userId),
       db.rascunhos_anamnese.get(userId),
       db.sync_outbox.count(),
+      academiaAtiva(userId),
     ])
-    return { perfil, anamnese, meta, medida, rascunho, pendentes }
+    return { perfil, anamnese, meta, medida, rascunho, pendentes, gym }
   }, [userId])
 
   // Perfil local primeiro; na primeira abertura, o nome que veio no login.
@@ -99,6 +101,27 @@ export function HomeScreen({ userId, email, nomeDaSessao, online, onIr, onSair }
           >
             <span className="text-sm text-neutral-400">Nutrição</span>
             <span className="text-xl font-semibold">{dados?.meta ? `${dados.meta.kcal_alvo} kcal` : '—'}</span>
+          </button>
+        </div>
+      )}
+
+      {dados && (
+        <div className="grid grid-cols-2 gap-3">
+          <button
+            type="button"
+            onClick={() => onIr('/academias')}
+            className="flex min-h-24 flex-col justify-between rounded-2xl bg-neutral-900 p-4 text-left active:bg-neutral-800"
+          >
+            <span className="text-sm text-neutral-400">Academia</span>
+            <span className="truncate text-lg font-semibold">{dados.gym?.nome ?? 'Cadastrar'}</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => onIr('/exercicios')}
+            className="flex min-h-24 flex-col justify-between rounded-2xl bg-neutral-900 p-4 text-left active:bg-neutral-800"
+          >
+            <span className="text-sm text-neutral-400">Exercícios</span>
+            <span className="text-lg font-semibold">Catálogo</span>
           </button>
         </div>
       )}

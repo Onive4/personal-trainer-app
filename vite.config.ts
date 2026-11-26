@@ -36,6 +36,20 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png,ico,webmanifest,woff2}'],
         navigateFallback: '/index.html',
         cleanupOutdatedCaches: true,
+        // Imagens do catálogo (free-exercise-db no GitHub): guarda as que já
+        // foram vistas para aparecerem sem sinal.
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) =>
+              url.origin === 'https://raw.githubusercontent.com' && url.pathname.startsWith('/yuhonas/free-exercise-db/'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'imagens-exercicios',
+              expiration: { maxEntries: 400, maxAgeSeconds: 60 * 60 * 24 * 365 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+        ],
       },
     }),
   ],

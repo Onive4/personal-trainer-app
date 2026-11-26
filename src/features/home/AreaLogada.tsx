@@ -7,6 +7,9 @@ import { ResumoScreen } from '../anamnese/ResumoScreen'
 import { MedidasScreen } from '../medidas/MedidasScreen'
 import { NutricaoScreen } from '../nutricao/NutricaoScreen'
 import { HomeScreen } from './HomeScreen'
+import { AcademiasScreen } from '../academias/AcademiasScreen'
+import { ExerciciosScreen } from '../exercicios/ExerciciosScreen'
+import { ExercicioScreen } from '../exercicios/ExercicioScreen'
 
 function assinarConexao(f: () => void) {
   window.addEventListener('online', f)
@@ -39,7 +42,26 @@ export function AreaLogada({ userId, email, nomeDaSessao, onSair }: Props) {
     void sincronizarTudo(userId)
   }, [userId, online])
 
+  if (caminho.startsWith('/exercicios/')) {
+    return (
+      <ExercicioScreen
+        key={caminho}
+        userId={userId}
+        slug={decodeURIComponent(caminho.slice('/exercicios/'.length))}
+        onVoltar={voltar}
+        onAbrir={(s) => ir(`/exercicios/${encodeURIComponent(s)}`)}
+        onAcademias={() => ir('/academias')}
+      />
+    )
+  }
+
   switch (caminho) {
+    case '/academias':
+      return <AcademiasScreen userId={userId} onVoltar={voltar} />
+    case '/exercicios':
+      return (
+        <ExerciciosScreen userId={userId} onVoltar={voltar} onAbrir={(s) => ir(`/exercicios/${encodeURIComponent(s)}`)} />
+      )
     case '/anamnese':
       return <AnamneseScreen userId={userId} onVoltar={voltar} onConcluir={() => ir('/avaliacao', true)} />
     case '/avaliacao':
