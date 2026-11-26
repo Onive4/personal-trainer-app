@@ -1,0 +1,23 @@
+name: Keep-alive do Supabase
+
+# O projeto Supabase gratuito pausa após 7 dias sem atividade no banco.
+# Esta chamada semanal mantém o banco ativo. Custo: zero.
+on:
+  schedule:
+    - cron: '0 12 * * 1,4' # segunda e quinta, 09:00 em São Paulo
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chamar keep_alive()
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          curl --fail --silent --show-error \
+            -X POST "$SUPABASE_URL/rest/v1/rpc/keep_alive" \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            -H "Content-Type: application/json" \
+            -d '{}'
