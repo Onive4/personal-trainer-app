@@ -1,5 +1,6 @@
-// Gera supabase/migrations/0006_carga_exercicios.sql a partir de data/exercises.pt.json.
-// Uso: node scripts/gerar-seed-exercicios.mjs
+// Gera a carga do catálogo (SQL idempotente) a partir de data/exercises.pt.json.
+// Uso: node scripts/gerar-seed-exercicios.mjs [arquivo-de-saida.sql] [slug,slug,...]
+// Sem argumentos grava supabase/migrations/0006_carga_exercicios.sql com o catálogo inteiro.
 // O arquivo é idempotente (insert ... on conflict do update): rode de novo e
 // crie uma migração nova sempre que o catálogo mudar.
 import { readFileSync, writeFileSync } from 'node:fs'
@@ -7,7 +8,9 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
 const raiz = join(dirname(fileURLToPath(import.meta.url)), '..')
-const exercicios = JSON.parse(readFileSync(join(raiz, 'data/exercises.pt.json'), 'utf8'))
+const saida = process.argv[2] ?? join(raiz, 'supabase/migrations/0006_carga_exercicios.sql')
+const filtro = process.argv[3] ? new Set(process.argv[3].split(',')) : null
+const exercicios = JSON.parse(readFileSync(join(raiz, 'data/exercises.pt.json'), 'utf8')).filter((e) => !filtro || filtro.has(e.slug))
 
 const txt = (s) => (s == null ? 'null' : `'${String(s).replaceAll("'", "''")}'`)
 const arr = (a) => (a.length ? `array[${a.map(txt).join(', ')}]::text[]` : `'{}'::text[]`)
@@ -46,5 +49,5 @@ on conflict (id) do update set
   contraindicacoes = excluded.contraindicacoes;
 `
 
-writeFileSync(join(raiz, 'supabase/migrations/0006_carga_exercicios.sql'), sql)
-console.log(`${exercicios.length} exercícios → supabase/migrations/0006_carga_exercicios.sql (${sql.length} bytes)`)
+writeFileSync(saida, sql)
+console.log(`${exercicios.length} exercícios → ${saida} (${sql.length} bytes)`)

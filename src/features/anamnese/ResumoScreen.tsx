@@ -67,7 +67,7 @@ export function ResumoScreen({ userId, onVoltar, onRefazer, onNutricao }: Props)
   return (
     <Tela titulo="Sua avaliação" onVoltar={onVoltar}>
       <p className="text-sm text-neutral-400">
-        Anamnese versão {anamnese.versao} · {formatarData(anamnese.data)}
+        Questionário respondido em {formatarData(anamnese.data)}
         {anamnese.liberacao &&
           ` · liberação de ${anamnese.liberacao.profissional} em ${formatarData(anamnese.liberacao.data)}`}
       </p>
@@ -80,7 +80,7 @@ export function ResumoScreen({ userId, onVoltar, onRefazer, onNutricao }: Props)
       </dl>
 
       <section className="flex flex-col gap-2">
-        <h2 className="text-lg font-semibold">Restrições do treino</h2>
+        <h2 className="text-lg font-semibold">Cuidados no seu treino</h2>
         {restricoes.length === 0 ? (
           <p className="text-neutral-300">Nenhuma. Todos os exercícios do catálogo podem entrar.</p>
         ) : (
@@ -93,7 +93,7 @@ export function ResumoScreen({ userId, onVoltar, onRefazer, onNutricao }: Props)
             ))}
           </ul>
         )}
-        <p className="text-sm text-neutral-400">Exercícios com essas contraindicações ficam fora do seu programa.</p>
+        <p className="text-sm text-neutral-400">Exercícios que forçam esses pontos ficam fora do seu treino.</p>
       </section>
 
       {familiar.length > 0 && (
@@ -105,7 +105,7 @@ export function ResumoScreen({ userId, onVoltar, onRefazer, onNutricao }: Props)
       <div className="mt-auto flex flex-col gap-2">
         <Button onClick={onNutricao}>Ver metas de nutrição</Button>
         <Button variante="secundario" onClick={onRefazer}>
-          Refazer anamnese
+          Refazer questionário
         </Button>
       </div>
     </Tela>

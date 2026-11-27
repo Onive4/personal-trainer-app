@@ -1,12 +1,14 @@
+import { useMemo } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db } from '../../db/schema'
+import { MINUTOS_AQUECIMENTO, MINUTOS_POR_SERIE } from '../../engine/volume'
 import { Button } from '../../ui/Button'
 import { Tela } from '../../ui/Tela'
 import { formatarData } from '../../ui/datas'
 import { ROTULO_OBJETIVO } from '../anamnese/rotulos'
 import { useCatalogo } from '../exercicios/useCatalogo'
 import { pendenciaParaGerar, programaAtual } from './registros'
-import { textoPrescricao } from './rotulos'
+import { DiaTreino, PorQue, SemanasEsforco } from './Componentes'
 
 interface Props {
   userId: string
@@ -16,26 +18,26 @@ interface Props {
 }
 
 const PENDENCIA = {
-  anamnese: { texto: 'Faça a anamnese primeiro: é dela que saem nível, objetivo e restrições.', botao: 'Fazer anamnese', destino: '/anamnese' },
-  liberacao: { texto: 'O treino está bloqueado até você registrar a liberação médica.', botao: 'Ver avaliação', destino: '/avaliacao' },
-  academia: { texto: 'Cadastre a academia e marque os equipamentos: o programa só usa o que existe lá.', botao: 'Cadastrar academia', destino: '/academias' },
+  anamnese: { texto: 'Responda o questionário inicial primeiro: é dele que saem seu nível, objetivo e cuidados.', botao: 'Responder questionário', destino: '/anamnese' },
+  liberacao: { texto: 'O treino fica bloqueado até você registrar a liberação médica.', botao: 'Ver avaliação', destino: '/avaliacao' },
+  academia: { texto: 'Cadastre sua academia e marque os aparelhos: o treino só usa o que existe lá.', botao: 'Cadastrar academia', destino: '/academias' },
 } as const
 
 export function ProgramaScreen({ userId, onVoltar, onIr, onAbrirExercicio }: Props) {
   const catalogo = useCatalogo()
+  const porSlug = useMemo(() => new Map((catalogo ?? []).map((e) => [e.slug, e])), [catalogo])
   const dados = useLiveQuery(async () => {
     const [atual, pendencia, proposta] = await Promise.all([programaAtual(userId), pendenciaParaGerar(userId), db.propostas.get(userId)])
     return { atual, pendencia, proposta }
   }, [userId])
   if (!dados) return null
   const { atual, pendencia, proposta } = dados
-  const nomeDe = (slug: string) => catalogo?.find((e) => e.slug === slug)?.nome_pt ?? slug
 
   const botaoGerar = pendencia ? (
     <Button onClick={() => onIr(PENDENCIA[pendencia].destino)}>{PENDENCIA[pendencia].botao}</Button>
   ) : (
     <Button variante={atual ? 'secundario' : 'primario'} onClick={() => onIr('/programa/proposta')}>
-      {proposta ? 'Continuar revisando a proposta' : atual ? 'Propor novo bloco' : 'Gerar proposta de treino'}
+      {proposta ? 'Continuar vendo a sugestão' : atual ? 'Montar um treino novo' : 'Montar meu treino'}
     </Button>
   )
 
@@ -45,7 +47,7 @@ export function ProgramaScreen({ userId, onVoltar, onIr, onAbrirExercicio }: Pro
         <p className="text-neutral-300">
           {pendencia
             ? PENDENCIA[pendencia].texto
-            : 'O app monta um bloco de treino a partir da sua anamnese e da academia ativa. Você revisa, troca o que quiser e aprova.'}
+            : 'O app monta seu treino a partir do questionário e da sua academia. Você vê, troca o que quiser e começa.'}
         </p>
         {botaoGerar}
       </Tela>
@@ -56,52 +58,50 @@ export function ProgramaScreen({ userId, onVoltar, onIr, onAbrirExercicio }: Pro
   const rir = slots[0]?.rir_semana ?? []
   const dias = [...new Set(slots.map((s) => s.dia))]
   const nomesDias = (mesociclo.diagnostico.dias as string[] | undefined) ?? []
+  const explicacao = (mesociclo.diagnostico.explicacao as string[] | undefined) ?? []
+  const minutosDia = (dia: number) => {
+    const doDia = slots.filter((s) => s.dia === dia)
+    return Math.round(
+      MINUTOS_AQUECIMENTO +
+        doDia.filter((s) => s.tipo !== 'aerobico').reduce((t, s) => t + s.series_alvo, 0) * MINUTOS_POR_SERIE +
+        doDia.reduce((t, s) => t + (s.minutos ?? 0), 0),
+    )
+  }
+  const semAerobico = !slots.some((s) => s.tipo === 'aerobico')
 
   return (
     <Tela titulo="Treino" onVoltar={onVoltar}>
-      <section className="rounded-2xl bg-neutral-900 p-4">
-        <p className="text-lg font-semibold">{programa.nome}</p>
-        <p className="text-sm text-neutral-400">
-          {ROTULO_OBJETIVO[programa.objetivo]} · bloco {mesociclo.numero} · aprovado em{' '}
-          {mesociclo.aprovado_em ? formatarData(mesociclo.aprovado_em) : '—'}
-        </p>
-        <div className="mt-3 flex gap-1">
-          {rir.map((r, i) => (
-            <div key={i} className={`flex-1 rounded-lg p-2 text-center ${i === rir.length - 1 ? 'bg-neutral-800' : 'bg-black'}`}>
-              <p className="text-xs text-neutral-500">{i === rir.length - 1 ? 'Desc.' : `S${i + 1}`}</p>
-              <p className="font-semibold">RIR {r}</p>
-            </div>
-          ))}
+      <section className="flex flex-col gap-3 rounded-2xl bg-neutral-900 p-4">
+        <div>
+          <p className="text-lg font-semibold">{programa.nome}</p>
+          <p className="text-sm text-neutral-400">
+            {ROTULO_OBJETIVO[programa.objetivo]} · fase {mesociclo.numero} · começou em{' '}
+            {mesociclo.aprovado_em ? formatarData(mesociclo.aprovado_em) : '—'}
+          </p>
         </div>
+        <SemanasEsforco rir={rir} />
       </section>
 
-      <p className="text-sm text-neutral-400">
-        O registro das séries, com carga e cronômetro, chega na próxima etapa do app.
-      </p>
+      {semAerobico && (
+        <p className="rounded-xl border border-sky-900 p-3 text-sm text-sky-200">
+          Este treino foi montado antes de o app incluir aeróbico. Toque em "Montar um treino novo" para receber a versão com
+          esteira, bicicleta e similares.
+        </p>
+      )}
+
+      <PorQue frases={explicacao} />
+
+      <p className="text-sm text-neutral-400">O registro das séries, com peso e cronômetro, chega na próxima versão do app.</p>
 
       {dias.map((dia) => (
-        <section key={dia} className="flex flex-col gap-2">
-          <h2 className="text-lg font-semibold">
-            Dia {dia}
-            {nomesDias.length === dias.length ? ` · ${nomesDias[dia - 1]}` : ''}
-          </h2>
-          <ul className="flex flex-col gap-2">
-            {slots
-              .filter((s) => s.dia === dia)
-              .map((s) => (
-                <li key={s.id}>
-                  <button
-                    type="button"
-                    onClick={() => onAbrirExercicio(s.exercise_id)}
-                    className="flex min-h-12 w-full items-center justify-between gap-3 rounded-xl border border-neutral-800 px-3 py-2 text-left active:bg-neutral-900"
-                  >
-                    <span>{nomeDe(s.exercise_id)}</span>
-                    <span className="shrink-0 text-sm text-orange-300">{textoPrescricao(s)}</span>
-                  </button>
-                </li>
-              ))}
-          </ul>
-        </section>
+        <DiaTreino
+          key={dia}
+          titulo={`Treino ${dia}${nomesDias[dia - 1] ? ` · ${nomesDias[dia - 1]}` : ''}`}
+          minutos={minutosDia(dia)}
+          porSlug={porSlug}
+          onAbrir={onAbrirExercicio}
+          itens={slots.filter((s) => s.dia === dia).map((s) => ({ ...s, chave: s.id }))}
+        />
       ))}
 
       {botaoGerar}

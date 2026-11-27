@@ -10,6 +10,7 @@ export const ROTULO_CATEGORIA: Record<string, string> = {
   polias: 'Polias e cabos',
   maquinas: 'Máquinas',
   livre: 'Peso corporal e acessórios',
+  aerobico: 'Aeróbico',
 }
 
 export const ROTULO_EQUIPAMENTO: Record<string, string> = {
@@ -75,6 +76,13 @@ export const ROTULO_EQUIPAMENTO: Record<string, string> = {
   fitas_suspensao: 'Fitas de suspensão (TRX)',
   paralelas: 'Paralelas',
   peso_corporal: 'Peso corporal (sempre disponível)',
+  esteira: 'Esteira',
+  bicicleta_ergometrica: 'Bicicleta ergométrica',
+  bicicleta_horizontal: 'Bicicleta horizontal (com encosto)',
+  eliptico: 'Elíptico (transport)',
+  escada_ergometrica: 'Escada ergométrica',
+  remo_ergometrico: 'Remo ergométrico',
+  corda_pular: 'Corda de pular',
 }
 
 export const rotuloEquipamento = (k: string) => ROTULO_EQUIPAMENTO[k] ?? k.replaceAll('_', ' ')

@@ -1,6 +1,7 @@
 import { MUSCULOS } from '../anamnese/rotulos'
 
-export const rotuloMusculo = (m: string) => MUSCULOS.find((x) => x.valor === m)?.rotulo ?? m.replaceAll('_', ' ')
+export const rotuloMusculo = (m: string) =>
+  m === 'cardio' ? 'Aeróbico' : (MUSCULOS.find((x) => x.valor === m)?.rotulo ?? m.replaceAll('_', ' '))
 
 const PADRAO: Record<string, string> = {
   agachamento: 'Agachamento',

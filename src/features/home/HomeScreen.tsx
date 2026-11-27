@@ -52,12 +52,12 @@ export function HomeScreen({ userId, email, nomeDaSessao, online, onIr, onSair }
 
       {dados && !anamnese && (
         <section className="flex flex-col gap-3 rounded-2xl bg-neutral-900 p-4">
-          <h2 className="text-lg font-semibold">Comece pela anamnese</h2>
+          <h2 className="text-lg font-semibold">Comece pelo questionário</h2>
           <p className="text-neutral-300">
-            São 7 etapas rápidas sobre saúde, histórico de treino e objetivo. Com elas o app calcula suas restrições e
+            São 7 etapas rápidas sobre saúde, rotina e objetivo. Com elas o app monta seu treino, seus cuidados e
             metas.
           </p>
-          <Button onClick={() => onIr('/anamnese')}>{dados.rascunho ? 'Continuar anamnese' : 'Fazer anamnese'}</Button>
+          <Button onClick={() => onIr('/anamnese')}>{dados.rascunho ? 'Continuar questionário' : 'Responder questionário'}</Button>
         </section>
       )}
 
@@ -80,14 +80,14 @@ export function HomeScreen({ userId, email, nomeDaSessao, online, onIr, onSair }
             {dados?.programa
               ? dados.programa.programa.nome
               : dados?.proposta
-                ? 'Proposta aguardando aprovação'
+                ? 'Treino sugerido esperando você'
                 : dados?.gym
-                  ? 'Gerar proposta de treino'
-                  : 'Cadastre a academia para gerar'}
+                  ? 'Montar meu treino'
+                  : 'Cadastre a academia para montar'}
           </span>
           {dados?.programa && (
             <span className="text-sm text-neutral-400">
-              Bloco {dados.programa.mesociclo.numero} · {dados.programa.mesociclo.semanas} semanas
+              {dados.programa.programa.dias_semana} treinos por semana · fase de {dados.programa.mesociclo.semanas} semanas
             </span>
           )}
         </button>
@@ -105,8 +105,8 @@ export function HomeScreen({ userId, email, nomeDaSessao, online, onIr, onSair }
           </span>
           <span className="text-sm text-neutral-400">
             {anamnese.constraints.length === 0
-              ? 'Sem restrições'
-              : `${anamnese.constraints.length} ${anamnese.constraints.length === 1 ? 'restrição' : 'restrições'}`}
+              ? 'Sem cuidados especiais'
+              : `${anamnese.constraints.length} ${anamnese.constraints.length === 1 ? 'cuidado' : 'cuidados'} no treino`}
           </span>
         </button>
       )}

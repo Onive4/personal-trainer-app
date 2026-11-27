@@ -47,7 +47,7 @@ export function ExerciciosScreen({ userId, onVoltar, onAbrir }: Props) {
         }}
       />
       <div className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1">
-        {[{ valor: null as string | null, rotulo: 'Todos' }, ...MUSCULOS].map((m) => (
+        {[{ valor: null as string | null, rotulo: 'Todos' }, { valor: 'cardio', rotulo: 'Aeróbico' }, ...MUSCULOS].map((m) => (
           <button
             key={m.valor ?? 'todos'}
             type="button"
@@ -106,7 +106,7 @@ function Item({ e, semEquipamento, conflita, onAbrir }: { e: Exercicio; semEquip
           </span>
           {(conflita || semEquipamento) && (
             <span className="text-sm text-amber-300">
-              {conflita ? 'Contraria uma restrição sua' : 'Sem equipamento na academia ativa'}
+              {conflita ? 'Não indicado pela sua avaliação' : 'Sua academia não tem o aparelho'}
             </span>
           )}
         </span>

@@ -71,7 +71,8 @@ describe('substituição', () => {
   })
 
   it('fallback: músculo com um exercício só busca quem o trabalha como secundário', () => {
-    const r = alternativas(ex('Thigh_Adductor'), catalogo, ctx())
+    // Sem elástico, o único outro exercício de adutores fica indisponível.
+    const r = alternativas(ex('Thigh_Adductor'), catalogo, ctx({ equipamentos: todos.filter((k) => k !== 'elastico') }))
     expect(r.length).toBeGreaterThan(0)
     for (const a of r) {
       expect(a.tipo).toBe('musculo_secundario')

@@ -88,10 +88,13 @@ export function volumeSemanal(itens: readonly { exercicio: Exercicio; series: nu
   return total
 }
 
-/** Tempo: ~10 min de aquecimento e ~2,5 min por série (execução + descanso). */
-export const MINUTOS_AQUECIMENTO = 10
+/** Tempo: ~5 min de aquecimento e ~2,5 min por série (execução + descanso). */
+export const MINUTOS_AQUECIMENTO = 5
 export const MINUTOS_POR_SERIE = 2.5
+/** Todo treino termina com pelo menos 10 min de aeróbico. */
+export const AEROBICO_MINIMO = 10
 
-export function seriesPorSessao(minutos: number): number {
-  return Math.max(8, Math.floor((minutos - MINUTOS_AQUECIMENTO) / MINUTOS_POR_SERIE))
+/** Séries de musculação que cabem na sessão, já reservando o aeróbico mínimo. */
+export function seriesPorSessao(minutos: number, reservaAerobico = AEROBICO_MINIMO): number {
+  return Math.max(8, Math.floor((minutos - MINUTOS_AQUECIMENTO - reservaAerobico) / MINUTOS_POR_SERIE))
 }

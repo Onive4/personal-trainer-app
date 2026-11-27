@@ -6,6 +6,14 @@ import { TextField } from '../../ui/TextField'
 import { Tela } from '../../ui/Tela'
 import { CATEGORIAS, ROTULO_CATEGORIA, rotuloEquipamento } from './equipamentos'
 import { academias, ativarAcademia, criarAcademia, salvarAcademia } from './registros'
+import { buscarAcademiasProximas, minhaPosicao, textoDistancia, type AcademiaProxima, type ErroBusca } from './buscarProximas'
+
+const MENSAGEM_ERRO: Record<ErroBusca, string> = {
+  sem_permissao: 'O celular não deu acesso à localização. Libere nas configurações do navegador ou digite o nome abaixo.',
+  sem_gps: 'Não deu para pegar sua localização agora. Tente de novo ou digite o nome abaixo.',
+  sem_rede: 'Sem internet para buscar. Digite o nome abaixo e marque os aparelhos.',
+  falhou: 'O serviço de mapas não respondeu. Tente de novo em instantes ou digite o nome abaixo.',
+}
 
 interface Props {
   userId: string
@@ -16,6 +24,22 @@ export function AcademiasScreen({ userId, onVoltar }: Props) {
   const lista = useLiveQuery(() => academias(userId), [userId])
   const [editando, setEditando] = useState<Gym | null>(null)
   const [nova, setNova] = useState('')
+  const [busca, setBusca] = useState<{ estado: 'parado' | 'buscando' } | { estado: 'pronto'; lista: AcademiaProxima[] } | { estado: 'erro'; erro: ErroBusca }>({ estado: 'parado' })
+
+  const buscar = async () => {
+    setBusca({ estado: 'buscando' })
+    try {
+      const { latitude, longitude } = await minhaPosicao()
+      setBusca({ estado: 'pronto', lista: await buscarAcademiasProximas(latitude, longitude) })
+    } catch (e) {
+      setBusca({ estado: 'erro', erro: (typeof e === 'string' ? e : 'falhou') as ErroBusca })
+    }
+  }
+  const escolher = async (nome: string) => {
+    const gym = await criarAcademia(userId, nome)
+    setBusca({ estado: 'parado' })
+    setEditando(gym)
+  }
 
   if (editando) return <EditarAcademia gym={editando} onFechar={() => setEditando(null)} />
 
@@ -29,7 +53,7 @@ export function AcademiasScreen({ userId, onVoltar }: Props) {
   return (
     <Tela titulo="Academias" onVoltar={onVoltar}>
       <p className="text-neutral-300">
-        O app só sugere exercícios com o equipamento que existe na academia ativa.
+        O treino só usa aparelhos que existem na sua academia.
       </p>
 
       <ul className="flex flex-col gap-3">
@@ -39,14 +63,14 @@ export function AcademiasScreen({ userId, onVoltar }: Props) {
               <div>
                 <p className="text-lg font-semibold">{g.nome}</p>
                 <p className="text-sm text-neutral-400">
-                  {g.equipamentos.filter((e) => e !== 'peso_corporal').length} equipamentos marcados
+                  {g.equipamentos.filter((e) => e !== 'peso_corporal').length} aparelhos marcados
                 </p>
               </div>
-              {g.ativa && <span className="rounded-full bg-orange-500 px-3 py-1 text-sm font-semibold text-black">Ativa</span>}
+              {g.ativa && <span className="rounded-full bg-orange-500 px-3 py-1 text-sm font-semibold text-black">Em uso</span>}
             </div>
             <div className="mt-3 grid grid-cols-2 gap-2">
               <Button variante="secundario" onClick={() => setEditando(g)}>
-                Equipamentos
+                Aparelhos
               </Button>
               {!g.ativa && (
                 <Button variante="secundario" onClick={() => void ativarAcademia(userId, g.id)}>
@@ -59,15 +83,46 @@ export function AcademiasScreen({ userId, onVoltar }: Props) {
       </ul>
 
       <section className="flex flex-col gap-3 rounded-2xl bg-neutral-900 p-4">
+        <h2 className="text-lg font-semibold">{lista?.length ? 'Adicionar outra academia' : 'Qual é a sua academia?'}</h2>
+        <Button onClick={() => void buscar()} disabled={busca.estado === 'buscando'}>
+          {busca.estado === 'buscando' ? 'Procurando perto de você…' : 'Buscar academias perto de mim'}
+        </Button>
+        <p className="text-xs text-neutral-500">
+          Usa sua localização só nesta busca, pelo mapa gratuito OpenStreetMap. Nada fica guardado.
+        </p>
+        {busca.estado === 'erro' && <p className="text-sm text-amber-300">{MENSAGEM_ERRO[busca.erro]}</p>}
+        {busca.estado === 'pronto' && busca.lista.length === 0 && (
+          <p className="text-sm text-amber-300">Nenhuma academia encontrada perto daqui no mapa. Digite o nome abaixo.</p>
+        )}
+        {busca.estado === 'pronto' && busca.lista.length > 0 && (
+          <ul className="flex flex-col gap-2">
+            {busca.lista.map((a) => (
+              <li key={a.id}>
+                <button
+                  type="button"
+                  onClick={() => void escolher(a.nome)}
+                  className="flex min-h-12 w-full items-center justify-between gap-3 rounded-xl bg-black px-3 py-2 text-left active:bg-neutral-800"
+                >
+                  <span className="min-w-0">
+                    <span className="block font-medium">{a.nome}</span>
+                    {a.endereco && <span className="block truncate text-xs text-neutral-500">{a.endereco}</span>}
+                  </span>
+                  <span className="shrink-0 text-sm text-neutral-400">{textoDistancia(a.distancia_m)}</span>
+                </button>
+              </li>
+            ))}
+            <li className="text-xs text-neutral-500">Não achou a sua? Digite o nome abaixo.</li>
+          </ul>
+        )}
         <TextField
-          label={lista?.length ? 'Outra academia' : 'Nome da sua academia'}
+          label="Ou digite o nome"
           placeholder="Ex.: Smart Fit Centro"
           maxLength={60}
           value={nova}
           onChange={(e) => setNova(e.target.value)}
         />
         <Button onClick={() => void criar()} disabled={!nova.trim()}>
-          Cadastrar e marcar equipamentos
+          Cadastrar e marcar aparelhos
         </Button>
       </section>
     </Tela>
@@ -98,15 +153,23 @@ function EditarAcademia({ gym, onFechar }: { gym: Gym; onFechar: () => void }) {
 
   return (
     <Tela
-      titulo="Equipamentos"
+      titulo="Aparelhos"
       onVoltar={onFechar}
       rodape={<Button onClick={() => void salvar()}>Salvar ({marcados.size - 1} marcados)</Button>}
     >
       <TextField label="Nome" maxLength={60} value={nome} onChange={(e) => setNome(e.target.value)} />
       <p className="text-sm text-neutral-400">
-        Marque o que existe na academia. Itens como "supino reto com barra" são a estação completa (banco + suporte +
-        barra).
+        Marque o que existe na sua academia. Academia grande costuma ter quase tudo: use "Marcar tudo" e desmarque o que
+        faltar.
       </p>
+      <div className="grid grid-cols-2 gap-2">
+        <Button variante="secundario" onClick={() => categoriaInteira(CATEGORIAS.flatMap(([, i]) => i.map((x) => x.chave)), true)}>
+          Marcar tudo
+        </Button>
+        <Button variante="secundario" onClick={() => categoriaInteira(CATEGORIAS.flatMap(([, i]) => i.map((x) => x.chave)), false)}>
+          Desmarcar tudo
+        </Button>
+      </div>
       {CATEGORIAS.map(([categoria, itens]) => {
         const chaves = itens.map((i) => i.chave)
         const todos = chaves.every((k) => marcados.has(k))

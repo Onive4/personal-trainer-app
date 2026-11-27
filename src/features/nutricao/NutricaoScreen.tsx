@@ -32,9 +32,9 @@ export function NutricaoScreen({ userId, onVoltar, onAnamnese }: Props) {
         <p className="text-neutral-300">
           {anamnese?.clearance_status === 'orientar_avaliacao'
             ? 'A meta de calorias fica bloqueada até a liberação médica ser registrada.'
-            : 'Complete a anamnese para calcular sua meta.'}
+            : 'Responda o questionário inicial para calcular sua meta.'}
         </p>
-        <Button onClick={onAnamnese}>{anamnese ? 'Ver avaliação' : 'Fazer anamnese'}</Button>
+        <Button onClick={onAnamnese}>{anamnese ? 'Ver avaliação' : 'Responder questionário'}</Button>
       </Tela>
     )
   }
@@ -64,14 +64,21 @@ export function NutricaoScreen({ userId, onVoltar, onAnamnese }: Props) {
       </section>
 
       <dl className="grid grid-cols-2 gap-3 text-sm">
-        <Info rotulo="Gasto basal" valor={`${meta.tmb} kcal`} />
-        <Info rotulo="Gasto total" valor={`${meta.tdee} kcal`} />
-        <Info
-          rotulo="Ritmo de peso alvo"
-          valor={meta.peso_alvo_semana_pct === 0 ? 'Manter' : `${meta.peso_alvo_semana_pct > 0 ? '+' : ''}${num(meta.peso_alvo_semana_pct, 2)}% por semana`}
-        />
-        <Info rotulo="Gordura estimada" valor={ultimaBf ? `${num(ultimaBf.bf_estimado!)}%` : 'Sem medidas'} />
+        <Info rotulo="Meta de peso" valor={textoRitmo(meta.peso_alvo_semana_pct, pesoAtual)} />
+        <Info rotulo="Gordura corporal" valor={ultimaBf ? `cerca de ${num(ultimaBf.bf_estimado!, 0)}%` : 'Meça em Medidas'} />
       </dl>
+
+      <details className="rounded-xl border border-neutral-800 px-4 py-3 text-sm text-neutral-300">
+        <summary className="min-h-8 cursor-pointer font-medium text-neutral-100">Como a meta foi calculada</summary>
+        <p className="mt-2">
+          Seu corpo gasta cerca de {meta.tmb} kcal por dia só para funcionar, e cerca de {meta.tdee} kcal contando a sua
+          rotina. {meta.kcal_alvo < meta.tdee ? 'A meta fica abaixo disso para o peso descer devagar.' : meta.kcal_alvo > meta.tdee ? 'A meta fica um pouco acima disso para ganhar músculo.' : 'A meta é igual a esse gasto, para manter o peso.'}
+        </p>
+        <p className="mt-2">
+          Proteína preserva e constrói músculo; gordura e carboidrato dão energia. Não precisa acertar o número exato: chegar
+          perto na maioria dos dias já funciona.
+        </p>
+      </details>
 
       {ajuste && diasDaMeta >= 14 && (
         <section className="flex flex-col gap-3 rounded-xl border border-orange-500/50 p-3">
@@ -123,4 +130,11 @@ function Info({ rotulo, valor }: { rotulo: string; valor: string }) {
       <dd className="text-base font-semibold">{valor}</dd>
     </div>
   )
+}
+
+/** "Perder cerca de 0,6 kg por semana" a partir do ritmo em % do peso. */
+function textoRitmo(pct: number, peso: number): string {
+  if (pct === 0 || !peso) return 'Manter o peso'
+  const kg = Math.abs((peso * pct) / 100)
+  return `${pct < 0 ? 'Perder' : 'Ganhar'} cerca de ${num(kg, 1)} kg por semana`
 }

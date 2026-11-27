@@ -12,6 +12,8 @@ export type Nivel = 'iniciante' | 'intermediario' | 'avancado'
 export type ClearanceStatus = 'liberado' | 'orientar_avaliacao' | 'liberado_por_registro'
 export type AtividadeDiaria = 'sedentario' | 'leve' | 'moderado' | 'intenso'
 export type Estresse = 'baixo' | 'medio' | 'alto'
+/** "Você conhece os exercícios e aparelhos da academia?" */
+export type Conhecimento = 'nenhum' | 'alguns' | 'bem'
 
 export const SINAIS_ALERTA = [
   'dor_peito',
@@ -81,7 +83,9 @@ export interface RespostasAnamnese {
     meses_treino_continuo: number
     experiencia: string
     frequencia_atual: number // dias por semana hoje
-    padroes_dominados: string[] // padrões de movimento que executa com boa técnica
+    /** Anamneses antigas (antes da pergunta de conhecimento) só têm padroes_dominados. */
+    conhecimento?: Conhecimento
+    padroes_dominados?: string[]
   }
   alerta: Record<SinalAlerta, boolean>
   familiar: {
@@ -236,4 +240,11 @@ export function avaliarAnamnese(
     nivel: nivelPorTempo(respostas.historico.meses_treino_continuo),
     objetivo: respostas.objetivo.objetivo,
   }
+}
+
+/** Conhecimento declarado; para anamneses antigas, deduz pelos movimentos marcados. */
+export function conhecimentoDe(r: RespostasAnamnese): Conhecimento {
+  if (r.historico.conhecimento) return r.historico.conhecimento
+  const n = r.historico.padroes_dominados?.length ?? 0
+  return n >= 4 ? 'bem' : n > 0 ? 'alguns' : 'nenhum'
 }

@@ -127,7 +127,9 @@ export interface Slot {
   ordem: number
   exercise_id: string
   padrao_movimento: string
-  tipo: 'composto' | 'acessorio'
+  tipo: 'composto' | 'acessorio' | 'aerobico'
+  /** Só no aeróbico. */
+  minutos: number | null
   series_alvo: number
   rep_min: number
   rep_max: number

@@ -46,6 +46,7 @@ data/
 ## Convenções
 
 - Interface, textos e nomes de domínio em **português do Brasil**. Código, tipos e nomes de arquivo em inglês quando for termo técnico (`progression.ts`), em português quando for domínio (`anamnese.ts`).
+- Linguagem da interface para leigo: nada de RIR, mesociclo, padrão de movimento ou sigla técnica na tela. Esforço em palavras, "fase", "semana leve", "questionário inicial". O que não ajuda a pessoa a treinar fica fora da tela ou recolhido.
 - Unidades: quilogramas e centímetros. Máquina com placas registra número de placas, nunca convertido para kg estimado.
 - Datas em ISO 8601, horário local de São Paulo na exibição.
 - `set_logs` é append-only. Correção cria registro novo com `substitui_id`. Nunca UPDATE em registro de série.

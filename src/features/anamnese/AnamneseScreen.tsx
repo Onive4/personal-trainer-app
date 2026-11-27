@@ -12,7 +12,6 @@ import { ETAPAS, formInicial, montarRespostas, pendenciaDaEtapa, type FormAnamne
 import {
   MOVIMENTOS_POR_REGIAO,
   MUSCULOS,
-  PADROES_DOMINAVEIS,
   PERGUNTA_ALERTA,
   ROTULO_ATIVIDADE,
   ROTULO_ESTRESSE,
@@ -91,7 +90,7 @@ export function AnamneseScreen({ userId, onVoltar, onConcluir }: Props) {
         <div className="flex flex-col gap-2">
           {aviso && <p role="alert" className="text-sm text-orange-300">{aviso}</p>}
           <Button onClick={() => void avancar()} disabled={salvando}>
-            {etapa < ETAPAS.length - 1 ? 'Continuar' : 'Concluir anamnese'}
+            {etapa < ETAPAS.length - 1 ? 'Continuar' : 'Concluir questionário'}
           </Button>
         </div>
       }
@@ -174,11 +173,16 @@ function Historico({ form, set }: EtapaProps) {
         valor={h.frequencia_atual}
         onChange={(frequencia_atual) => muda({ frequencia_atual })}
       />
-      <EscolhaVarias
-        rotulo="Quais destes você já faz com boa técnica?"
-        opcoes={PADROES_DOMINAVEIS}
-        valores={h.padroes_dominados}
-        onChange={(padroes_dominados) => muda({ padroes_dominados })}
+      <EscolhaUma
+        rotulo="Você conhece os exercícios e aparelhos da academia?"
+        colunas={1}
+        opcoes={[
+          { valor: 'nenhum', rotulo: 'Não, preciso de orientação', detalhe: 'O treino usa mais aparelhos fáceis de aprender e repete exercícios' },
+          { valor: 'alguns', rotulo: 'Conheço alguns', detalhe: 'Mistura aparelhos e pesos livres' },
+          { valor: 'bem', rotulo: 'Sim, sei usar bem', detalhe: 'Mais pesos livres e mais variedade' },
+        ]}
+        valor={h.conhecimento}
+        onChange={(conhecimento) => muda({ conhecimento })}
       />
       <TextField
         label="Outras experiências (opcional)"

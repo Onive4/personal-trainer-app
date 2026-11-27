@@ -93,3 +93,10 @@ As variáveis `VITE_SUPABASE_*` entram no build a partir do `.env.local`.
 - [ ] Julyana cadastra a academia, gera e aprova o programa dela
 - [ ] Os dois programas aparecem no Supabase (`programs`, `mesocycles`, `slots`) e são diferentes
 - [x] Cenários 1 e 2 da especificação passam (testes do motor)
+
+## Ajustes de simplicidade (antes do M4)
+
+- [ ] Gerar o treino de novo (versão com aeróbico) e aprovar — Raphael e Julyana
+- [ ] Marcar os aparelhos de aeróbico da academia (esteira, bicicleta, elíptico…)
+- [ ] Testar "Buscar academias perto de mim" no celular
+- [x] Catálogo com 237 exercícios no Supabase (conferido contra `data/exercises.pt.json`)

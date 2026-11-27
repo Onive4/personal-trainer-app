@@ -1,5 +1,7 @@
 import {
   SINAIS_ALERTA,
+  conhecimentoDe,
+  type Conhecimento,
   type AtividadeDiaria,
   type Estresse,
   type Lesao,
@@ -13,7 +15,7 @@ import type { Profile } from '../../db/schema'
 /** Estado do questionário enquanto é preenchido: tudo pode estar em branco. */
 export interface FormAnamnese {
   identificacao: { data_nascimento: string; sexo: Sexo | null; altura_cm: number | null; peso_kg: number | null }
-  historico: { meses_treino_continuo: number | null; experiencia: string; frequencia_atual: number | null; padroes_dominados: string[] }
+  historico: { meses_treino_continuo: number | null; experiencia: string; frequencia_atual: number | null; conhecimento: Conhecimento | null }
   alerta: Record<SinalAlerta, boolean | null>
   familiar: { cardiovascular_precoce: boolean | null; diabetes: boolean | null; hipertensao: boolean | null }
   lesoes: Lesao[]
@@ -39,7 +41,11 @@ export const ETAPAS = [
 
 /** Formulário inicial: parte da anamnese anterior (refazer) ou do perfil. */
 export function formInicial(perfil: Profile | undefined, anterior: RespostasAnamnese | undefined): FormAnamnese {
-  if (anterior) return structuredClone(anterior)
+  if (anterior) {
+    const copia = structuredClone(anterior)
+    const { padroes_dominados: _p, ...historico } = copia.historico
+    return { ...copia, historico: { ...historico, conhecimento: conhecimentoDe(anterior) } }
+  }
   return {
     identificacao: {
       data_nascimento: perfil?.data_nascimento ?? '',
@@ -47,7 +53,7 @@ export function formInicial(perfil: Profile | undefined, anterior: RespostasAnam
       altura_cm: perfil?.altura_cm ?? null,
       peso_kg: null,
     },
-    historico: { meses_treino_continuo: null, experiencia: '', frequencia_atual: null, padroes_dominados: [] },
+    historico: { meses_treino_continuo: null, experiencia: '', frequencia_atual: null, conhecimento: null },
     alerta: Object.fromEntries(SINAIS_ALERTA.map((s) => [s, null])) as Record<SinalAlerta, null>,
     familiar: { cardiovascular_precoce: null, diabetes: null, hipertensao: null },
     lesoes: [],
@@ -72,6 +78,7 @@ export function pendenciaDaEtapa(etapa: number, f: FormAnamnese, hoje: string): 
     case 1:
       if (f.historico.meses_treino_continuo === null) return 'Diga há quanto tempo treina sem parar.'
       if (f.historico.frequencia_atual === null) return 'Diga quantos dias por semana treina hoje.'
+      if (!f.historico.conhecimento) return 'Diga se você conhece os exercícios e aparelhos da academia.'
       return null
     case 2:
       return SINAIS_ALERTA.some((s) => f.alerta[s] === null) ? 'Responda todas as perguntas.' : null
@@ -105,7 +112,7 @@ export function montarRespostas(f: FormAnamnese): RespostasAnamnese {
       meses_treino_continuo: f.historico.meses_treino_continuo!,
       experiencia: f.historico.experiencia.trim(),
       frequencia_atual: f.historico.frequencia_atual!,
-      padroes_dominados: f.historico.padroes_dominados,
+      conhecimento: f.historico.conhecimento!,
     },
     alerta: Object.fromEntries(SINAIS_ALERTA.map((s) => [s, f.alerta[s] === true])) as Record<SinalAlerta, boolean>,
     familiar: {

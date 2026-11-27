@@ -2,7 +2,7 @@
  * Proposta e aprovação do bloco. A proposta fica só no aparelho; aprovar grava
  * programa, mesociclo e slots no Dexie e na fila na mesma transação.
  */
-import { podeGerarPrograma } from '../../engine/anamnese'
+import { conhecimentoDe, podeGerarPrograma } from '../../engine/anamnese'
 import { montarMesociclo, type PropostaMesociclo, type SlotProposto } from '../../engine/builder'
 import type { Exercicio } from '../../engine/catalogo'
 import {
@@ -61,7 +61,7 @@ export async function gerarProposta(userId: string, catalogo: readonly Exercicio
     dias_semana: r.contexto.dias_semana,
     minutos_sessao: r.contexto.minutos_sessao,
     musculos_prioritarios: r.objetivo.musculos_prioritarios,
-    padroes_dominados: r.historico.padroes_dominados,
+    conhecimento: conhecimentoDe(r),
     constraints: anamnese.constraints,
     equipamentos: gym.equipamentos,
     catalogo,
@@ -144,6 +144,8 @@ export async function aprovarProposta(userId: string, catalogo: readonly Exercic
       dias: proposta.dias.map((d) => d.nome),
       volume: proposta.volume,
       avisos: proposta.avisos,
+      explicacao: proposta.explicacao,
+      aerobico_semana_min: proposta.aerobico_semana_min,
       validacao: proposta.validacao,
       series_por_sessao: proposta.series_por_sessao,
       semanas_acumulo: proposta.semanas_acumulo,
@@ -166,6 +168,7 @@ export async function aprovarProposta(userId: string, catalogo: readonly Exercic
       exercise_id: s.exercise_id,
       padrao_movimento: s.padrao_movimento,
       tipo: s.tipo,
+      minutos: s.minutos ?? null,
       series_alvo: s.series_alvo,
       rep_min: s.rep_min,
       rep_max: s.rep_max,

@@ -54,7 +54,7 @@ export function MedidasScreen({ userId, onVoltar }: { userId: string; onVoltar: 
     <Tela titulo="Medidas" onVoltar={onVoltar}>
       <Button onClick={() => setLancando(true)}>Registrar medidas de hoje</Button>
       {historico && historico.length === 0 && (
-        <p className="text-neutral-400">Nenhuma medida ainda. O peso da anamnese aparece aqui.</p>
+        <p className="text-neutral-400">Nenhuma medida ainda. O peso do questionário aparece aqui.</p>
       )}
       <ul className="flex flex-col gap-2">
         {historico?.map((m) => <LinhaMedida key={m.id} m={m} />)}

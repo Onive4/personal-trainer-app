@@ -63,6 +63,8 @@ O projeto Supabase não concede acesso automático da API às tabelas novas do s
 | Google OAuth (Google Cloud) | Gratuito; tela de consentimento em modo "Teste" aceita até 100 usuários de teste | Os dois e-mails cadastrados como usuários de teste; só escopos de e-mail e perfil |
 | Cloudflare Workers Free | Requisições a arquivos estáticos são gratuitas e ilimitadas | App só de arquivos estáticos, sem código de servidor |
 | GitHub Actions | Repositório público ilimitado; privado 2.000 min/mês. Cron é desativado após 60 dias sem commit | Keep-alive usa segundos por semana; reativar o workflow se o GitHub desligar |
+| OpenStreetMap — Overpass API (busca de academias) | Gratuita, sem chave; uso justo (até ~10 mil consultas/dia por instância pública), às vezes lotada | Uma consulta por toque em "Buscar academias perto de mim"; com o principal lotado, tenta espelhos públicos e a busca por nome |
+| OpenStreetMap — Nominatim (busca por nome, reserva) | Gratuito, no máximo 1 requisição por segundo, sem uso em massa | Só quando o Overpass falha, uma requisição por busca |
 
 ### Riscos da infraestrutura gratuita e mitigação
 
@@ -100,7 +102,8 @@ mesocycles          id, program_id, profile_id, numero, semanas, enfase[], statu
                     aprovado_em, created_at, updated_at
 slots               id, mesocycle_id, profile_id, dia, ordem, exercise_id, padrao_movimento,
                     tipo (composto | acessorio), series_alvo, rep_min, rep_max,
-                    rir_semana (int[]), substituiu_slot_id, motivo, created_at
+                    rir_semana (int[]), substituiu_slot_id, motivo, created_at,
+                    tipo inclui 'aerobico', com minutos (só no aeróbico)
 sessions            id, mesocycle_id, profile_id, dia, semana, data_prevista,
                     data_realizada, readiness (jsonb), status
 set_logs            id, session_id, slot_id, exercise_id, serie_num, tipo_carga
@@ -380,6 +383,14 @@ Decisões do M3 (implementadas em `src/engine/volume.ts` e `src/engine/builder.t
 - **Bloco:** iniciante 4 semanas, intermediário 5, avançado 6, mais 1 de descarga. RIR desce linearmente dentro da faixa do objetivo (hipertrofia 3→1, força 2→1, emagrecimento 3→2, condicionamento e saúde 4→2); descarga em RIR 4 (5 quando o objetivo começa em 4), metade das séries.
 - **Aprovação:** a proposta fica só no aparelho (tabela local `propostas`) com as trocas feitas à mão. Aprovar grava programa, mesociclo e slots de uma vez. Mesmo objetivo e mesmos dias → novo mesociclo no mesmo programa; senão, programa novo e o anterior fica inativo. Pela API, `programs` só altera `ativo`, `mesocycles` só altera `status`, e `slots` não muda.
 
+Ajustes de simplicidade (pedido dos usuários depois do M3, antes do M4):
+- **Linguagem:** a interface não usa jargão. RIR aparece como esforço em palavras (Leve, Moderado, Forte, Bem forte) e como instrução ("pare quando ainda conseguir fazer mais 2 repetições"); "mesociclo/bloco" é "fase", "descarga" é "semana leve", "anamnese" é "questionário inicial"; padrões de movimento, tabela de volume e motivos técnicos ficam fora da tela. O "Por que esse treino?" (recolhido) explica a montagem em frases simples geradas pelo motor (`explicacao`); `avisos` só traz o que pede ação. A nutrição mostra a meta e os macros; gasto basal e total ficam em "Como a meta foi calculada".
+- **Pergunta de conhecimento:** "Você conhece os exercícios e aparelhos da academia?" (não / alguns / sim) substitui a lista de padrões dominados. Não → só exercícios de nível iniciante, máquinas e cabos (+4) e repetição do mesmo exercício na semana para aprender; alguns → máquinas e cabos com peso menor (+1) e variedade; sim → peso livre (+1) e variedade. Anamneses antigas deduzem a resposta pela lista antiga. O mesmo exercício nunca aparece duas vezes no mesmo treino se houver outra opção.
+- **Aeróbico (time-based, sem zonas de frequência cardíaca):** todo treino termina com aeróbico. Emagrecimento, saúde e condicionamento reservam a parte dos 150 min/semana da OMS que cabe em até 30% da sessão (mínimo 10 min); hipertrofia e força reservam 10 min. O tempo que sobrar depois da musculação vai para o aeróbico (até 30 min, ou 20 em hipertrofia/força). A intensidade é descrita sem números ("ritmo em que ainda dá para conversar"). Aparelho escolhido pela academia e pelas restrições (sem impacto → nada de corrida, corda); varia entre os dias. Sem aparelho de aeróbico marcado, vira caminhada e a proposta avisa.
+- **Uso do tempo:** aquecimento estimado em 5 min. Depois de garantir o piso de volume, os músculos não prioritários sobem até o meio da faixa da tabela 6.1 se houver tempo. Cada dia mostra a duração estimada.
+- **Catálogo ampliado para 237** (`scripts/curadoria/c5_ampliacao.mjs`): 10 aeróbicos (padrão `aerobico`, músculo `cardio`, categoria de equipamento "aerobico": esteira, bicicleta ergométrica e horizontal, elíptico, escada, remo, corda) e 37 de musculação para lacunas (máquinas e cabos comuns no Brasil, adutores, panturrilha, antebraço, abdômen). Carga no banco pela migração `0009` (idempotente).
+- **Academia pelo GPS:** "Buscar academias perto de mim" usa a localização só nessa hora e consulta o OpenStreetMap (Overpass, `leisure=fitness_centre` em 3 km). Com o servidor principal lotado, tenta ao mesmo tempo dois espelhos públicos e a busca por nome do Nominatim ("academia"), e vale a primeira resposta. Nada da localização é guardado; a academia continua sendo só um nome. Se não achar, digita-se o nome. O checklist ganhou "Marcar tudo" / "Desmarcar tudo".
+
 **M4 — Execução e registro**
 Tela de sessão; registro de carga/placas/reps/RIR; cronômetro; detecção de recorde; check-in de readiness; fila de sincronização e resolução offline.
 *Pronto quando:* um treino inteiro é registrado em modo avião e sincroniza ao voltar o sinal.
@@ -400,7 +411,7 @@ O motor é função pura: entra estado, sai prescrição. Isso permite testar se
 
 Cenários mínimos em `src/engine/__tests__/`:
 
-1. Iniciante, hipertrofia, 3 dias, sem restrição → volume no piso, exercícios de nível iniciante, padrões equilibrados.
+1. Iniciante, hipertrofia, 3 dias, sem restrição → meta de volume no piso (o tempo que sobrar pode subir até o meio da faixa, nunca acima do teto), exercícios de nível iniciante, padrões equilibrados, aeróbico no fim de cada treino.
 2. Intermediário com dor lombar ativa → nenhum exercício com carga axial no programa.
 3. Sinal de alerta positivo na triagem → geração bloqueada, tela de avaliação médica.
 4. Carga estagnada 4 sessões com RIR no alvo → gatilho A, intervenção 1 (troca de faixa de repetições).
@@ -413,6 +424,6 @@ Cenários mínimos em `src/engine/__tests__/`:
 
 ## 15. Fora de escopo (por decisão)
 
-Rede social e feed · integração com relógio · vídeo demonstrativo próprio · diário alimentar com busca de alimentos · exercícios de cardio estruturados com zonas de frequência cardíaca · compartilhamento público de treino.
+Rede social e feed · integração com relógio · vídeo demonstrativo próprio · diário alimentar com busca de alimentos · cardio estruturado com zonas de frequência cardíaca (o aeróbico do app é por tempo e percepção de esforço) · compartilhamento público de treino.
 
 Nenhum deles é necessário para o objetivo, e cada um traria custo, dependência externa ou obrigação de conteúdo que não se sustenta de graça.

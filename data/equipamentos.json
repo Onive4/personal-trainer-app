@@ -10,7 +10,7 @@
   },
   {
    "chave": "barra_banco",
-   "exercicios": 1
+   "exercicios": 2
   },
   {
    "chave": "barra_livre",
@@ -18,7 +18,7 @@
   },
   {
    "chave": "barra_rack",
-   "exercicios": 8
+   "exercicios": 9
   },
   {
    "chave": "barra_rack_banco",
@@ -40,11 +40,11 @@
  "halteres": [
   {
    "chave": "halteres",
-   "exercicios": 23
+   "exercicios": 29
   },
   {
    "chave": "halteres_banco",
-   "exercicios": 3
+   "exercicios": 7
   }
  ],
  "bancos": [
@@ -70,7 +70,7 @@
   },
   {
    "chave": "banco_halteres",
-   "exercicios": 3
+   "exercicios": 4
   },
   {
    "chave": "banco_hiperextensao",
@@ -82,7 +82,7 @@
   },
   {
    "chave": "banco_inclinado_halteres",
-   "exercicios": 4
+   "exercicios": 5
   },
   {
    "chave": "banco_reto_barra",
@@ -98,7 +98,7 @@
   },
   {
    "chave": "banco_scott",
-   "exercicios": 1
+   "exercicios": 2
   },
   {
    "chave": "banco_scott_w",
@@ -108,19 +108,19 @@
  "polias": [
   {
    "chave": "crossover",
-   "exercicios": 4
+   "exercicios": 6
   },
   {
    "chave": "polia_alta",
-   "exercicios": 14
+   "exercicios": 19
   },
   {
    "chave": "polia_baixa",
-   "exercicios": 15
+   "exercicios": 19
   },
   {
    "chave": "polia_media",
-   "exercicios": 3
+   "exercicios": 4
   }
  ],
  "maquinas": [
@@ -174,7 +174,7 @@
   },
   {
    "chave": "maquina_hack",
-   "exercicios": 1
+   "exercicios": 2
   },
   {
    "chave": "maquina_panturrilha_pe",
@@ -198,11 +198,11 @@
   },
   {
    "chave": "maquina_rosca",
-   "exercicios": 1
+   "exercicios": 2
   },
   {
    "chave": "maquina_supino",
-   "exercicios": 1
+   "exercicios": 2
   },
   {
    "chave": "maquina_supino_inclinado",
@@ -222,7 +222,7 @@
   },
   {
    "chave": "smith",
-   "exercicios": 5
+   "exercicios": 9
   }
  ],
  "livre": [
@@ -244,7 +244,7 @@
   },
   {
    "chave": "elastico",
-   "exercicios": 5
+   "exercicios": 6
   },
   {
    "chave": "fitas_suspensao",
@@ -256,7 +256,37 @@
   },
   {
    "chave": "peso_corporal",
-   "exercicios": 16
+   "exercicios": 19
+  }
+ ],
+ "aerobico": [
+  {
+   "chave": "esteira",
+   "exercicios": 3
+  },
+  {
+   "chave": "bicicleta_ergometrica",
+   "exercicios": 1
+  },
+  {
+   "chave": "bicicleta_horizontal",
+   "exercicios": 1
+  },
+  {
+   "chave": "eliptico",
+   "exercicios": 1
+  },
+  {
+   "chave": "escada_ergometrica",
+   "exercicios": 1
+  },
+  {
+   "chave": "remo_ergometrico",
+   "exercicios": 1
+  },
+  {
+   "chave": "corda_pular",
+   "exercicios": 1
   }
  ]
 }

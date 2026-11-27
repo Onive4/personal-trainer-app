@@ -8,7 +8,7 @@ import { anamneseAtual } from '../perfil/registros'
 import { academiaAtiva } from '../academias/registros'
 import { rotuloEquipamento } from '../academias/equipamentos'
 import { useCatalogo } from './useCatalogo'
-import { ROTULO_NIVEL_EX, rotuloMusculo, rotuloPadrao } from './rotulos'
+import { ROTULO_NIVEL_EX, rotuloMusculo } from './rotulos'
 
 interface Props {
   userId: string
@@ -64,8 +64,7 @@ export function ExercicioScreen({ userId, slug, onVoltar, onAbrir, onAcademias }
 
       <dl className="grid grid-cols-2 gap-2 text-sm">
         <Info rotulo="Músculo" valor={rotuloMusculo(e.musculo_primario)} />
-        <Info rotulo="Movimento" valor={rotuloPadrao(e.padrao_movimento)} />
-        <Info rotulo="Equipamento" valor={rotuloEquipamento(e.equipamento)} />
+        <Info rotulo={e.padrao_movimento === 'aerobico' ? 'Tipo' : 'Aparelho'} valor={e.padrao_movimento === 'aerobico' ? 'Aeróbico' : rotuloEquipamento(e.equipamento)} />
         <Info rotulo="Nível" valor={`${ROTULO_NIVEL_EX[e.nivel] ?? e.nivel}${e.unilateral ? ' · unilateral' : ''}`} />
       </dl>
       {e.musculos_secundarios.length > 0 && (
@@ -74,7 +73,7 @@ export function ExercicioScreen({ userId, slug, onVoltar, onAbrir, onAcademias }
 
       {contra.length > 0 && (
         <div className="rounded-xl border border-amber-700 p-3 text-sm">
-          <p className="font-semibold text-amber-300">Contraria uma restrição sua</p>
+          <p className="font-semibold text-amber-300">Não indicado pela sua avaliação</p>
           <ul className="mt-1 list-disc pl-5 text-neutral-300">
             {contra.map((c) => (
               <li key={c}>{ROTULO_CONSTRAINT[c]}</li>
