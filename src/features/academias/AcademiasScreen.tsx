@@ -85,7 +85,7 @@ export function AcademiasScreen({ userId, onVoltar }: Props) {
       <section className="flex flex-col gap-3 rounded-2xl bg-neutral-900 p-4">
         <h2 className="text-lg font-semibold">{lista?.length ? 'Adicionar outra academia' : 'Qual é a sua academia?'}</h2>
         <Button onClick={() => void buscar()} disabled={busca.estado === 'buscando'}>
-          {busca.estado === 'buscando' ? 'Procurando perto de você…' : 'Buscar academias perto de mim'}
+          {busca.estado === 'buscando' ? 'Procurando perto de você… (até uns 8 segundos)' : 'Buscar academias perto de mim'}
         </Button>
         <p className="text-xs text-neutral-500">
           Usa sua localização só nesta busca, pelo mapa gratuito OpenStreetMap. Nada fica guardado.

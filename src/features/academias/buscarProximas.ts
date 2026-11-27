@@ -59,15 +59,26 @@ export async function buscarAcademiasProximas(lat: number, lon: number, raio = 3
     if (!r.ok) throw new Error(String(r.status)) // lotado (429/502/504)
     return paraLista((await r.json()) as { elements: ElementoOsm[] }, lat, lon)
   }
+  // Tudo começa ao mesmo tempo. O servidor principal (lista mais completa) tem 3 s de
+  // preferência; depois disso vale a primeira resposta boa, de qualquer fonte.
+  const principal = overpass(SERVIDORES[0]!, 8)
+  const qualquerOverpass = Promise.any([principal, ...SERVIDORES.slice(1).map((sv) => overpass(sv, 8))])
+  const porNome = buscarPorNome(lat, lon, raio)
+  // A busca por nome só ganha a corrida se achou pelo menos 3; senão espera o Overpass.
+  const porNomeBom = porNome.then((l) => {
+    if (l.length < 3) throw new Error('poucas')
+    return l
+  })
+  for (const p of [principal, qualquerOverpass, porNome, porNomeBom]) p.catch(() => {}) // sem aviso de rejeição solta
+
+  const rapido = await Promise.race([principal.catch(() => null), new Promise<null>((r) => setTimeout(() => r(null), 3000))])
+  if (rapido) return rapido
   try {
-    return await overpass(SERVIDORES[0]!, 10)
+    return await Promise.any([qualquerOverpass, porNomeBom])
   } catch {
-    // Principal lotado ou lento: espelhos e a busca por nome ao mesmo tempo; vale a primeira que responder.
+    // Nenhum Overpass respondeu: fica a busca por nome, mesmo curta.
     try {
-      return await Promise.any([
-        ...SERVIDORES.slice(1).map((sv) => overpass(sv, 10)),
-        buscarPorNome(lat, lon, raio),
-      ])
+      return await porNome
     } catch {
       throw (navigator.onLine ? 'falhou' : 'sem_rede') satisfies ErroBusca
     }
@@ -114,11 +125,11 @@ async function buscarPorNome(lat: number, lon: number, raio: number): Promise<Ac
     limit: '40',
     'accept-language': 'pt-BR',
   }).toString()
-  const r = await fetch(url, { signal: AbortSignal.timeout(12_000) })
+  const r = await fetch(url, { signal: AbortSignal.timeout(8_000) })
   if (!r.ok) throw new Error(String(r.status))
-  const lista = (await r.json()) as { place_id: number; name: string; category: string; lat: string; lon: string; address?: Record<string, string> }[]
+  const lista = (await r.json()) as { place_id: number; name: string; category: string; type: string; lat: string; lon: string }[]
   return lista
-    .filter((x) => x.name && x.category === 'leisure')
+    .filter((x) => x.name && x.category === 'leisure' && ['fitness_centre', 'sports_centre'].includes(x.type))
     .map((x) => ({
       id: `nominatim/${x.place_id}`,
       nome: x.name,

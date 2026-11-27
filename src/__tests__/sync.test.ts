@@ -15,11 +15,12 @@ describe('fila de sincronização', () => {
     await enfileirarSync('measurements', 'insert', { id: 'a' }, banco)
     await enfileirarSync('measurements', 'insert', { id: 'b' }, banco)
     const enviados: unknown[] = []
-    await processarFila(async (i) => {
-      enviados.push(i.payload.id)
+    await processarFila(async (lote) => {
+      enviados.push(lote.map((i) => i.payload.id))
       return 'ok'
     }, banco)
-    expect(enviados).toEqual(['a', 'b'])
+    // Inserts seguidos da mesma tabela vão juntos, num envio só.
+    expect(enviados).toEqual([['a', 'b']])
     expect(await banco.sync_outbox.count()).toBe(0)
   })
 
@@ -42,12 +43,35 @@ describe('fila de sincronização', () => {
   it('recusa conta tentativa, segue para o próximo e desiste no limite', async () => {
     await enfileirarSync('anamneses', 'insert', { id: 'ruim' }, banco)
     await enfileirarSync('anamneses', 'insert', { id: 'bom' }, banco)
-    const enviar = async (i: { payload: Record<string, unknown> }): Promise<ResultadoEnvio> =>
-      i.payload.id === 'ruim' ? 'recusado' : 'ok'
+    const enviar = async (lote: { payload: Record<string, unknown> }[]): Promise<ResultadoEnvio> =>
+      lote.some((i) => i.payload.id === 'ruim') ? 'recusado' : 'ok'
     for (let k = 0; k < MAX_TENTATIVAS + 2; k++) await processarFila(enviar, banco)
     const itens = await banco.sync_outbox.toArray()
     expect(itens).toHaveLength(1)
     expect(itens[0]?.status).toBe('erro')
     expect(itens[0]?.tentativas).toBe(MAX_TENTATIVAS)
+  })
+})
+
+describe('lotes', () => {
+  it('agrupa só inserts consecutivos da mesma tabela, mantendo a ordem', async () => {
+    await enfileirarSync('programs', 'update', { id: 'p0' }, banco)
+    await enfileirarSync('programs', 'insert', { id: 'p1' }, banco)
+    await enfileirarSync('mesocycles', 'insert', { id: 'm1' }, banco)
+    for (let i = 0; i < 3; i++) await enfileirarSync('slots', 'insert', { id: 's' + i }, banco)
+    const lotes: unknown[][] = []
+    await processarFila(async (lote) => {
+      lotes.push(lote.map((i) => i.payload.id))
+      return 'ok'
+    }, banco)
+    expect(lotes).toEqual([['p0'], ['p1'], ['m1'], ['s0', 's1', 's2']])
+  })
+
+  it('sem rede no meio: o que já foi fica, o resto espera', async () => {
+    await enfileirarSync('programs', 'insert', { id: 'p1' }, banco)
+    await enfileirarSync('slots', 'insert', { id: 's1' }, banco)
+    await processarFila(async (lote) => (lote[0]!.tabela === 'slots' ? 'rede' : 'ok'), banco)
+    const restantes = await banco.sync_outbox.toArray()
+    expect(restantes.map((i) => [i.payload.id, i.status])).toEqual([['s1', 'pendente']])
   })
 })

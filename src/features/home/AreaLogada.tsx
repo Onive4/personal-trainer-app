@@ -1,6 +1,7 @@
 import { useEffect, useSyncExternalStore } from 'react'
 import { sincronizarPerfil } from '../../api/profiles'
-import { sincronizarTudo } from '../../api/sincronizacao'
+import { enviarFila, sincronizarTudo } from '../../api/sincronizacao'
+import { db } from '../../db/schema'
 import { useRota } from '../../ui/rota'
 import { AnamneseScreen } from '../anamnese/AnamneseScreen'
 import { ResumoScreen } from '../anamnese/ResumoScreen'
@@ -43,6 +44,24 @@ export function AreaLogada({ userId, email, nomeDaSessao, onSair }: Props) {
     void sincronizarPerfil(userId)
     void sincronizarTudo(userId)
   }, [userId, online])
+
+  // Ao voltar para o app (tela desbloqueada, troca de aplicativo), envia o que ficou pendente.
+  // E, enquanto houver algo na fila, tenta de novo a cada 30 s.
+  useEffect(() => {
+    const aoVoltar = () => {
+      if (document.visibilityState === 'visible' && navigator.onLine) void sincronizarTudo(userId)
+    }
+    document.addEventListener('visibilitychange', aoVoltar)
+    const timer = setInterval(() => {
+      if (document.visibilityState === 'visible' && navigator.onLine) {
+        void db.sync_outbox.count().then((n) => (n > 0 ? enviarFila() : undefined))
+      }
+    }, 30_000)
+    return () => {
+      document.removeEventListener('visibilitychange', aoVoltar)
+      clearInterval(timer)
+    }
+  }, [userId])
 
   if (caminho.startsWith('/exercicios/')) {
     return (

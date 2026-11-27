@@ -8,16 +8,18 @@ function ehErroDeRede(mensagem: string | undefined): boolean {
   return !navigator.onLine || /fetch|network|load failed/i.test(mensagem ?? '')
 }
 
-async function enviarItem(item: SyncOutboxItem): Promise<ResultadoEnvio> {
-  const { tabela, operacao, payload } = item
+async function enviarLote(itens: SyncOutboxItem[]): Promise<ResultadoEnvio> {
+  const { tabela, operacao } = itens[0]!
   let erro: { message: string } | null = null
 
   if (operacao === 'update') {
-    const { id, ...campos } = payload
+    // Updates vão sempre um por um (o lote tem um item só).
+    const { id, ...campos } = itens[0]!.payload
     erro = (await supabase.from(tabela).update(campos).eq('id', id as string)).error
   } else {
-    // ids gerados no celular: reenviar o mesmo item não duplica.
-    erro = (await supabase.from(tabela).upsert(payload, { onConflict: 'id', ignoreDuplicates: true })).error
+    // Um insert com várias linhas. ids gerados no celular: reenviar não duplica.
+    const linhas = itens.map((i) => i.payload)
+    erro = (await supabase.from(tabela).upsert(linhas, { onConflict: 'id', ignoreDuplicates: true })).error
   }
 
   if (!erro) return 'ok'
@@ -27,7 +29,7 @@ async function enviarItem(item: SyncOutboxItem): Promise<ResultadoEnvio> {
 /** Envia o que está na fila. Seguro chamar várias vezes. */
 export function enviarFila(): Promise<void> {
   if (!navigator.onLine) return Promise.resolve()
-  return processarFila(enviarItem)
+  return processarFila(enviarLote)
 }
 
 /**
